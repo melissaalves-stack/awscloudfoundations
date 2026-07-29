@@ -79,16 +79,19 @@ Abra o arquivo `quiz.md` do módulo que deseja praticar. As alternativas usam ca
 ### 2. Pelo Terminal (Interativo)
 Requer Python 3.8+ instalado.
 
-```bash
+```
 python quiz/quiz.py           # Abre o menu interativo por módulo
 python quiz/quiz.py 02        # Executa diretamente o quiz do módulo 02
 python quiz/quiz.py --todos -n 65   # Gera um simulado completo no formato da prova real
 python quiz/quiz.py --errei   # Executa um quiz focado apenas nas questões que você errou
+```
 
 3. Interface Web
 Para visualizar o quiz no navegador:
+```
 python3 -m http.server 8000
 # Acesse no seu navegador: http://localhost:8000/web/
+```
 
 ⚠️ Alertas importantes antes de começar
 Proteja sua conta: Crie sua conta AWS e ative o MFA na conta root imediatamente (veja Módulo 00, Parte 3).

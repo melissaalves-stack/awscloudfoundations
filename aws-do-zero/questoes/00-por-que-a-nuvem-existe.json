@@ -1,0 +1,108 @@
+{
+  "modulo": "00",
+  "titulo": "Por que a nuvem existe",
+  "questoes": [
+    {
+      "id": "00-01",
+      "dificuldade": "facil",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Uma startup quer lançar um aplicativo sem saber quantos usuários terá no primeiro mês. Qual benefício da nuvem AWS responde diretamente a essa incerteza?",
+      "alternativas": [
+        "Beneficiar-se de economias de escala massivas",
+        "Parar de adivinhar capacidade",
+        "Tornar-se global em minutos",
+        "Parar de gastar dinheiro mantendo data centers"
+      ],
+      "correta": 1,
+      "explicacao": "O problema descrito é de incerteza de demanda. 'Parar de adivinhar capacidade' é exatamente o benefício que permite provisionar conforme o uso real cresce ou cai. As outras opções são benefícios reais, mas respondem a outros problemas: custo unitário, alcance geográfico e overhead operacional."
+    },
+    {
+      "id": "00-02",
+      "dificuldade": "medio",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Qual afirmação descreve corretamente a diferença entre escalabilidade e elasticidade?",
+      "alternativas": [
+        "São sinônimos; a AWS usa os dois termos de forma intercambiável",
+        "Escalabilidade é aumentar recursos; elasticidade é aumentar e reduzir automaticamente conforme a demanda",
+        "Escalabilidade só ocorre na horizontal; elasticidade só ocorre na vertical",
+        "Elasticidade é uma característica do hardware; escalabilidade é do software"
+      ],
+      "correta": 1,
+      "explicacao": "Um sistema escalável consegue crescer para atender mais demanda, mas isso pode exigir ação manual. Elasticidade acrescenta o automatismo e, principalmente, a redução: é o encolher automático que gera a economia. Escalabilidade pode ser vertical ou horizontal — as duas coisas."
+    },
+    {
+      "id": "00-03",
+      "dificuldade": "facil",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Uma empresa usa o Amazon RDS para não precisar cuidar de patches, backups e do sistema operacional do banco, mas continua responsável pelo esquema e pelos dados. Qual modelo de serviço isso representa?",
+      "alternativas": ["IaaS", "PaaS", "SaaS", "On-premises"],
+      "correta": 1,
+      "explicacao": "PaaS: o fornecedor gerencia a plataforma (SO, runtime, patches) e o cliente cuida apenas da aplicação e dos dados. Seria IaaS se a empresa instalasse o banco numa EC2 e cuidasse do SO, e SaaS se apenas consumisse um software pronto."
+    },
+    {
+      "id": "00-04",
+      "dificuldade": "medio",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Ao migrar da infraestrutura própria para a AWS, qual mudança financeira ocorre?",
+      "alternativas": [
+        "De despesa operacional (OpEx) para despesa de capital (CapEx)",
+        "De despesa de capital (CapEx) para despesa operacional (OpEx)",
+        "Ambas viram despesa de capital",
+        "Não há mudança na classificação contábil"
+      ],
+      "correta": 1,
+      "explicacao": "Comprar servidores é CapEx: investimento inicial em ativo que deprecia. Na nuvem o gasto vira OpEx, recorrente e proporcional ao consumo. Consequência de engenharia: como o custo de errar cai, experimentar fica barato."
+    },
+    {
+      "id": "00-05",
+      "dificuldade": "dificil",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Uma empresa roda uma carga de trabalho constante, previsível e de altíssimo volume, com pouquíssima variação ao longo do ano e grande volume de tráfego de saída para a internet. Qual conclusão é mais defensável?",
+      "alternativas": [
+        "A nuvem sempre será mais barata, pois há economias de escala",
+        "É um dos cenários em que infraestrutura própria pode sair mais barata, porque a elasticidade não é aproveitada e a transferência de saída é cobrada",
+        "A empresa deve usar exclusivamente instâncias Spot",
+        "O modelo híbrido é sempre proibido pela AWS nesse caso"
+      ],
+      "correta": 1,
+      "explicacao": "A economia da nuvem vem principalmente de elasticidade — pagar menos quando a demanda cai. Sem variação, esse benefício não é acionado, e o custo de transferência de dados de saída pode dominar a conta. Saber reconhecer isso é justamente o que as questões de otimização de custos avaliam."
+    },
+    {
+      "id": "00-06",
+      "dificuldade": "facil",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Um banco mantém o core bancário no data center próprio por exigência regulatória, mas roda o portal do cliente na AWS, conectando os dois ambientes. Qual modelo de implantação é esse?",
+      "alternativas": ["Nuvem pública", "Híbrido", "Multi-cloud", "On-premises"],
+      "correta": 1,
+      "explicacao": "Híbrido é a combinação de recursos on-premises com recursos na nuvem, integrados. Multi-cloud seria usar dois provedores de nuvem diferentes, o que é outra coisa."
+    },
+    {
+      "id": "00-07",
+      "dificuldade": "medio",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Qual das opções é um exemplo de escalabilidade VERTICAL?",
+      "alternativas": [
+        "Adicionar mais instâncias EC2 atrás de um load balancer",
+        "Trocar uma instância t3.medium por uma t3.2xlarge",
+        "Replicar a aplicação em outra Região",
+        "Ativar o Auto Scaling para adicionar instâncias no pico"
+      ],
+      "correta": 1,
+      "explicacao": "Escalar verticalmente é aumentar a capacidade da mesma máquina (mais CPU e memória). As demais são escala horizontal ou distribuição geográfica. Na nuvem a escala horizontal costuma ser preferida por não ter teto físico e por tolerar falha de instância individual."
+    },
+    {
+      "id": "00-08",
+      "dificuldade": "medio",
+      "dominio": "CLF-C02 D1",
+      "enunciado": "Qual tecnologia é o alicerce técnico que tornou a computação em nuvem economicamente viável?",
+      "alternativas": [
+        "Blockchain",
+        "Virtualização",
+        "Fibra óptica",
+        "Bancos de dados relacionais"
+      ],
+      "correta": 1,
+      "explicacao": "A virtualização permite fatiar um servidor físico em várias máquinas virtuais isoladas. É isso que deixa o provedor manter alta taxa de utilização do hardware juntando cargas de milhares de clientes, e revender capacidade por hora ou segundo."
+    }
+  ]
+}

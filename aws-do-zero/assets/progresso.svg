@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="263" height="26" role="img" aria-label="progresso geral: 0/16 módulos · 0%">
+  <linearGradient id="brilho" x2="0" y2="100%">
+    <stop offset="0" stop-color="#fff" stop-opacity=".08"/>
+    <stop offset="1" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="borda">
+    <rect width="263" height="26" rx="6" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#borda)">
+    <rect width="116" height="26" fill="#211D3C"/>
+    <rect x="116" width="147.5" height="26" fill="#FF6B8A"/>
+    <rect width="263" height="26" fill="url(#brilho)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Consolas, 'IBM Plex Mono', ui-monospace, monospace" font-size="12">
+    <text x="58.0" y="17" fill="#948CBB">progresso geral</text>
+    <text x="189.75" y="17" fill="#16132A" font-weight="700">0/16 módulos · 0%</text>
+  </g>
+</svg>

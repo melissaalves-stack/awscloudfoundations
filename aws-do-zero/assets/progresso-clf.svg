@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="207" height="26" role="img" aria-label="CLF-C02: 0/11 módulos · 0%">
+  <linearGradient id="brilho" x2="0" y2="100%">
+    <stop offset="0" stop-color="#fff" stop-opacity=".08"/>
+    <stop offset="1" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="borda">
+    <rect width="207" height="26" rx="6" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#borda)">
+    <rect width="60" height="26" fill="#211D3C"/>
+    <rect x="60" width="147.5" height="26" fill="#FF6B8A"/>
+    <rect width="207" height="26" fill="url(#brilho)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Consolas, 'IBM Plex Mono', ui-monospace, monospace" font-size="12">
+    <text x="30.0" y="17" fill="#948CBB">CLF-C02</text>
+    <text x="133.75" y="17" fill="#16132A" font-weight="700">0/11 módulos · 0%</text>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.png" alt="Trilha Cloud · Liga Acadêmica SBG · UNIFAL-MG" width="100%" />
+<img src="./assets/banner.svg" alt="Trilha Cloud · Liga Acadêmica SBG · UNIFAL-MG" width="100%" />
 
 <br><br>
 

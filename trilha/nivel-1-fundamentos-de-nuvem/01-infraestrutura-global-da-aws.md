@@ -26,12 +26,12 @@ Uma **Região** é uma área geográfica do mundo onde a AWS tem infraestrutura.
 
 ```mermaid
 flowchart TD
-    W[🌍 Infraestrutura Global AWS] --> R1[📍 Região: São Paulo]
-    W --> R2[📍 Região: Norte da Virgínia]
-    W --> R3[📍 Região: Irlanda]
-    R1 --> AZ1[Zona A]
-    R1 --> AZ2[Zona B]
-    R1 --> AZ3[Zona C]
+    W["🌍 Infraestrutura Global AWS"] --> R1["📍 Região: São Paulo"]
+    W --> R2["📍 Região: Norte da Virgínia"]
+    W --> R3["📍 Região: Irlanda"]
+    R1 --> AZ1["Zona A"]
+    R1 --> AZ2["Zona B"]
+    R1 --> AZ3["Zona C"]
 ```
 
 ### 3. Zonas de Disponibilidade (Availability Zones / AZs)
@@ -66,9 +66,9 @@ Além das Regiões, a AWS tem centenas de **Edge Locations** — pontos menores,
 
 ```mermaid
 flowchart LR
-    U[👤 Usuário em Alfenas] --> E[⚡ Edge Location próxima]
+    U["👤 Usuário em Alfenas"] --> E["⚡ Edge Location próxima"]
     E -->|conteúdo em cache| U
-    E -.->|só se necessário| R[📍 Região distante]
+    E -.->|só se necessário| R["📍 Região distante"]
 ```
 
 ---

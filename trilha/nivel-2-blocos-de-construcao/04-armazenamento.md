@@ -17,9 +17,9 @@ Todo sistema precisa **guardar dados** — mas nem todo dado se guarda do mesmo 
 
 ```mermaid
 flowchart TD
-    S[💾 Armazenamento na AWS] --> O[🗂️ Objetos<br/>Amazon S3]
-    S --> B[🧱 Blocos<br/>Amazon EBS]
-    S --> F[📁 Arquivos<br/>Amazon EFS]
+    S["💾 Armazenamento na AWS"] --> O["🗂️ Objetos<br/>Amazon S3"]
+    S --> B["🧱 Blocos<br/>Amazon EBS"]
+    S --> F["📁 Arquivos<br/>Amazon EFS"]
 ```
 
 ### 1. Armazenamento de objetos — Amazon S3

@@ -20,7 +20,7 @@ Ao final deste módulo, você será capaz de:
 
 ```mermaid
 flowchart LR
-    A[Conceito] --> B[Exemplo]
+    A["Conceito"] --> B["Exemplo"]
 ```
 
 ### [Seção 2]

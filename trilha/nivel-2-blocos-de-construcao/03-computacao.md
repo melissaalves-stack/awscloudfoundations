@@ -17,8 +17,8 @@ Ao final deste módulo, você será capaz de:
 
 ```mermaid
 flowchart LR
-    A[🖥️ EC2<br/>servidor completo] --> B[📦 Containers<br/>empacotado e leve]
-    B --> C[⚡ Serverless<br/>só o código]
+    A["🖥️ EC2<br/>servidor completo"] --> B["📦 Containers<br/>empacotado e leve"]
+    B --> C["⚡ Serverless<br/>só o código"]
     A -.mais controle.-> A
     C -.menos gerência.-> C
 ```
@@ -62,10 +62,10 @@ O serviço-estrela é o **AWS Lambda**: você sobe uma função, define o **even
 
 ```mermaid
 flowchart LR
-    E1[📤 Upload de arquivo] --> L[⚡ Função Lambda]
-    E2[🌐 Chamada de API] --> L
-    E3[⏰ Horário agendado] --> L
-    L --> R[✅ Executa e cobra só pelo uso]
+    E1["📤 Upload de arquivo"] --> L["⚡ Função Lambda"]
+    E2["🌐 Chamada de API"] --> L
+    E3["⏰ Horário agendado"] --> L
+    L --> R["✅ Executa e cobra só pelo uso"]
 ```
 
 > [!TIP]

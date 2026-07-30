@@ -38,12 +38,12 @@ Esse modelo é o que chamamos de **on-premises** (ou "on-prem"): tudo por sua co
 ```mermaid
 flowchart LR
     subgraph ANTES["🏢 On-premises (antes)"]
-        A1[Comprar servidores] --> A2[Manter sala e equipe]
-        A2 --> A3[Pagar tudo, sempre]
+        A1["Comprar servidores"] --> A2["Manter sala e equipe"]
+        A2 --> A3["Pagar tudo, sempre"]
     end
     subgraph DEPOIS["☁️ Nuvem (agora)"]
-        B1[Ligar recursos<br/>sob demanda] --> B2[Usar]
-        B2 --> B3[Pagar só o que usou]
+        B1["Ligar recursos<br/>sob demanda"] --> B2["Usar"]
+        B2 --> B3["Pagar só o que usou"]
     end
 ```
 

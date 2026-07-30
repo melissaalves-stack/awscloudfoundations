@@ -36,11 +36,11 @@ Quando uma conta AWS é criada, nasce o **usuário root** — o "dono" absoluto,
 
 ```mermaid
 flowchart TD
-    P[📜 Política<br/>define permissões] --> U[👤 Usuário]
-    P --> G[👥 Grupo]
-    P --> R[🎭 Função/Role]
+    P["📜 Política<br/>define permissões"] --> U["👤 Usuário"]
+    P --> G["👥 Grupo"]
+    P --> R["🎭 Função/Role"]
     G --> U
-    G -.contém.-> U2[👤 Outro usuário]
+    G -.contém.-> U2["👤 Outro usuário"]
 ```
 
 | Conceito | O que é | Exemplo |
@@ -73,9 +73,9 @@ Se a pessoa só precisa **ler** relatórios, ela não deve poder **apagar** o ba
 
 ```mermaid
 flowchart LR
-    A[Login] --> B{MFA?}
-    B -->|Senha correta<br/>+ código do app| C[✅ Acesso liberado]
-    B -->|Só senha| D[❌ Bloqueado]
+    A["Login"] --> B{"MFA?"}
+    B -->|Senha correta<br/>+ código do app| C["✅ Acesso liberado"]
+    B -->|Só senha| D["❌ Bloqueado"]
 ```
 
 ---

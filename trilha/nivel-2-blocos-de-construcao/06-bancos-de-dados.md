@@ -47,8 +47,8 @@ Na AWS:
 
 ```mermaid
 flowchart TD
-    Q{Como são seus dados?} -->|Estrutura fixa,<br/>relações fortes,<br/>consistência crítica| SQL[🗃️ Relacional<br/>RDS / Aurora]
-    Q -->|Flexível, enorme volume,<br/>velocidade extrema| NO[⚡ NoSQL<br/>DynamoDB]
+    Q{"Como são seus dados?"} -->|Estrutura fixa,<br/>relações fortes,<br/>consistência crítica| SQL["🗃️ Relacional<br/>RDS / Aurora"]
+    Q -->|Flexível, enorme volume,<br/>velocidade extrema| NO["⚡ NoSQL<br/>DynamoDB"]
 ```
 
 | Situação | Melhor escolha |

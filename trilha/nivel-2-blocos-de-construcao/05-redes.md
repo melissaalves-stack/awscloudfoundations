@@ -26,10 +26,10 @@ Dentro da VPC você cria **sub-redes (subnets)**, que dividem sua rede em partes
 
 ```mermaid
 flowchart TD
-    NET[🌍 Internet] --> IGW[🚪 Internet Gateway]
+    NET["🌍 Internet"] --> IGW["🚪 Internet Gateway"]
     subgraph VPC["🏰 Sua VPC"]
-        IGW --> PUB[🌐 Sub-rede pública<br/>servidor web]
-        PUB --> PRIV[🔒 Sub-rede privada<br/>banco de dados]
+        IGW --> PUB["🌐 Sub-rede pública<br/>servidor web"]
+        PUB --> PRIV["🔒 Sub-rede privada<br/>banco de dados"]
     end
 ```
 
@@ -59,9 +59,9 @@ O **Amazon CloudFront** é uma **CDN (Content Delivery Network)**: ele usa as **
 
 ```mermaid
 flowchart LR
-    U[👤 Usuário no Brasil] --> CF[⚡ CloudFront<br/>Edge em SP]
+    U["👤 Usuário no Brasil"] --> CF["⚡ CloudFront<br/>Edge em SP"]
     CF -->|cache local, rápido| U
-    CF -.busca só se preciso.-> ORIG[🗂️ Origem: bucket S3 nos EUA]
+    CF -.busca só se preciso.-> ORIG["🗂️ Origem: bucket S3 nos EUA"]
 ```
 
 > [!TIP]

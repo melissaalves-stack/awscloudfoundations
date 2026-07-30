@@ -6,11 +6,11 @@ Bem-vindo(a) à trilha de aprendizado da **Liga Acadêmica SBG — UNIFAL-MG**! 
 
 ```mermaid
 flowchart LR
-    A[1. Entre na<br/>comunidade] --> B[2. Estude os<br/>módulos]
-    B --> C[3. Faça os<br/>quizzes]
-    C --> D[4. Marque seu<br/>progresso]
-    D --> E[5. Pratique nos<br/>Builder Labs]
-    E --> F[6. Tire dúvidas<br/>nas Discussions]
+    A["1. Entre na<br/>comunidade"] --> B["2. Estude os<br/>módulos"]
+    B --> C["3. Faça os<br/>quizzes"]
+    C --> D["4. Marque seu<br/>progresso"]
+    D --> E["5. Pratique nos<br/>Builder Labs"]
+    E --> F["6. Tire dúvidas<br/>nas Discussions"]
     F --> B
 ```
 

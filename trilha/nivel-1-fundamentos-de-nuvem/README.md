@@ -19,6 +19,10 @@ Antes de construir qualquer coisa, você precisa entender **o que é a nuvem, po
 - Compreender os fundamentos de identidade e segurança (IAM).
 
 ## Terminou o Nível 1? Faça o laboratório prático do AWS Simulearn!
-> [Acesse aqui para praticar seus conhecimentos do nível 1](https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-primeiros-passos-na-nuvem/DCCN5PZXUQ)
+> [Clique aqui para praticar seus conhecimentos do nível 1](https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-primeiros-passos-na-nuvem/DCCN5PZXUQ)
+OBS: Por se tratar de um desafio mais dificil, realize-o apenas quando se sentir confiante com os fundamentos de nuvem.
+Assim que finalizar o desafio, você recebe um certificado oficial da AWS Training e Certification!
+<img width="1115" height="792" alt="image" src="https://github.com/user-attachments/assets/0e42e420-9df0-4398-92af-318b2d6cd4a3" />
+
 ---
 🏠 [Voltar ao início](../../README.md) · ➡️ [Ir para o Nível 2](../nivel-2-blocos-de-construcao/README.md)

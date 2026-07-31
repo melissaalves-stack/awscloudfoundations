@@ -53,7 +53,7 @@ Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica SBG da U
 | 05 | [Redes: VPC, DNS e entrega de conteúdo](./trilha/nivel-2-blocos-de-construcao/05-redes.md) | 5h |
 | 06 | [Bancos de dados gerenciados](./trilha/nivel-2-blocos-de-construcao/06-bancos-de-dados.md) | 4h |
 
-### 🔜 Próximos níveis &nbsp; `esqueletos prontos p/ upload`
+### 🔜 Próximos níveis &nbsp;
 🟣 [Nível 3 · Arquitetura e Alta Disponibilidade](./trilha/nivel-3-arquitetura-e-alta-disponibilidade/) &nbsp;·&nbsp; 🟠 [Nível 4 · Segurança e Operações](./trilha/nivel-4-seguranca-e-operacoes/) &nbsp;·&nbsp; 🩷 [Nível 5 · Dados, Analytics e IA](./trilha/nivel-5-dados-analytics-e-ia/) &nbsp;·&nbsp; 🏆 [Nível 6 · Projeto Final e Certificação](./trilha/nivel-6-projeto-final-e-certificacao/)
 
 ---

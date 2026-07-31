@@ -18,5 +18,7 @@ Antes de construir qualquer coisa, você precisa entender **o que é a nuvem, po
 - Conhecer como a AWS organiza sua infraestrutura pelo planeta (Regiões e Zonas de Disponibilidade).
 - Compreender os fundamentos de identidade e segurança (IAM).
 
+## Terminou o Nível 1? Faça o laboratório prático do AWS Simulearn!
+[Acesse aqui para praticar seus conhecimentos do nível 1](https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-primeiros-passos-na-nuvem/DCCN5PZXUQ)
 ---
 🏠 [Voltar ao início](../../README.md) · ➡️ [Ir para o Nível 2](../nivel-2-blocos-de-construcao/README.md)

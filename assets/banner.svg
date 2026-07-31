@@ -32,7 +32,7 @@
 <g clip-path="url(#cc)">
   <text class="m" x="179" y="196" font-size="24" fill="#E6EDF3">./trilha-cloud --start</text>
 </g>
-<rect class="caret" x="179" y="177" width="12" height="25" fill="#FF9900"/>
+<rect class="caret" x="179" y="177" width="12" height="28" fill="#FF9900"/>
 
 <!-- saída -->
 <g class="out">

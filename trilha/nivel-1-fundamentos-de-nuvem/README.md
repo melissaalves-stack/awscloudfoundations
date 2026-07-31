@@ -24,7 +24,7 @@ Antes de construir qualquer coisa, você precisa entender **o que é a nuvem, po
 OBS: Por se tratar de um desafio mais dificil, realize-o apenas quando se sentir confiante com os fundamentos de nuvem.
 
 Assim que finalizar o desafio, você recebe um certificado oficial da AWS Training e Certification!
-<img width="500" height="792" alt="image" src="https://github.com/user-attachments/assets/0e42e420-9df0-4398-92af-318b2d6cd4a3" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/0e42e420-9df0-4398-92af-318b2d6cd4a3" />
 
 ---
 🏠 [Voltar ao início](../../README.md) · ➡️ [Ir para o Nível 2](../nivel-2-blocos-de-construcao/README.md)

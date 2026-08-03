@@ -13,6 +13,7 @@
 ![Liga Acadêmica SBG](https://img.shields.io/badge/Liga_Acad%C3%AAmica-SBG_UNIFAL--MG-00E582?style=for-the-badge&labelColor=12181F)
 ![Trilha Cloud](https://img.shields.io/badge/Trilha-Computa%C3%A7%C3%A3o_em_Nuvem-42B4FF?style=for-the-badge&labelColor=12181F)
 ![100% GitHub](https://img.shields.io/badge/Aprendizado-100%25_no_GitHub-AD5CFF?style=for-the-badge&labelColor=12181F)
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-yellow?style=for-the-badge&labelColor=12181F)](LICENSE.md)
 
 </div>
 
@@ -101,6 +102,19 @@ Nas **Discussions**: tire dúvidas e ajude os colegas da liga.
 > ### 👉 [Entrar no AWS Builder Center](COLE-SEU-LINK-DO-BUILDER-CENTER-AQUI)
 
 <br>
+
+---
+
+## 🛡️ Autoria e Licença
+
+Este repositório e todo o seu conteúdo educacional foram desenvolvidos por **Melissa Alves** em conjunto com a **Liga Acadêmica SBG — UNIFAL-MG**.
+
+Este material está protegido sob a licença **[Creative Commons CC BY-NC-SA 4.0](LICENSE.md)**:
+- 👤 **Atribuição:** É obrigatório dar os devidos créditos à autora e à Liga.
+- 🚫 **Não Comercial:** É expressamente proibida a venda, comercialização ou uso com fins lucrativos deste material.
+- 🔄 **Compartilha Igual:** Qualquer adaptação deve manter esta mesma licença.
+
+---
 
 <div align="center">
 

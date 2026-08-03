@@ -39,7 +39,14 @@ No fim de cada módulo tem um **quiz interativo**. As respostas ficam escondidas
 
 **Pergunta exemplo:** O que significa "elasticidade" na nuvem?
 
-**Resposta:** É a capacidade de aumentar ou diminuir recursos automaticamente conforme a demanda. ✔️
+<details>
+<summary>👀 <b>Clique aqui para revelar a resposta</b></summary>
+
+> **Resposta:** É a capacidade de aumentar ou diminuir recursos automaticamente conforme a demanda. ✔️
+
+</details>
+
+<br>
 
 Deu certo? É assim que todos os quizzes funcionam!
 

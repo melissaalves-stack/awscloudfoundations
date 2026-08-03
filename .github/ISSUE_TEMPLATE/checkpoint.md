@@ -18,4 +18,10 @@ labels: ["progresso"]
 - [ ] 05 · Redes (VPC, DNS, entrega de conteúdo)
 - [ ] 06 · Bancos de dados gerenciados
 
+### 🟣 Nível 3 — Arquitetura e Alta Disponibilidade
+- [ ] 07 · Escalabilidade e balanceamento de carga
+- [ ] 08 · Alta disponibilidade e tolerância a falhas
+- [ ] 09 · O AWS Well-Architected Framework
+- [ ] 10 · Otimização de custos
+
 > 💡 Vá marcando os quadradinhos conforme concluir cada módulo. Você consegue! 🚀

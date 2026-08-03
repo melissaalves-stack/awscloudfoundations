@@ -58,7 +58,7 @@ Use a aba **Discussions** deste repositório para perguntar, responder colegas e
 |:--:|:--|:--:|
 | 🟢 **1** | Fundamentos de Nuvem | ✅ Disponível |
 | 🔵 **2** | Os Blocos de Construção | ✅ Disponível |
-| 🟣 **3** | Arquitetura e Alta Disponibilidade | 🔜 Em breve |
+| 🟣 **3** | Arquitetura e Alta Disponibilidade | ✅ Disponível |
 | 🟠 **4** | Segurança e Operações | 🔜 Em breve |
 | 🩷 **5** | Dados, Analytics e IA | 🔜 Em breve |
 | 🏆 **6** | Projeto Final e Certificação | 🔜 Em breve |

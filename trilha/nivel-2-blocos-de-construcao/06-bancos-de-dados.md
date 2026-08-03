@@ -2,11 +2,15 @@
 
 > **Nível:** 2 · Os Blocos de Construção · **Tempo estimado:** 4h · **Pré-requisitos:** Módulo 05
 
+> [!NOTE]
+> 📅 **No cronograma da Liga:** fecha o **Evento 2 · O Arsenal** (Setembro/2026), o encontro dos serviços core da AWS. Domínio: **CLF-C02 D3 · Cloud Technology & Services (34%)**.
+
 ## 🎯 Objetivos de aprendizagem
 Ao final deste módulo, você será capaz de:
 - [ ] Diferenciar bancos de dados relacionais e NoSQL.
 - [ ] Entender o que significa um banco "gerenciado".
 - [ ] Conhecer RDS, Aurora e DynamoDB.
+- [ ] Distinguir Multi-AZ (disponibilidade) de Read Replicas (performance).
 - [ ] Escolher o tipo de banco certo para cada necessidade.
 
 ---
@@ -38,7 +42,7 @@ Na AWS:
 Não usam o formato rígido de tabelas relacionais. São flexíveis, extremamente rápidos e escalam com facilidade — ótimos para grandes volumes, dados que mudam de forma, jogos, carrinhos de compra e apps de alto tráfego.
 
 Na AWS:
-- **Amazon DynamoDB** — banco NoSQL totalmente gerenciado, rápido e que escala praticamente sem limites.
+- **Amazon DynamoDB** — banco NoSQL totalmente gerenciado, rápido, serverless e que escala praticamente sem limites.
 
 > [!TIP]
 > **Analogia:** um banco NoSQL é como uma **caixa de gavetas etiquetadas** 🗄️. Você guarda cada coisa do jeito que ela é (nem tudo precisa ter o mesmo formato) e encontra rapidinho pela etiqueta.
@@ -59,9 +63,26 @@ flowchart TD
 > [!NOTE]
 > Muitos sistemas usam **os dois**: um relacional para os dados centrais e um NoSQL para partes que exigem velocidade e escala.
 
-### 5. Outros da família (para conhecer)
+### 5. Multi-AZ vs. Read Replica — não confunda!
+
+Duas formas de "reforçar" um banco relacional que a prova adora contrastar:
+
+| Recurso | Serve para | Como funciona |
+|:--|:--|:--|
+| 🛡️ **Multi-AZ** | **Disponibilidade** (resiliência) | Uma cópia idêntica ("standby") em outra AZ, que assume automaticamente se a principal cair |
+| ⚡ **Read Replica** | **Performance** (escalar leitura) | Cópias que atendem consultas de leitura, aliviando o banco principal |
+
+> [!IMPORTANT]
+> Regra de ouro: **Multi-AZ = sobreviver a falhas** (foco em disponibilidade). **Read Replica = aguentar mais leituras** (foco em desempenho). Elas resolvem problemas diferentes e podem ser usadas juntas.
+
+### 6. OLTP vs. OLAP — dois jeitos de usar dados
+
+- 🛒 **OLTP** (transacional) — muitas operações pequenas e rápidas (inserir pedido, atualizar saldo). É o mundo do **RDS/Aurora/DynamoDB**.
+- 📈 **OLAP** (analítico) — poucas consultas, porém pesadas, sobre grandes volumes históricos (relatórios, BI). É o mundo do **data warehouse**.
+
+### 7. Outros da família (para conhecer)
 - **Amazon ElastiCache** — guarda dados em memória para acesso ultrarrápido (cache).
-- **Amazon Redshift** — banco voltado a **data warehouse** (análise de grandes volumes históricos — você verá mais no Nível 5).
+- **Amazon Redshift** — banco voltado a **data warehouse** (análise OLAP de grandes volumes — você verá mais no Nível 5).
 
 ---
 
@@ -69,6 +90,9 @@ flowchart TD
 
 - 🔗 **AWS Skill Builder** → módulo *"Databases"* + lab guiado de DynamoDB/RDS.
 - 🔗 **AWS Builder Labs** → laboratório pronto para criar uma tabela e fazer consultas, **sem** conta própria.
+
+> [!TIP]
+> **Para a liderança:** encerrado o **Evento 2**, os alunos já viram os quatro blocos (computação, storage, redes, bancos). É um bom momento para um simulado-relâmpago do domínio D3 (34% da prova) antes de avançar para arquitetura.
 
 ---
 
@@ -93,7 +117,13 @@ Um banco **relacional** gerenciado: **Amazon RDS** ou **Amazon Aurora**.
 </details>
 
 <details>
-<summary><b>4. Verdadeiro ou falso: um sistema só pode usar um tipo de banco.</b></summary>
+<summary><b>4. Você quer que o banco continue no ar mesmo se uma AZ cair. Multi-AZ ou Read Replica?</b></summary>
+
+**Multi-AZ** — ele mantém uma cópia standby em outra AZ, que assume automaticamente. Read Replica é para escalar **leitura**, não para disponibilidade.
+</details>
+
+<details>
+<summary><b>5. Verdadeiro ou falso: um sistema só pode usar um tipo de banco.</b></summary>
 
 **Falso.** É comum combinar relacional e NoSQL no mesmo sistema, cada um para a parte em que é mais forte.
 </details>
@@ -108,12 +138,16 @@ Um banco **relacional** gerenciado: **Amazon RDS** ou **Amazon Aurora**.
 | **RDS** | Serviço gerenciado de bancos relacionais (MySQL, PostgreSQL, etc.). |
 | **Aurora** | Banco relacional da AWS, alta performance. |
 | **NoSQL** | Banco flexível e escalável, sem tabelas rígidas. |
-| **DynamoDB** | Banco NoSQL gerenciado, rápido e escalável. |
+| **DynamoDB** | Banco NoSQL gerenciado, serverless, rápido e escalável. |
+| **Multi-AZ** | Cópia standby em outra AZ, para disponibilidade. |
+| **Read Replica** | Cópia de leitura, para escalar performance. |
+| **OLTP / OLAP** | Uso transacional (operações rápidas) vs. analítico (relatórios pesados). |
 
 ## ✅ Checklist de conclusão
 - [ ] Li todo o conteúdo do módulo
 - [ ] Diferencio relacional e NoSQL
 - [ ] Entendi o que é um banco gerenciado
+- [ ] Sei diferenciar Multi-AZ (disponibilidade) de Read Replica (performance)
 - [ ] Sei escolher entre RDS/Aurora e DynamoDB
 - [ ] Fiz o quiz
 - [ ] Pratiquei em um Builder Lab

@@ -2,12 +2,16 @@
 
 > **Nível:** 1 · Fundamentos de Nuvem · **Tempo estimado:** 3h · **Pré-requisitos:** Módulo 00
 
+> [!NOTE]
+> 📅 **No cronograma da Liga:** parte do **Evento 1 · A Origem** (Agosto/2026). Aqui entra a "infraestrutura global (Regiões, Zonas de Disponibilidade e Edge Locations)" da consolidação teórica. Domínio: **CLF-C02 D1 · Cloud Concepts (24%)**.
+
 ## 🎯 Objetivos de aprendizagem
 Ao final deste módulo, você será capaz de:
 - [ ] Explicar o que são Regiões e Zonas de Disponibilidade (AZs).
 - [ ] Entender por que a AWS espalha data centers pelo mundo.
 - [ ] Escolher uma Região com base em critérios reais.
 - [ ] Reconhecer o papel das Edge Locations na entrega de conteúdo.
+- [ ] Diferenciar serviços globais, regionais e zonais.
 
 ---
 
@@ -34,12 +38,18 @@ flowchart TD
     R1 --> AZ3["Zona C"]
 ```
 
+> [!IMPORTANT]
+> Uma Região é **isolada** das outras: por padrão, seus dados **não saem** da Região que você escolheu, a menos que você mande. Isso é essencial para conformidade (LGPD, por exemplo).
+
 ### 3. Zonas de Disponibilidade (Availability Zones / AZs)
 
-Cada Região é dividida em várias **Zonas de Disponibilidade**. Uma AZ é composta por **um ou mais data centers** independentes, com energia, refrigeração e rede próprias, e ficam fisicamente **separadas** umas das outras (mas conectadas por links rápidos).
+Cada Região é dividida em várias **Zonas de Disponibilidade**. Uma AZ é composta por **um ou mais data centers** independentes, com energia, refrigeração e rede próprias, e ficam fisicamente **separadas** umas das outras (mas conectadas por links rápidos de baixa latência).
 
 > [!TIP]
 > **Por que isso importa?** Se um data center pega fogo, inunda ou fica sem energia, os outros continuam funcionando. Ao distribuir sua aplicação em **múltiplas AZs**, ela continua no ar mesmo se uma zona inteira falhar. Isso se chama **alta disponibilidade**.
+
+> [!NOTE]
+> **Número mágico:** toda Região da AWS tem **no mínimo 3 AZs**. Guarde isso — a prova gosta de perguntar o mínimo.
 
 > [!WARNING]
 > Colocar tudo em uma única AZ é como guardar todos os seus arquivos em um único HD sem backup. Funciona... até o dia em que não funciona.
@@ -71,12 +81,39 @@ flowchart LR
     E -.->|só se necessário| R["📍 Região distante"]
 ```
 
+### 6. Escopo dos serviços: global, regional ou zonal
+
+Cada serviço da AWS "vive" em um nível diferente da infraestrutura. Entender isso evita muita confusão:
+
+| Escopo | O recurso existe em... | Exemplos |
+|:--|:--|:--|
+| 🌐 **Global** | Toda a AWS, sem Região fixa | IAM, Route 53, CloudFront |
+| 📍 **Regional** | Uma Região (replicado entre AZs) | S3, DynamoDB, Lambda |
+| 🏠 **Zonal** | Uma única AZ | EC2 (a instância), EBS, sub-redes |
+
+> [!TIP]
+> Faz sentido: **identidade** (IAM) precisa valer no mundo todo, então é global. Já **uma instância EC2** roda em uma máquina específica, dentro de uma AZ — por isso é zonal. Para deixá-la resiliente, você replica em outras AZs.
+
+### 7. Estendendo a nuvem: Local Zones, Wavelength e Outposts
+
+Às vezes você precisa da AWS **mais perto ainda**, ou até dentro da sua empresa. Para isso existem:
+
+- 🏙️ **Local Zones** — colocam computação e armazenamento perto de grandes cidades, para latência ultrabaixa.
+- 📡 **Wavelength** — leva a AWS para dentro das redes 5G das operadoras.
+- 🏭 **Outposts** — racks físicos da AWS instalados **no seu próprio data center**, para quem precisa rodar localmente com as mesmas ferramentas da nuvem.
+
+> [!NOTE]
+> Você não precisa decorar detalhes desses três. Basta reconhecer que servem para **aproximar a nuvem** de casos específicos (latência, 5G, data center próprio).
+
 ---
 
 ## 🧪 Mão na massa (sem console!)
 
 - 🔗 **AWS Skill Builder** → módulo sobre *"AWS Global Infrastructure"* dentro do Cloud Practitioner Essentials.
 - 🔗 Explore o mapa interativo da infraestrutura global no site oficial da AWS (apenas visualização, sem login).
+
+> [!TIP]
+> **Para a liderança:** um bom exercício de fixação para o Evento 1 é pedir que cada aluno classifique 5 serviços quaisquer em global / regional / zonal. Rende ótima pergunta de Kahoot.
 
 ---
 
@@ -85,7 +122,7 @@ flowchart LR
 <details>
 <summary><b>1. Qual a diferença entre uma Região e uma Zona de Disponibilidade?</b></summary>
 
-Uma **Região** é uma área geográfica (ex.: São Paulo). Uma **Zona de Disponibilidade (AZ)** é um ou mais data centers isolados **dentro** de uma Região. Cada Região tem várias AZs.
+Uma **Região** é uma área geográfica (ex.: São Paulo). Uma **Zona de Disponibilidade (AZ)** é um ou mais data centers isolados **dentro** de uma Região. Cada Região tem no mínimo 3 AZs.
 </details>
 
 <details>
@@ -106,20 +143,29 @@ Quaisquer dois entre: **latência** (proximidade dos usuários), **custo**, **co
 Para entregar conteúdo (imagens, vídeos, páginas) **mais perto do usuário final**, reduzindo o tempo de carregamento. É a base do Amazon CloudFront.
 </details>
 
+<details>
+<summary><b>5. O IAM é um serviço global, regional ou zonal? E uma instância EC2?</b></summary>
+
+O **IAM é global** (identidade vale em toda a AWS). Uma **instância EC2 é zonal** (roda em uma AZ específica). Por isso, para tornar o EC2 resiliente, distribuímos instâncias em várias AZs.
+</details>
+
 ---
 
 ## 📔 Glossário
 | Termo | Significado |
 |:--|:--|
-| **Região (Region)** | Área geográfica com infraestrutura da AWS. |
-| **Zona de Disponibilidade (AZ)** | Um ou mais data centers isolados dentro de uma Região. |
+| **Região (Region)** | Área geográfica isolada com infraestrutura da AWS. |
+| **Zona de Disponibilidade (AZ)** | Um ou mais data centers isolados dentro de uma Região (mín. 3 por Região). |
 | **Alta disponibilidade** | Capacidade de continuar funcionando mesmo com falhas. |
 | **Edge Location** | Ponto de presença para entregar conteúdo perto do usuário. |
+| **Serviço global/regional/zonal** | O nível da infraestrutura em que um recurso existe. |
+| **Outposts / Local Zones / Wavelength** | Formas de estender a AWS para perto do usuário ou para o data center próprio. |
 
 ## ✅ Checklist de conclusão
 - [ ] Li todo o conteúdo do módulo
 - [ ] Sei diferenciar Região, AZ e Edge Location
-- [ ] Entendi por que usar múltiplas AZs
+- [ ] Entendi por que usar múltiplas AZs (e que há no mínimo 3)
+- [ ] Consigo classificar serviços em global, regional e zonal
 - [ ] Fiz o quiz
 - [ ] Explorei o mapa da infraestrutura global
 

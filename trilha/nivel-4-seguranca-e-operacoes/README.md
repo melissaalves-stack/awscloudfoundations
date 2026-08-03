@@ -11,5 +11,3 @@ Proteja e opere ambientes em nuvem como um profissional.
 | 12 | Monitoramento e observabilidade (CloudWatch) | 4h | 🔜 |
 | 13 | Infraestrutura como Código (CloudFormation) | 5h | 🔜 |
 | 14 | Automação e DevOps na AWS | 5h | 🔜 |
-
-> 📌 **Para a liderança:** duplique o `_templates/modulo-template.md` para criar cada módulo acima.

@@ -11,5 +11,3 @@ Extraia valor dos dados e construa com inteligência artificial na nuvem.
 | 16 | Analytics e visualização | 4h | 🔜 |
 | 17 | Introdução a Machine Learning na AWS | 5h | 🔜 |
 | 18 | IA Generativa com Amazon Bedrock | 5h | 🔜 |
-
-> 📌 **Para a liderança:** duplique o `_templates/modulo-template.md` para criar cada módulo acima.

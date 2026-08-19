@@ -21,7 +21,7 @@
 
 ## 👋 Bem-vindo(a) à Trilha!
 
-Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica SBG da UNIFAL-MG** — vinculada ao programa **AWS Student Builder Group**. Aqui você aprende **computação em nuvem do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes e prática guiada.
+Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG** — vinculada ao programa **AWS Student Builder Group**. Aqui você aprende **computação em nuvem do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes e prática guiada.
 
 > [!IMPORTANT]
 > 🧭 **É a sua primeira vez aqui?** Comece pelo **[📖 Guia do Aluno](./GUIA-DO-ALUNO.md)** — ele explica todo o fluxo de aprendizado.

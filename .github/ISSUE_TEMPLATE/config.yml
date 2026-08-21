@@ -1,5 +1,8 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: 💬 Discussions da Liga
-    url: https://github.com/
-    about: Para conversas abertas, dúvidas gerais e troca de ideias, use as Discussions.
+  - name: "💬 Discussions da Liga"
+    url: https://github.com/melissaalves-stack/awscloudfoundations/discussions
+    about: "Para conversas gerais, networking, carreira e sugestões — use as Discussions."
+  - name: "🚀 Entrar no AWS Builder Center"
+    url: https://bit.ly/4w720IR
+    about: "Crie seu perfil oficial pelo link da Liga."

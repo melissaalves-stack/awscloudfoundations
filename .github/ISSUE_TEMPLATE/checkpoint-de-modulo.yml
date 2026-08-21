@@ -1,0 +1,53 @@
+name: "📊 Checkpoint de Módulo"
+description: "Registre a conclusão de um módulo ou nível da trilha."
+title: "[Checkpoint] Trilha · Módulo/Nível: "
+labels: ["checkpoint"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📊 Checkpoint de Módulo
+        Use este formulário para registrar seu progresso. Concluir os checkpoints é **um dos requisitos para finalizar o curso**. 🚀
+
+  - type: dropdown
+    id: trilha
+    attributes:
+      label: Qual trilha?
+      options:
+        - "🎓 Certificação Cloud Practitioner (CLF-C02)"
+        - "🤖 Certificação AI Practitioner (AIF-C01)"
+        - "🔬 Aprendizado Aprofundado (Capacitação de Líderes)"
+    validations:
+      required: true
+
+  - type: input
+    id: modulo
+    attributes:
+      label: Módulo / Nível concluído
+      placeholder: "Ex.: Domínio 1 · Módulo 00 — Por que a nuvem existe"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist de conclusão
+      options:
+        - label: "Li todo o conteúdo do módulo"
+        - label: "Respondi ao quiz de 5 perguntas"
+        - label: "Explorei o laboratório sugerido no SimuLearn / Skill Builder"
+        - label: "Anotei minhas dúvidas (se houver)"
+
+  - type: textarea
+    id: aprendizado
+    attributes:
+      label: O que você aprendeu de mais importante?
+      placeholder: "Escreva 2-3 frases sobre o que ficou marcado neste módulo."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidência (opcional)
+      placeholder: "Cole aqui um print do lab concluído, certificado ou anotações."

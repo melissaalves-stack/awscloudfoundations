@@ -1,111 +1,138 @@
-Ah, desculpe! Ficou dentro de um bloco de código.
-
-Abaixo está o conteúdo formatado em **Markdown puro**, do jeito exato que você precisa colar direto no arquivo `.md`:
-
----
+<div align="center">
+  <img src="./assets/header-guia.png" alt="Guia do Aluno" width="100%" />
+</div>
 
 # 🎓 Guia do Aluno
 
-Bem-vindo(a) à trilha de aprendizado da **Liga Acadêmica SBG — UNIFAL-MG**! Todo o aprendizado acontece **aqui dentro do GitHub**. Este guia explica como usar o repositório.
+Bem-vindo(a) à trilha de aprendizado da **Liga Acadêmica SBG — UNIFAL-MG**! Todo o aprendizado acontece **aqui dentro do GitHub**. Este guia explica como usar o repositório do jeito certo.
+
+---
 
 ## 🧭 Como funciona
 
 ```mermaid
 flowchart LR
-    A["1. Entre na<br/>comunidade"] --> B["2. Estude os<br/>módulos"]
-    B --> C["3. Faça os<br/>quizzes"]
-    C --> D["4. Marque seu<br/>progresso"]
-    D --> E["5. Pratique nos<br/>Builder Labs"]
-    E --> F["6. Interaja no<br/>GitHub"]
-    F --> B
-
+    A["1. Entre na<br/>comunidade"] --> B["2. Escolha sua<br/>trilha"]
+    B --> C["3. Estude os<br/>módulos"]
+    C --> D["4. Faça os<br/>quizzes"]
+    D --> E["5. Marque seu<br/>progresso"]
+    E --> F["6. Pratique nos<br/>labs"]
+    F --> G["7. Interaja no<br/>GitHub"]
+    G --> C
 ```
+
+---
 
 ### 1. Entre na comunidade 🤝
 
 Crie seu perfil no **AWS Builder Center** pelo link oficial da nossa líder:
 
 > [!IMPORTANT]
-> 👉 **[Entre no AWS Builder Center pelo link da Liga](https://www.google.com/search?q=%23)** *(Link em breve — fique atento aos avisos da Liga!)*
-> Use **sempre** este link para se registrar quando estiver disponível — é assim que a AWS reconhece você como membro da nossa liga.
+> 👉 **[Entre no AWS Builder Center pelo link da Liga](https://bit.ly/4w720IR)**
+> Use **sempre** este link para se registrar — é assim que a AWS reconhece você como membro da nossa liga.
 
-### 2. Estude os módulos 📚
+### 2. Escolha sua trilha 🗺️
 
-A trilha é dividida em **níveis**, e cada nível tem **módulos** numerados. Comece pelo [Nível 1](https://www.google.com/search?q=./trilha/nivel-1-fundamentos-de-nuvem/) e siga em ordem. Cada módulo é uma aula completa, com explicações, diagramas e exemplos.
+Temos **três trilhas**, e você pode seguir na ordem que fizer mais sentido para você:
 
-### 3. Faça os quizzes ✅
+| Trilha | Para quem é |
+|:--|:--|
+| 🎓 **[Certificação Cloud Practitioner](./certificacao-cloud/)** | Quer tirar a certificação **CLF-C02** e dominar os fundamentos da nuvem. |
+| 🤖 **[Certificação AI Practitioner](./certificacao-ia/)** | Quer tirar a certificação **AIF-C01** e entender IA, ML e IA generativa na AWS. |
+| 🔬 **[Aprendizado Aprofundado](./aprofundamento/)** | Quer ir além da prova, com o conteúdo técnico da capacitação oficial de líderes. |
 
-No fim de cada módulo tem um **quiz interativo**. As respostas ficam escondidas em blocos retráteis — tente responder antes de abrir!
+> [!TIP]
+> Recomendamos começar pela **Cloud Practitioner**, mas as trilhas são independentes. Vá no seu ritmo!
+
+### 3. Estude os módulos 📚
+
+Cada trilha é dividida em **domínios** (ou blocos), e cada domínio tem **módulos** numerados. Cada módulo é uma aula completa, com explicações, analogias, diagramas e exemplos. Estude em ordem dentro de cada domínio.
+
+### 4. Faça os quizzes ✅
+
+No fim de **cada módulo** tem um **quiz interativo de 5 perguntas de múltipla escolha**. As alternativas ficam visíveis — escolha a sua resposta mentalmente e depois clique em **"Ver resposta"** para conferir e entender o porquê.
 
 **Pergunta exemplo:** O que significa "elasticidade" na nuvem?
 
-<details>
-<summary>👀 <b>Clique aqui para revelar a resposta</b></summary>
+- **A)** Guardar dados em vários países ao mesmo tempo.
+- **B)** Aumentar ou diminuir recursos automaticamente conforme a demanda.
+- **C)** Pagar um valor fixo mensal independentemente do uso.
+- **D)** Criptografar todo o tráfego de rede.
 
-> **Resposta:** É a capacidade de aumentar ou diminuir recursos automaticamente conforme a demanda. ✔️
+<details>
+<summary>💡 Ver resposta</summary>
+
+> ✅ **Resposta: B)** — Elasticidade é ajustar recursos (para cima ou para baixo) automaticamente conforme a demanda. É um dos maiores diferenciais da nuvem. ✔️
 
 </details>
 
 <br>
 
-Deu certo? É assim que todos os quizzes funcionam!
+Deu certo? É assim que **todos** os quizzes funcionam!
 
-### 4. Marque seu progresso 📊
+### 5. Marque seu progresso 📊
 
-Cada módulo tem uma **checklist de conclusão**. Para acompanhar e registrar sua evolução, você usará a aba **Issues** do repositório utilizando o template de Checkpoint.
+Cada módulo tem uma **checklist de conclusão** no final. Para registrar oficialmente sua evolução, abra uma **Issue** usando o template de **Checkpoint**.
 
-### 5. Pratique (sem console!) 🧪
+> [!IMPORTANT]
+> Registrar seus checkpoints é **um dos requisitos para concluir o curso**. Não pule essa etapa!
+>
+> 👉 **[Abrir um Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)**
 
-A parte prática usa ambientes **prontos e gratuitos** — você **não precisa** de conta pessoal da AWS nem de cartão de crédito:
+### 6. Pratique (sem console!) 🧪
 
-* **AWS Skill Builder** — cursos e labs guiados
-* **AWS Builder Labs** — laboratórios com ambiente pré-configurado
-* **AWS SimuLearn** — prática interativa com IA
+Ao final de cada módulo há uma **sugestão de laboratório**. A parte prática usa ambientes **prontos e gratuitos** — você **não precisa** de conta pessoal da AWS nem de cartão de crédito:
 
-### 6. Interaja nas Issues e Discussions 💬
+- **AWS Skill Builder** — cursos e labs guiados.
+- **AWS Builder Labs** — laboratórios com ambiente pré-configurado.
+- **AWS SimuLearn** — prática interativa com IA (e ainda rende certificado oficial da AWS!).
 
-Tire dúvidas, envie atividades e participe de debates usando os recursos nativos do GitHub explicados na seção abaixo.
+### 7. Interaja nas Issues e Discussions 💬
+
+Tire dúvidas, registre estudos e participe de debates usando os recursos nativos do GitHub, explicados na seção abaixo.
 
 ---
 
 ## 🛠️ Como interagir na aba Issues
 
-Nossa comunidade usa a aba **Issues** para registrar estudos, tirar dúvidas e interagir. Ao clicar no botão **[New Issue](https://www.google.com/search?q=../../issues/new)**, você encontrará as seguintes opções:
+Nossa comunidade usa a aba **Issues** para registrar estudos, tirar dúvidas e interagir. Ao clicar em **[New Issue](https://github.com/melissaalves-stack/awscloudfoundations/issues/new/choose)**, você encontrará estas opções:
 
 ### 📊 1. Checkpoint de Módulo
 
-* **O que é:** O formulário oficial para registrar sua evolução na trilha.
-* **Quando usar:** Sempre que você concluir os estudos ou exercícios de um nível/módulo.
-* **Como funciona:** Escolha essa opção, selecione o módulo correspondente e preencha a checklist com suas respostas/prints para validar seu progresso.
+- **O que é:** o formulário oficial para registrar sua evolução na trilha.
+- **Quando usar:** sempre que concluir os estudos ou exercícios de um módulo/nível.
+- **Como funciona:** escolha a trilha, informe o módulo e preencha a checklist com suas respostas/prints para validar seu progresso.
+- 👉 **[Abrir Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)**
 
 ### ❓ 2. Dúvida
 
-* **O que é:** Nosso canal direto para suporte técnico nos conteúdos.
-* **Quando usar:** Se você travou em um conceito de Cloud, não entendeu um exercício ou encontrou um erro ao rodar uma atividade.
-* **Como funciona:** Descreva o que está tentando fazer, o erro que apareceu e, se possível, adicione um print para que a liderança ou colegas consigam te ajudar.
+- **O que é:** nosso canal direto para suporte nos conteúdos.
+- **Quando usar:** se travou em um conceito, não entendeu um exercício ou encontrou um erro em uma atividade.
+- **Como funciona:** descreva o que está tentando fazer, o que aconteceu e, se possível, adicione um print para que a liderança ou colegas ajudem.
+- 👉 **[Abrir Dúvida](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=duvida.yml)**
 
 ### 📝 3. Blank issue *(Apenas Mantenedores)*
 
-* **O que é:** Um formulário em branco e sem estrutura padrão.
-* **Nota:** Uso exclusivo da organização da Liga Acadêmica. Você não precisa utilizar essa opção no seu dia a dia.
+- **O que é:** um formulário em branco, sem estrutura padrão.
+- **Nota:** uso exclusivo da organização da Liga. Você não precisa usar essa opção no dia a dia.
 
 ### 💬 4. Discussions da Liga
 
-* **O que é:** Nosso fórum aberto para networking e conversas gerais.
-* **Quando usar:** Para discussões mais amplas que não são dúvidas pontuais de código ou checklists.
-* **Exemplos:** Troca de ideias sobre carreira em Nuvem, compartilhamento de artigos, eventos e sugestões para a Liga.
+- **O que é:** nosso fórum aberto para networking e conversas gerais.
+- **Quando usar:** para discussões mais amplas que não são dúvidas pontuais.
+- **Exemplos:** carreira em nuvem, compartilhamento de artigos, oportunidades e sugestões para a Liga.
 
 ---
 
-## 🏅 Sistema de níveis
+## 🏅 As três trilhas em resumo
 
-|   Nível  |               Tema                 |     Status     |
-| -------- | ---------------------------------- | -------------- |
-| 🟢 **1** | Fundamentos de Nuvem               | ✅ Disponível |
-| 🔵 **2** | Os Blocos de Construção            | ✅ Disponível |
-| 🟣 **3** | Arquitetura e Alta Disponibilidade | ✅ Disponível |
-| 🟠 **4** | Segurança e Operações              | 🔜 Em breve   |
-| 🩷 **5** | Dados, Analytics e IA              | 🔜 Em breve   |
-| 🏆 **6** | Projeto Final e Certificação       | 🔜 Em breve   |
+| Trilha | Estrutura | Status |
+|:--|:--|:--:|
+| 🎓 **Cloud Practitioner (CLF-C02)** | 4 domínios oficiais da prova | ✅ Disponível |
+| 🤖 **AI Practitioner (AIF-C01)** | 5 domínios oficiais da prova | ✅ Disponível |
+| 🔬 **Aprendizado Aprofundado** | 12 módulos da capacitação de líderes | ✅ Disponível |
 
 Bons estudos, e **bora construir!** 🚀
+
+---
+🏠 [Voltar ao início](./README.md) · 💜 [Sobre a Liga](./sobre/) · 📰 [Novidades Tech](./blog/)

@@ -4,7 +4,7 @@
 
 # 🎓 Guia do Aluno
 
-Bem-vindo(a) à trilha de aprendizado da **Liga Acadêmica SBG — UNIFAL-MG**! Todo o aprendizado acontece **aqui dentro do GitHub**. Este guia explica como usar o repositório do jeito certo.
+Bem-vindo(a) à trilha de aprendizado da **Liga Acadêmica de Computação em Nuvem — UNIFAL-MG**! Todo o aprendizado acontece **aqui dentro do GitHub**. Este guia explica como usar o repositório do jeito certo.
 
 ---
 

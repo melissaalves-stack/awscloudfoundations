@@ -4,11 +4,24 @@
 
 <div align="center">
 
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=800&color=FF9900&center=true&vCenter=true&width=700&lines=O%20conte%C3%BAdo%20da%20capacita%C3%A7%C3%A3o%20de%20l%C3%ADderes.%3B12%20m%C3%B3dulos%20t%C3%A9cnicos%2C%20abertos%20a%20todos.%3BAprenda%20como%20quem%20ensina%20aprendeu." alt="" />
+</a>
+
+</div>
+
+<div align="center">
+
 # 🔬 Trilha · Aprendizado Aprofundado
 
 <img src="../assets/roadmap-aprofundamento.png" alt="Roadmap do Aprendizado Aprofundado" width="100%" />
 
 </div>
+
+---
+
+> [!NOTE]
+> **De onde vem este material.** Todo o conteúdo deste repositório foi escrito por **Melissa Hollanda de Oliveira Alves**, presidente da LACEN, **enquanto ela cursava a capacitação gratuita em computação em nuvem que a Amazon oferece aos líderes estudantis**. Cada módulo é a tradução — em português e em linguagem de estudante — do que ela aprendeu nessa formação, para que ninguém precise ocupar um cargo de liderança para ter acesso a esse conhecimento. 💜
 
 ---
 

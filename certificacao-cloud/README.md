@@ -4,6 +4,14 @@
 
 <div align="center">
 
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=800&color=00E582&center=true&vCenter=true&width=700&lines=Do%20zero%20%C3%A0%20AWS%20Cloud%20Practitioner.%3B4%20dom%C3%ADnios%20%C2%B7%2016%20m%C3%B3dulos%20%C2%B7%20quizzes.%3BSem%20cart%C3%A3o%20de%20cr%C3%A9dito.%20Sem%20enrola%C3%A7%C3%A3o." alt="" />
+</a>
+
+</div>
+
+<div align="center">
+
 # 🎓 Trilha · Certificação AWS Cloud Practitioner (CLF-C02)
 
 <img src="../assets/roadmap-certificacao-cloud.png" alt="Roadmap da Certificação Cloud Practitioner" width="100%" />

@@ -4,6 +4,14 @@
 
 <div align="center">
 
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=800&color=41B3FF&center=true&vCenter=true&width=700&lines=Do%20zero%20%C3%A0%20AWS%20AI%20Practitioner.%3BBedrock%2C%20RAG%2C%20prompts%20e%20IA%20respons%C3%A1vel.%3B5%20dom%C3%ADnios%20oficiais%20da%20prova." alt="" />
+</a>
+
+</div>
+
+<div align="center">
+
 # 🤖 Trilha · Certificação AWS AI Practitioner (AIF-C01)
 
 <img src="../assets/roadmap-certificacao-ia.png" alt="Roadmap da Certificação AI Practitioner" width="100%" />

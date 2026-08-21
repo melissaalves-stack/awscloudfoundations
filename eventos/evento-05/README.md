@@ -2,7 +2,7 @@
 
 # 🎬 Evento 05
 
-<sub>Liga Acadêmica SBG · UNIFAL-MG</sub>
+<sub>LACEN · Liga Acadêmica de Computação em Nuvem · UNIFAL-MG</sub>
 
 </div>
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" fill="none" role="img" aria-label="Trilha Cloud - Liga SBG UNIFAL">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" fill="none" role="img" aria-label="Trilha Cloud - Liga Academica de Computacao em Nuvem UNIFAL">
 <defs>
   
   <clipPath id="cc"><rect class="cmdclip" x="179" y="176" width="346" height="28"></rect></clipPath>
@@ -13,7 +13,7 @@
 <circle cx="112" cy="69" r="6" fill="#484F58"></circle>
 <circle cx="134" cy="69" r="6" fill="#484F58"></circle>
 <circle cx="156" cy="69" r="6" fill="#FF9900"></circle>
-<text class="m" x="640.0" y="74" text-anchor="middle" font-size="15" fill="#7D8590">sbg@unifal — trilha-cloud</text>
+<text class="m" x="640.0" y="74" text-anchor="middle" font-size="15" fill="#7D8590">liga@unifal — trilha-cloud</text>
 
 
 <text class="m" x="150" y="196" font-size="24" fill="#FF9900">$</text>

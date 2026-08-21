@@ -4,11 +4,19 @@
 
 <div align="center">
 
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=800&color=FF57E9&center=true&vCenter=true&width=700&lines=Community%20Day%2C%20hackathon%20e%20encontros.%3BA%20Liga%20acontece%20pessoalmente%20tamb%C3%A9m." alt="" />
+</a>
+
+</div>
+
+<div align="center">
+
 # 🎉 Eventos da Liga
 
 ### Registros e memórias dos nossos encontros
 
-<sub>Liga Acadêmica SBG · UNIFAL-MG</sub>
+<sub>LACEN · Liga Acadêmica de Computação em Nuvem · UNIFAL-MG</sub>
 
 </div>
 

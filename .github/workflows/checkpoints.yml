@@ -1,0 +1,131 @@
+name: Atualizar progresso dos checkpoints
+
+on:
+  issues:
+    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  progresso:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Calcular progresso e atualizar PROGRESSO.md
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            const TRILHAS = [
+              { chave: 'Cloud',          rotulo: 'Certificação Cloud Practitioner', total: 17, cor: '00E582' },
+              { chave: 'AI Practitioner',rotulo: 'Certificação AI Practitioner',    total: 14, cor: '41B3FF' },
+              { chave: 'Aprofundado',    rotulo: 'Aprendizado Aprofundado',         total: 12, cor: 'FF9900' },
+            ];
+
+            // Todas as issues com o rótulo "checkpoint"
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'checkpoint',
+              state: 'all',
+              per_page: 100,
+            });
+
+            // aluno -> trilha -> Set(módulos)
+            const alunos = new Map();
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              const autor = issue.user.login;
+              const corpo = issue.body || '';
+              const trilha = TRILHAS.find(t => corpo.includes(t.chave));
+              if (!trilha) continue;
+
+              // o módulo é a linha logo abaixo do cabeçalho "Módulo / Nível concluído"
+              const m = corpo.split(/### Módulo \/ Nível concluído/i)[1] || '';
+              const modulo = m.split('###')[0].trim().split('\n')[0].trim();
+              if (!modulo || modulo === '_No response_') continue;
+
+              if (!alunos.has(autor)) alunos.set(autor, new Map());
+              const porTrilha = alunos.get(autor);
+              if (!porTrilha.has(trilha.chave)) porTrilha.set(trilha.chave, new Set());
+              porTrilha.get(trilha.chave).add(modulo.toLowerCase());
+            }
+
+            const barra = (feitos, total) => {
+              const blocos = 24;
+              const cheios = total ? Math.round((feitos / total) * blocos) : 0;
+              return '█'.repeat(cheios) + '░'.repeat(blocos - cheios);
+            };
+
+            const linhasAluno = (porTrilha) => TRILHAS.map(t => {
+              const feitos = (porTrilha.get(t.chave) || new Set()).size;
+              const pct = t.total ? Math.round((feitos / t.total) * 100) : 0;
+              return `| ${t.rotulo} | \`${barra(feitos, t.total)}\` | ${feitos}/${t.total} | ${pct}% |`;
+            }).join('\n');
+
+            const cabecalho = '| Trilha | Progresso | Módulos | % |\n|:--|:--|:--:|:--:|';
+
+            // ---------- PROGRESSO.md ----------
+            const ordenados = [...alunos.entries()].sort((a, b) => {
+              const soma = m => [...m.values()].reduce((s, set) => s + set.size, 0);
+              return soma(b[1]) - soma(a[1]);
+            });
+
+            let md = `<div align="center">\n\n<img src="./assets/progresso.png" alt="Progresso das trilhas" width="100%" />\n\n# 📊 Progresso da turma\n\n<sub>Atualizado automaticamente a cada checkpoint registrado · ${new Date().toISOString().slice(0,10)}</sub>\n\n</div>\n\n---\n\n`;
+
+            if (!ordenados.length) {
+              md += 'Ninguém registrou checkpoint ainda. Seja a primeira pessoa: [abrir checkpoint](../../issues/new?template=checkpoint-de-modulo.yml) 🚀\n';
+            } else {
+              md += '## 🏆 Ranking\n\n| # | Aluno(a) | Módulos concluídos |\n|:--:|:--|:--:|\n';
+              ordenados.forEach(([login, porTrilha], i) => {
+                const soma = [...porTrilha.values()].reduce((s, set) => s + set.size, 0);
+                md += `| ${i + 1} | [@${login}](https://github.com/${login}) | ${soma} |\n`;
+              });
+              md += '\n---\n\n## 📈 Detalhe por pessoa\n\n';
+              for (const [login, porTrilha] of ordenados) {
+                md += `### [@${login}](https://github.com/${login})\n\n${cabecalho}\n${linhasAluno(porTrilha)}\n\n`;
+              }
+            }
+            md += '\n---\n\n<div align="center">\n\n🏠 [Voltar ao início](./README.md)\n\n</div>\n';
+            fs.writeFileSync('PROGRESSO.md', md);
+
+            // ---------- comentário na issue ----------
+            if (context.payload.issue && ['opened', 'edited', 'reopened'].includes(context.payload.action)) {
+              const login = context.payload.issue.user.login;
+              const porTrilha = alunos.get(login);
+              if (porTrilha) {
+                const soma = [...porTrilha.values()].reduce((s, set) => s + set.size, 0);
+                const corpo = [
+                  `### 📊 Progresso de @${login}`,
+                  '',
+                  cabecalho,
+                  linhasAluno(porTrilha),
+                  '',
+                  `**${soma} módulos concluídos.** Veja a turma inteira em [PROGRESSO.md](../blob/main/PROGRESSO.md). Bora construir! 🚀`,
+                ].join('\n');
+
+                const comentarios = await github.paginate(github.rest.issues.listComments, {
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  issue_number: context.payload.issue.number, per_page: 100,
+                });
+                const meu = comentarios.find(c => c.user.type === 'Bot' && c.body.includes('### 📊 Progresso de'));
+                if (meu) {
+                  await github.rest.issues.updateComment({ owner: context.repo.owner, repo: context.repo.repo, comment_id: meu.id, body: corpo });
+                } else {
+                  await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: context.payload.issue.number, body: corpo });
+                }
+              }
+            }
+
+      - name: Commitar PROGRESSO.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add PROGRESSO.md
+          git diff --staged --quiet || git commit -m "chore: atualiza progresso dos checkpoints"
+          git push

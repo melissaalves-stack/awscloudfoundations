@@ -74,7 +74,7 @@ flowchart TD
 
 ### 4. Route 53 — o DNS da AWS
 
-O **Amazon Route 53** é o serviço de **DNS**: ele traduz nomes de domínio (como `ligasbg.com.br`) no endereço IP do servidor certo. Também registra domínios e faz roteamento inteligente (por latência, geografia, saúde do servidor).
+O **Amazon Route 53** é o serviço de **DNS**: ele traduz nomes de domínio (como `lacen-unifal.com.br`) no endereço IP do servidor certo. Também registra domínios e faz roteamento inteligente (por latência, geografia, saúde do servidor).
 
 > [!TIP]
 > DNS é a "agenda de contatos" da internet: você digita um nome, e o DNS descobre o "número" (IP) para ligar. O **Route 53** é a agenda da AWS. (O nome vem da porta 53, usada pelo DNS.)

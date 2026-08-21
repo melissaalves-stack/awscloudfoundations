@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.png" alt="Trilha Cloud · Liga Acadêmica SBG · UNIFAL-MG" width="100%" />
+<a href="./GUIA-DO-ALUNO.md"><img src="./assets/hero.png" alt="Trilha Cloud · Liga Acadêmica de Computação em Nuvem · UNIFAL-MG" width="100%" /></a>
 
 <br><br>
 
@@ -10,7 +10,7 @@
 
 <br><br>
 
-![Liga Acadêmica SBG](https://img.shields.io/badge/Liga_Acad%C3%AAmica-SBG_UNIFAL--MG-00E582?style=for-the-badge&labelColor=12181F)
+![LACEN](https://img.shields.io/badge/LACEN-UNIFAL--MG-00E582?style=for-the-badge&labelColor=12181F)
 ![Trilha Cloud](https://img.shields.io/badge/Trilha-Computa%C3%A7%C3%A3o_em_Nuvem-42B4FF?style=for-the-badge&labelColor=12181F)
 ![Trilha IA](https://img.shields.io/badge/Trilha-Intelig%C3%AAncia_Artificial-AD5CFF?style=for-the-badge&labelColor=12181F)
 [![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-yellow?style=for-the-badge&labelColor=12181F)](LICENSE.md)
@@ -21,10 +21,14 @@
 
 ## 👋 Bem-vindo(a) à Liga!
 
-Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG** — vinculada ao programa **AWS Student Builder Group**. Aqui você aprende **computação em nuvem e inteligência artificial do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes interativos e prática guiada.
+Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG** — a **Liga Acadêmica de Computação em Nuvem**. Aqui você aprende **computação em nuvem e inteligência artificial do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes interativos e prática guiada.
 
 > [!IMPORTANT]
 > 🧭 **É a sua primeira vez aqui?** Comece pelo **[📖 Guia do Aluno](./GUIA-DO-ALUNO.md)** — ele explica todo o fluxo de aprendizado.
+
+
+> [!NOTE]
+> **De onde vem este material.** Todo o conteúdo deste repositório foi escrito por **Melissa Hollanda de Oliveira Alves**, presidente da LACEN, **enquanto ela cursava a capacitação gratuita em computação em nuvem que a Amazon oferece aos líderes estudantis**. Cada módulo é a tradução — em português e em linguagem de estudante — do que ela aprendeu nessa formação, para que ninguém precise ocupar um cargo de liderança para ter acesso a esse conhecimento. 💜
 
 > [!TIP]
 > Todo o aprendizado acontece **aqui dentro do GitHub**. Você **não precisa** de conta pessoal da AWS nem de cartão de crédito — a prática usa ambientes prontos (Builder Labs, Skill Builder, SimuLearn). 🎉
@@ -35,9 +39,18 @@ Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Compu
 
 Pensamos tudo para ser **intuitivo**. São três trilhas de estudo e alguns espaços de apoio:
 
-<div align="center">
-  <img src="./assets/mapa-do-repositorio.png" alt="Mapa do repositório" width="100%" />
-</div>
+<table>
+<tr>
+<td width="33%"><a href="./certificacao-cloud/"><img src="./assets/card-cloud.png" alt="Certificação Cloud Practitioner" width="100%" /></a></td>
+<td width="33%"><a href="./certificacao-ia/"><img src="./assets/card-ia.png" alt="Certificação AI Practitioner" width="100%" /></a></td>
+<td width="33%"><a href="./aprofundamento/"><img src="./assets/card-aprofundamento.png" alt="Aprendizado Aprofundado" width="100%" /></a></td>
+</tr>
+<tr>
+<td width="33%"><a href="./blog/"><img src="./assets/card-blog.png" alt="Novidades Tech" width="100%" /></a></td>
+<td width="33%"><a href="./eventos/"><img src="./assets/card-eventos.png" alt="Eventos" width="100%" /></a></td>
+<td width="33%"><a href="./sobre/"><img src="./assets/card-sobre.png" alt="Sobre a Liga" width="100%" /></a></td>
+</tr>
+</table>
 
 | Espaço | O que é |
 |:--|:--|
@@ -107,7 +120,7 @@ Doze módulos técnicos aprofundados, divididos exatamente como o curso oficial 
 ## 🎮 Como estudar (100% interativo)
 
 <div align="center">
-  <img src="./assets/como-estudar.png" alt="Como estudar: leia, faça o quiz, marque o checkpoint, converse" width="100%" />
+  <a href="./GUIA-DO-ALUNO.md"><img src="./assets/como-estudar.png" alt="Como estudar: leia, faça o quiz, marque o checkpoint, converse" width="100%" /></a>
 </div>
 
 <table>
@@ -138,10 +151,10 @@ Tire dúvidas na aba **[Issues](https://github.com/melissaalves-stack/awscloudfo
 ## 📊 Acompanhe sua evolução
 
 <div align="center">
-  <img src="./assets/progresso.png" alt="Progresso por trilha" width="100%" />
+  <a href="https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml"><img src="./assets/progresso.png" alt="Progresso por trilha" width="100%" /></a>
 </div>
 
-Cada módulo concluído vira um **checkpoint**. Abra uma Issue com o template [Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) e acompanhe sua trilha crescendo.
+Cada módulo concluído vira um **checkpoint**. Abra uma Issue com o template [Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) — em segundos um robô responde na própria Issue com a sua barra de progresso atualizada e soma você ao **[📊 Progresso da turma](./PROGRESSO.md)**.
 
 ---
 
@@ -158,7 +171,7 @@ Cada módulo concluído vira um **checkpoint**. Abra uma Issue com o template [C
 
 ## 🛡️ Autoria e Licença
 
-Este repositório e todo o seu conteúdo educacional foram desenvolvidos por **Melissa Hollanda de Oliveira Alves** — fundadora e presidente da Liga — em conjunto com a **Liga Acadêmica SBG · UNIFAL-MG**. Saiba mais na página **[Sobre a Liga](./sobre/)**.
+Este repositório e todo o seu conteúdo educacional foram desenvolvidos por **Melissa Hollanda de Oliveira Alves** — fundadora e presidente da Liga — em conjunto com a **LACEN · Liga Acadêmica de Computação em Nuvem · UNIFAL-MG**. Saiba mais na página **[Sobre a Liga](./sobre/)**.
 
 Este material está protegido sob a licença **[Creative Commons CC BY-NC-SA 4.0](LICENSE.md)**:
 - 👤 **Atribuição:** É obrigatório dar os devidos créditos à autora e à Liga.
@@ -175,7 +188,7 @@ Este material está protegido sob a licença **[Creative Commons CC BY-NC-SA 4.0
 
 <img src="./assets/logo.png" width="52" />
 
-**Liga Acadêmica SBG · UNIFAL-MG**
+**LACEN · Liga Acadêmica de Computação em Nuvem · UNIFAL-MG**
 <sub>Alfenas · Minas Gerais · Feito com 🧡 pela comunidade · Bora construir! 🚀</sub>
 
 </div>

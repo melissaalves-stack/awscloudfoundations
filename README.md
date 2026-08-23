@@ -21,7 +21,7 @@
 
 ## 👋 Bem-vindo(a) à Liga!
 
-Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG** — a **Liga Acadêmica de Computação em Nuvem**. Aqui você aprende **computação em nuvem e inteligência artificial do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes interativos e prática guiada.
+Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG**. Aqui você aprende **computação em nuvem e inteligência artificial do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes interativos e prática guiada.
 
 > [!IMPORTANT]
 > 🧭 **É a sua primeira vez aqui?** Comece pelo **[📖 Guia do Aluno](./GUIA-DO-ALUNO.md)** — ele explica todo o fluxo de aprendizado.

@@ -27,33 +27,79 @@ jobs:
               { chave: 'Aprofundado',    rotulo: 'Aprendizado Aprofundado',         total: 12, cor: 'FF9900' },
             ];
 
+            // Extrai o valor de uma seção do body do issue form (### Heading\n\nvalue)
+            function parseSection(body, heading) {
+              // flexível com espaços, acentos e pontuação
+              const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const re = new RegExp('###\\s*' + escaped + '\\s*\\n+', 'i');
+              const parts = body.split(re);
+              if (parts.length < 2) return '';
+              return parts[1].split(/\n###\s/)[0].trim();
+            }
+
             // Todas as issues com o rótulo "checkpoint"
-            const issues = await github.paginate(github.rest.issues.listForRepo, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: 'checkpoint',
-              state: 'all',
-              per_page: 100,
-            });
+            let issues;
+            try {
+              issues = await github.paginate(github.rest.issues.listForRepo, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: 'checkpoint',
+                state: 'all',
+                per_page: 100,
+              });
+            } catch (e) {
+              core.warning('Falha ao buscar issues: ' + e.message);
+              issues = [];
+            }
+            core.info(`Total de issues com label "checkpoint": ${issues.length}`);
 
             // aluno -> trilha -> Set(módulos)
             const alunos = new Map();
             for (const issue of issues) {
               if (issue.pull_request) continue;
               const autor = issue.user.login;
-              const corpo = issue.body || '';
-              const trilha = TRILHAS.find(t => corpo.includes(t.chave));
-              if (!trilha) continue;
+              const corpo = (issue.body || '').replace(/\r\n/g, '\n');
 
-              // o módulo é a linha logo abaixo do cabeçalho "Módulo / Nível concluído"
-              const m = corpo.split(/### Módulo \/ Nível concluído/i)[1] || '';
-              const modulo = m.split('###')[0].trim().split('\n')[0].trim();
-              if (!modulo || modulo === '_No response_') continue;
+              core.info(`--- Issue #${issue.number} por @${autor} ---`);
+
+              // 1. Detectar trilha pela seção "Qual trilha?"
+              const trilhaText = parseSection(corpo, 'Qual trilha\\?');
+              core.info(`  Trilha (seção): "${trilhaText.substring(0, 80)}"`);
+
+              // Match case-insensitive: primeiro na seção, fallback no corpo inteiro
+              const textoTrilha = trilhaText || corpo;
+              const trilha = TRILHAS.find(t =>
+                textoTrilha.toLowerCase().includes(t.chave.toLowerCase())
+              );
+              if (!trilha) {
+                core.warning(`  ⚠ Trilha não encontrada — pulando issue #${issue.number}`);
+                continue;
+              }
+              core.info(`  Trilha detectada: ${trilha.rotulo}`);
+
+              // 2. Extrair módulo — tenta heading exato, depois variações
+              let modulo = parseSection(corpo, 'Módulo / Nível concluído');
+              if (!modulo) modulo = parseSection(corpo, 'Módulo \\/ Nível concluído');
+              if (!modulo) modulo = parseSection(corpo, 'Módulo');
+              // fallback: regex genérico
+              if (!modulo) {
+                const fm = corpo.match(/m[oó]dulo\s*(?:\/\s*)?n[ií]vel\s*conclu[ií]do\s*\n+(.*?)(?:\n###|\n*$)/is);
+                if (fm) modulo = fm[1].trim();
+              }
+
+              const moduloLimpo = (modulo || '').split('\n')[0].trim();
+              core.info(`  Módulo: "${moduloLimpo}"`);
+
+              if (!moduloLimpo || moduloLimpo === '_No response_') {
+                core.warning(`  ⚠ Módulo vazio — pulando issue #${issue.number}`);
+                continue;
+              }
 
               if (!alunos.has(autor)) alunos.set(autor, new Map());
               const porTrilha = alunos.get(autor);
               if (!porTrilha.has(trilha.chave)) porTrilha.set(trilha.chave, new Set());
-              porTrilha.get(trilha.chave).add(modulo.toLowerCase());
+              porTrilha.get(trilha.chave).add(moduloLimpo.toLowerCase());
+              core.info(`  ✅ Registrado: ${trilha.rotulo} · ${moduloLimpo}`);
             }
 
             const barra = (feitos, total) => {

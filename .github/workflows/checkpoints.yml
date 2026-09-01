@@ -37,8 +37,8 @@ jobs:
               return parts[1].split(/\n###\s/)[0].trim();
             }
 
-            // Todas as issues com o rótulo "checkpoint"
-            let issues;
+            // Busca issues: primeiro por label, fallback por título
+            let issues = [];
             try {
               issues = await github.paginate(github.rest.issues.listForRepo, {
                 owner: context.repo.owner,
@@ -48,10 +48,26 @@ jobs:
                 per_page: 100,
               });
             } catch (e) {
-              core.warning('Falha ao buscar issues: ' + e.message);
-              issues = [];
+              core.warning('Falha ao buscar por label: ' + e.message);
             }
-            core.info(`Total de issues com label "checkpoint": ${issues.length}`);
+            core.info(`Issues com label "checkpoint": ${issues.length}`);
+
+            // Fallback: busca por título [Checkpoint] se label não retornou nada
+            if (issues.length === 0) {
+              core.info('Tentando fallback por título "[Checkpoint]"...');
+              try {
+                const todas = await github.paginate(github.rest.issues.listForRepo, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'all',
+                  per_page: 100,
+                });
+                issues = todas.filter(i => !i.pull_request && (i.title || '').toLowerCase().includes('[checkpoint]'));
+              } catch (e) {
+                core.warning('Falha ao buscar todas as issues: ' + e.message);
+              }
+              core.info(`Issues encontradas por título: ${issues.length}`);
+            }
 
             // aluno -> trilha -> Set(módulos)
             const alunos = new Map();

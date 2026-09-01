@@ -10,7 +10,60 @@
 
 ---
 
-Ninguém registrou checkpoint ainda. Seja a primeira pessoa: [abrir checkpoint](../../issues/new?template=checkpoint-de-modulo.yml) 🚀
+## 🏆 Ranking
+
+| # | Aluno(a) | Módulos concluídos |
+|:--:|:--|:--:|
+| 1 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 4 |
+| 2 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 1 |
+| 3 | [@frantonissi](https://github.com/frantonissi) | 1 |
+| 4 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
+| 5 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
+
+---
+
+## 📈 Detalhe por pessoa
+
+### [@CrispimCesarJulio](https://github.com/CrispimCesarJulio)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@PedroFerreira5](https://github.com/PedroFerreira5)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@frantonissi](https://github.com/frantonissi)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@Diego-Montemor](https://github.com/Diego-Montemor)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@darlansm47-stack](https://github.com/darlansm47-stack)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/17 | 0% |
+| Certificação AI Practitioner | `██░░░░░░░░░░░░░░░░░░░░░░` | 1/14 | 7% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
 
 ---
 

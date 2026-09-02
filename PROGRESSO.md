@@ -14,9 +14,9 @@
 
 | # | Aluno(a) | Módulos concluídos |
 |:--:|:--|:--:|
-| 1 | [@J3ff23](https://github.com/J3ff23) | 4 |
-| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 4 |
-| 3 | [@gco-code](https://github.com/gco-code) | 3 |
+| 1 | [@gco-code](https://github.com/gco-code) | 4 |
+| 2 | [@J3ff23](https://github.com/J3ff23) | 4 |
+| 3 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 4 |
 | 4 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 1 |
 | 5 | [@frantonissi](https://github.com/frantonissi) | 1 |
 | 6 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
@@ -25,6 +25,14 @@
 ---
 
 ## 📈 Detalhe por pessoa
+
+### [@gco-code](https://github.com/gco-code)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
 ### [@J3ff23](https://github.com/J3ff23)
 
@@ -39,14 +47,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@gco-code](https://github.com/gco-code)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

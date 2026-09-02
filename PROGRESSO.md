@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-01</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-02</sub>
 
 </div>
 
@@ -15,10 +15,11 @@
 | # | Aluno(a) | Módulos concluídos |
 |:--:|:--|:--:|
 | 1 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 4 |
-| 2 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 1 |
-| 3 | [@frantonissi](https://github.com/frantonissi) | 1 |
-| 4 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
-| 5 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
+| 2 | [@J3ff23](https://github.com/J3ff23) | 1 |
+| 3 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 1 |
+| 4 | [@frantonissi](https://github.com/frantonissi) | 1 |
+| 5 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
+| 6 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
 ---
 
@@ -29,6 +30,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@J3ff23](https://github.com/J3ff23)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

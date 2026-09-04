@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-02</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-04</sub>
 
 </div>
 

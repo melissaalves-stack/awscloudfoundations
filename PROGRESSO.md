@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-04</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-07</sub>
 
 </div>
 
@@ -15,7 +15,7 @@
 | # | Aluno(a) | Módulos concluídos |
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
-| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 7 |
+| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 8 |
 | 3 | [@gco-code](https://github.com/gco-code) | 4 |
 | 4 | [@frantonissi](https://github.com/frantonissi) | 3 |
 | 5 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 1 |
@@ -38,7 +38,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `██████████░░░░░░░░░░░░░░` | 7/17 | 41% |
+| Certificação Cloud Practitioner | `███████████░░░░░░░░░░░░░` | 8/17 | 47% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

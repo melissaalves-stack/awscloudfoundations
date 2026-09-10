@@ -21,7 +21,7 @@
 | 5 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 6 | [@gco-code](https://github.com/gco-code) | 4 |
 | 7 | [@frantonissi](https://github.com/frantonissi) | 3 |
-| 8 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 1 |
+| 8 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 2 |
 | 9 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
 | 10 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
 | 11 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
@@ -90,7 +90,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

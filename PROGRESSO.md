@@ -16,10 +16,10 @@
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 9 |
-| 3 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 4 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 5 | [@gco-code](https://github.com/gco-code) | 4 |
-| 6 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 3 |
+| 3 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 4 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 5 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
+| 6 | [@gco-code](https://github.com/gco-code) | 4 |
 | 7 | [@frantonissi](https://github.com/frantonissi) | 3 |
 | 8 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 1 |
 | 9 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
@@ -46,6 +46,14 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
+### [@pereira-devcarlos](https://github.com/pereira-devcarlos)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
 ### [@Amoreirinha](https://github.com/Amoreirinha)
 
 | Trilha | Progresso | Módulos | % |
@@ -67,14 +75,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@pereira-devcarlos](https://github.com/pereira-devcarlos)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

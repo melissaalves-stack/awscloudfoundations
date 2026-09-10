@@ -73,9 +73,9 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `████░░░░░░░░░░░░░░░░░░░░` | 2/12 | 17% |
+| Aprendizado Aprofundado | `██░░░░░░░░░░░░░░░░░░░░░░` | 1/12 | 8% |
 
 ### [@frantonissi](https://github.com/frantonissi)
 

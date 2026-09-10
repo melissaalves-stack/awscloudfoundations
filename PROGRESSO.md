@@ -15,8 +15,8 @@
 | # | Aluno(a) | Módulos concluídos |
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
-| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 10 |
-| 3 | [@frantonissi](https://github.com/frantonissi) | 9 |
+| 2 | [@frantonissi](https://github.com/frantonissi) | 10 |
+| 3 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 10 |
 | 4 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
 | 5 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
 | 6 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
@@ -39,7 +39,7 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@CrispimCesarJulio](https://github.com/CrispimCesarJulio)
+### [@frantonissi](https://github.com/frantonissi)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
@@ -47,11 +47,11 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@frantonissi](https://github.com/frantonissi)
+### [@CrispimCesarJulio](https://github.com/CrispimCesarJulio)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█████████████░░░░░░░░░░░` | 9/17 | 53% |
+| Certificação Cloud Practitioner | `██████████████░░░░░░░░░░` | 10/17 | 59% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

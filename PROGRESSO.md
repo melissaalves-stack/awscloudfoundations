@@ -15,7 +15,7 @@
 | # | Aluno(a) | Módulos concluídos |
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
-| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 9 |
+| 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 10 |
 | 3 | [@frantonissi](https://github.com/frantonissi) | 4 |
 | 4 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
 | 5 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
@@ -42,7 +42,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█████████████░░░░░░░░░░░` | 9/17 | 53% |
+| Certificação Cloud Practitioner | `██████████████░░░░░░░░░░` | 10/17 | 59% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

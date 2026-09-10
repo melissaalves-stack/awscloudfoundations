@@ -16,13 +16,13 @@
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 10 |
-| 3 | [@frantonissi](https://github.com/frantonissi) | 4 |
-| 4 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 5 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
-| 6 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 7 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 8 | [@gco-code](https://github.com/gco-code) | 4 |
-| 9 | [@MarcosBento06](https://github.com/MarcosBento06) | 3 |
+| 3 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
+| 4 | [@frantonissi](https://github.com/frantonissi) | 4 |
+| 5 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 6 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 7 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 8 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
+| 9 | [@gco-code](https://github.com/gco-code) | 4 |
 | 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
 | 11 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
 | 12 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
@@ -44,6 +44,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████████████░░░░░░░░░░` | 10/17 | 59% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@MarcosBento06](https://github.com/MarcosBento06)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
@@ -92,14 +100,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@MarcosBento06](https://github.com/MarcosBento06)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

@@ -20,7 +20,7 @@
 | 4 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 5 | [@gco-code](https://github.com/gco-code) | 4 |
 | 6 | [@frantonissi](https://github.com/frantonissi) | 3 |
-| 7 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 1 |
+| 7 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 2 |
 | 8 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
 | 9 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
 | 10 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
@@ -83,7 +83,7 @@
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/17 | 0% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `██░░░░░░░░░░░░░░░░░░░░░░` | 1/12 | 8% |
+| Aprendizado Aprofundado | `████░░░░░░░░░░░░░░░░░░░░` | 2/12 | 17% |
 
 ### [@Otavio-oliv](https://github.com/Otavio-oliv)
 

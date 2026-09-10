@@ -16,12 +16,12 @@
 |:--:|:--|:--:|
 | 1 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 2 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 9 |
-| 3 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 4 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
-| 5 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 6 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 7 | [@gco-code](https://github.com/gco-code) | 4 |
-| 8 | [@frantonissi](https://github.com/frantonissi) | 3 |
+| 3 | [@frantonissi](https://github.com/frantonissi) | 4 |
+| 4 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 5 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 6 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 7 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
+| 8 | [@gco-code](https://github.com/gco-code) | 4 |
 | 9 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
 | 10 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
 | 11 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
@@ -43,6 +43,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `█████████████░░░░░░░░░░░` | 9/17 | 53% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@frantonissi](https://github.com/frantonissi)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
@@ -83,14 +91,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@frantonissi](https://github.com/frantonissi)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

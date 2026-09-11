@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-10</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-11</sub>
 
 </div>
 
@@ -23,7 +23,7 @@
 | 7 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
 | 8 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 9 | [@gco-code](https://github.com/gco-code) | 4 |
-| 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 1 |
+| 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 2 |
 | 11 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 1 |
 | 12 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
@@ -107,7 +107,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

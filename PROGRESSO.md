@@ -16,7 +16,7 @@
 |:--:|:--|:--:|
 | 1 | [@frantonissi](https://github.com/frantonissi) | 17 |
 | 2 | [@J3ff23](https://github.com/J3ff23) | 17 |
-| 3 | [@gco-code](https://github.com/gco-code) | 11 |
+| 3 | [@gco-code](https://github.com/gco-code) | 12 |
 | 4 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 10 |
 | 5 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
 | 6 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
@@ -51,7 +51,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████████████████░░░░░░░░` | 11/17 | 65% |
+| Certificação Cloud Practitioner | `█████████████████░░░░░░░` | 12/17 | 71% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

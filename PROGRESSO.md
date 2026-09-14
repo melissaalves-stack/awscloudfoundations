@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-13</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-14</sub>
 
 </div>
 
@@ -25,7 +25,8 @@
 | 9 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
 | 10 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 11 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
-| 12 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
+| 12 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 1 |
+| 13 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
 ---
 
@@ -116,6 +117,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

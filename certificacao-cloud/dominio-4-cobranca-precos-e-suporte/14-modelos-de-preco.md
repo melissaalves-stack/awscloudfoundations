@@ -1,14 +1,16 @@
-# Módulo 14 · Modelos de preço e o Free Tier
+# Módulo 14 · Modelos de preço
 
-> **Domínio:** 4 · Cobrança, Preços e Suporte · **Tempo estimado:** 2h · **Pré-requisitos:** Domínios 1 a 3
+> **Domínio:** 4 · Cobrança, Preços e Suporte · **Tempo estimado:** 3h · **Pré-requisitos:** Domínios 1 a 3 completos
+> **Peso na prova:** o Domínio 4 vale **12%** do CLF-C02. Pequeno em peso, mas cheio de pontos fáceis — não deixe escapar.
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Onde você quer chegar
 
-Ao final deste módulo, você será capaz de:
+Ao final deste módulo, você vai:
 
-- Explicar os **três pilares de preço** da AWS.
-- Entender o **AWS Free Tier** e seus três tipos.
-- Reconhecer como as escolhas de arquitetura afetam o custo.
+- Entender os **três pilares de preço** da AWS: computação, armazenamento e transferência de dados.
+- Saber por que **dados que saem** custam, mas **dados que entram** costumam ser grátis.
+- Entender a filosofia **pay-as-you-go** aplicada ao dinheiro.
+- Conhecer o **AWS Free Tier** (camada gratuita) e seus três tipos.
 
 <br>
 
@@ -16,61 +18,65 @@ Ao final deste módulo, você será capaz de:
 
 <br>
 
-## 🧠 Conteúdo
+## 🎬 A conta de três linhas
+
+No fim do mês chega a fatura da AWS. Ela pode ter centenas de itens, mas quase tudo se resume a **três perguntas**: *quanto você processou?*, *quanto você guardou?* e *quanto de dado saiu para a internet?*. Entender essas três linhas é entender como a AWS cobra — e evitar aquele susto de fatura que derruba muita startup.
 
 <br>
 
-### 1. Os três pilares de preço da AWS
+---
 
-Apesar de milhares de serviços, a lógica de cobrança gira em torno de três ideias:
+<br>
+
+## 🧠 Parte 1 — Os três pilares de preço da AWS
+
+Praticamente todo custo na AWS cai em um destes três baldes:
 
 | Pilar | O que significa |
 |:--|:--|
-| 💻 **Computação** | Você paga pelo tempo de processamento que usa (ex.: horas de EC2). |
-| 💾 **Armazenamento** | Você paga pela quantidade de dados guardados (ex.: GB no S3). |
-| 🌐 **Transferência de dados (saída)** | Dados que **saem** da AWS para a internet são cobrados. Dados que **entram** costumam ser gratuitos. |
+| 💻 **Computação** | Você paga pelo **tempo de processamento** que usa (ex.: horas de EC2, execuções de Lambda). |
+| 💾 **Armazenamento** | Você paga pela **quantidade de dados guardados** (ex.: GB no S3). |
+| 🌐 **Transferência de dados** | Dados que **saem** da AWS para a internet são cobrados. Dados que **entram** costumam ser **gratuitos**. |
 
 > [!IMPORTANT]
-> Detalhe que cai na prova: **transferência de entrada (inbound)** geralmente é **grátis**; a **saída (outbound)** para a internet é **cobrada**. Movimentação de dados é uma fonte comum de custo "escondido".
+> **A pegadinha do tráfego (cai muito):** entrada de dados (**inbound**) é geralmente **grátis**; saída de dados (**outbound**, para a internet) é **cobrada**. A lógica da AWS é: é fácil colocar seus dados lá dentro (de graça), mas tirá-los custa. Se a questão pergunta "qual tipo de transferência costuma ser gratuito?", a resposta é **entrada (inbound)**.
 
 <br>
 
-### 2. A filosofia: pague pelo que usar
+## 💧 Parte 2 — A filosofia: pague pelo que usar
 
-A AWS resume seu modelo em três princípios:
+Toda a precificação gira em torno do **pay-as-you-go** (pague conforme o uso), que você viu lá no Domínio 1. Três princípios que a AWS destaca:
 
-1. **Pague conforme o uso** (pay-as-you-go) — sem contratos longos obrigatórios.
-2. **Pague menos reservando** — compromissos (Savings Plans/Reserved) trazem descontos.
-3. **Pague menos usando mais** — quanto maior o volume, menor o preço por unidade (economia de escala).
+- **Pague pelo que usar** — sem contratos gigantes obrigatórios; ligou, pagou; desligou, parou de pagar.
+- **Pague menos ao se comprometer** — Reserved/Savings Plans dão desconto por compromisso (Módulo 09).
+- **Pague menos usando mais** — quanto maior o volume (ex.: de armazenamento), menor o preço por unidade (economia de escala, Módulo 03).
+
+> [!TIP]
+> Isto amarra o curso inteiro: a nuvem troca **CapEx por OpEx** (Módulo 03), e a fatura reflete exatamente o que você consumiu. "Otimizar custos" (o pilar do Well-Architected, Módulo 02) é, em boa parte, **desligar o que não está em uso**.
 
 <br>
 
-### 3. O AWS Free Tier (camada gratuita)
+## 🆓 Parte 3 — O AWS Free Tier (camada gratuita)
 
-Para você aprender e testar **sem gastar**, a AWS oferece o **Free Tier**, com três tipos:
+Para você aprender e experimentar sem gastar, a AWS oferece o **Free Tier** — e ele tem **três tipos** distintos, que a prova gosta de diferenciar:
 
 | Tipo | Como funciona | Exemplo |
 |:--|:--|:--|
-| 🕐 **Gratuito por 12 meses** | Grátis no primeiro ano após criar a conta. | 750h/mês de EC2 t2.micro. |
-| ♾️ **Sempre gratuito** | Grátis para sempre, dentro de um limite. | 1 milhão de requisições Lambda/mês. |
-| 🧪 **Testes (trials)** | Grátis por um curto período para experimentar. | Alguns serviços por 30/60 dias. |
+| 🕐 **Gratuito por 12 meses** | Grátis no **primeiro ano** após criar a conta. | 750h/mês de EC2 t2.micro |
+| ♾️ **Sempre gratuito** | Grátis **para sempre**, dentro de um limite mensal. | 1 milhão de execuções/mês do Lambda |
+| 🧪 **Testes (trials)** | Grátis por um **curto período** para experimentar. | Alguns serviços por 30/60 dias |
 
-> [!TIP]
-> Como membro da Liga, você aprende **sem** precisar de conta pessoal — usa Skill Builder, Builder Labs e SimuLearn. Mas é bom **conhecer** o Free Tier, porque ele cai na prova. E com o [Student Rewards](../../blog/2026-08-21-aws-student-rewards.md) você ainda ganha créditos! 🎁
+> [!NOTE]
+> É por meio do espírito do Free Tier (e das plataformas de laboratório gratuitas) que a Liga consegue ensinar prática **sem exigir cartão de crédito**. Para a prova, saiba distinguir os **três tipos**: 12 meses, sempre grátis, e testes.
 
 <br>
 
-### 4. Arquitetura barata é decisão consciente
+## 🎯 Parte 4 — Arquitetura barata é decisão consciente
 
-Suas escolhas técnicas mexem diretamente no valor da fatura:
+Custo não é sorte — é design. Escolhas que você já viu ao longo do curso são, no fundo, decisões de custo: usar **Spot** para cargas tolerantes (Módulo 09), a **classe certa do S3** para cada dado (Módulo 10), **desligar** ambientes de teste à noite, definir o **máximo** do Auto Scaling (Módulo 13), e reduzir **tráfego de saída** com cache no CloudFront.
 
-- Usar **Spot** em vez de On-Demand para tarefas tolerantes a falhas.
-- Escolher a **classe de S3** certa (Glacier para arquivamento).
-- **Desligar** recursos ociosos (Auto Scaling ajuda nisso).
-- Escolher a **Região** com melhor preço quando a latência permitir.
-
-> [!NOTE]
-> É o pilar de **Otimização de Custos** do Well-Architected ([Módulo 02](../dominio-1-conceitos-de-nuvem/02-well-architected-e-caf.md)) na prática.
+> [!TIP]
+> Se a questão descreve uma situação de desperdício ("instâncias ligadas sem uso", "dados frequentes no Glacier", "sem limite no Auto Scaling") e pede a melhoria, ela está testando **otimização de custos** — o pilar do Well-Architected na prática.
 
 <br>
 
@@ -78,85 +84,115 @@ Suas escolhas técnicas mexem diretamente no valor da fatura:
 
 <br>
 
-## ❓ Quiz — teste seus conhecimentos
+## 🎯 Dicas de prova (pegadinhas clássicas)
+
+> [!CAUTION]
+> - **Entrada de dados (inbound) costuma ser grátis; saída (outbound) é cobrada.** A pegadinha nº 1 do Domínio 4.
+> - Os três pilares de custo: **computação, armazenamento, transferência**.
+> - **Free Tier tem 3 tipos:** 12 meses, sempre gratuito, e testes (trials).
+> - **Pague pelo uso / menos ao comprometer / menos usando mais** são os princípios de preço.
+> - Reduzir custo = desligar ocioso, classe certa do S3, Spot, máximo no Auto Scaling, cache para reduzir saída.
 
 <br>
 
-**1. Quais são os três pilares fundamentais de preço da AWS?**
+## 🗺️ Mapa rápido pra revisão
 
-- **A)** Segurança, rede e identidade.
+| Conceito | Em uma frase |
+|:--|:--|
+| 3 pilares de preço | computação · armazenamento · transferência |
+| Inbound × outbound | entrada grátis · saída cobrada |
+| Pay-as-you-go | pagar pelo que usar |
+| Free Tier | 12 meses · sempre grátis · testes |
+
+<br>
+
+---
+
+<br>
+
+## ❓ Quiz nível prova
+
+<br>
+
+**1. Na AWS, qual tipo de transferência de dados é geralmente gratuito?**
+
+- **A)** Dados que saem da AWS para a internet (outbound).
+- **B)** Dados que entram na AWS vindos da internet (inbound).
+- **C)** Toda transferência é sempre cobrada.
+- **D)** Toda transferência é sempre gratuita.
+
+<details>
+<summary>💡 Ver resposta e explicação</summary>
+
+> ✅ **Resposta: B) Entrada (inbound)**
+>
+> Colocar dados na AWS costuma ser grátis; **tirá-los** (saída para a internet) é cobrado.
+>
+> - **A)** ❌ — saída (outbound) é justamente o que costuma ter custo.
+> - **C) / D)** ❌ — absolutos incorretos; depende da direção.
+
+</details>
+
+<br>
+
+**2. Uma estudante quer usar o EC2 gratuitamente no primeiro ano após criar a conta, dentro de um limite de horas mensais. Que parte do Free Tier ela está usando?**
+
+- **A)** Sempre gratuito
+- **B)** Gratuito por 12 meses
+- **C)** Teste (trial) de 30 dias
+- **D)** Savings Plans
+
+<details>
+<summary>💡 Ver resposta e explicação</summary>
+
+> ✅ **Resposta: B) Gratuito por 12 meses**
+>
+> 750h/mês de EC2 t2.micro no primeiro ano é o tipo **"gratuito por 12 meses"** do Free Tier.
+>
+> - **A)** ❌ — "sempre gratuito" vale para sempre (ex.: execuções do Lambda), não é o caso do EC2.
+> - **C)** ❌ — trials são por curtos períodos para serviços específicos.
+> - **D)** ❌ — Savings Plans é modelo de compra com desconto, não Free Tier.
+
+</details>
+
+<br>
+
+**3. Quais são os três principais fatores (pilares) que compõem o custo na AWS?**
+
+- **A)** Número de usuários, cor da interface e Região.
 - **B)** Computação, armazenamento e transferência de dados.
-- **C)** EC2, S3 e Lambda.
-- **D)** Console, CLI e SDK.
+- **C)** Suporte, treinamento e certificação.
+- **D)** CPU, GPU e RAM apenas.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Os três pilares são **computação, armazenamento e transferência de dados**.
+> ✅ **Resposta: B)**
+>
+> Os três pilares de custo são **computação, armazenamento e transferência de dados**.
+>
+> - **A), C), D)** ❌ — não são os pilares de precificação da AWS.
 
 </details>
 
 <br>
 
-**2. Sobre transferência de dados, o que geralmente é GRATUITO?**
+**4. Selecione as DUAS afirmações corretas sobre preços na AWS.** *(múltipla resposta — escolha 2)*
 
-- **A)** A saída de dados para a internet.
-- **B)** A entrada de dados (inbound) para a AWS.
-- **C)** Toda transferência é paga.
-- **D)** Toda transferência é grátis.
-
-<details>
-<summary>💡 Ver resposta</summary>
-
-> ✅ **Resposta: B)** — A **entrada** costuma ser grátis; a **saída** para a internet é cobrada.
-
-</details>
-
-<br>
-
-**3. "1 milhão de requisições Lambda por mês, para sempre" é qual tipo de Free Tier?**
-
-- **A)** Gratuito por 12 meses.
-- **B)** Sempre gratuito.
-- **C)** Teste (trial).
-- **D)** Não faz parte do Free Tier.
+- **A)** O modelo pay-as-you-go cobra conforme o uso, sem grande compromisso inicial obrigatório.
+- **B)** Dados que entram na AWS quase sempre custam mais que dados que saem.
+- **C)** O Free Tier inclui uma categoria "sempre gratuita", dentro de limites mensais.
+- **D)** Desligar recursos ociosos não afeta a fatura.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — É do tipo **sempre gratuito** (always free), dentro do limite mensal.
-
-</details>
-
-<br>
-
-**4. Qual princípio de preço se resume em "pague menos reservando"?**
-
-- **A)** Pague conforme o uso.
-- **B)** Descontos por compromisso (Savings Plans / Reserved).
-- **C)** Free Tier.
-- **D)** Transferência de dados.
-
-<details>
-<summary>💡 Ver resposta</summary>
-
-> ✅ **Resposta: B)** — Reservar capacidade (compromisso de 1–3 anos) gera **descontos**.
-
-</details>
-
-<br>
-
-**5. Qual destas é uma decisão de arquitetura que REDUZ custos?**
-
-- **A)** Usar On-Demand para tudo, sempre.
-- **B)** Deixar recursos ociosos ligados 24/7.
-- **C)** Arquivar dados raramente acessados no S3 Glacier.
-- **D)** Guardar backups no S3 Standard para sempre.
-
-<details>
-<summary>💡 Ver resposta</summary>
-
-> ✅ **Resposta: C)** — Mover dados frios para o **Glacier** reduz muito o custo de armazenamento.
+> ✅ **Respostas: A) e C)**
+>
+> **A** (pay-as-you-go) e **C** (categoria "sempre gratuita" do Free Tier) estão corretas.
+>
+> - **B)** ❌ — é o contrário: entrada costuma ser grátis, saída é cobrada.
+> - **D)** ❌ — desligar o ocioso **reduz** a fatura (é otimização de custos).
 
 </details>
 
@@ -168,8 +204,9 @@ Suas escolhas técnicas mexem diretamente no valor da fatura:
 
 ## 🧪 Mão na massa (sem console!)
 
-- 🔗 **AWS Skill Builder** → procure por *"AWS Pricing"* e *"AWS Free Tier"*.
-- 🔗 Consulte a página oficial do **Free Tier** e liste 3 serviços "sempre gratuitos" que você usaria em um projeto.
+- 🔗 **AWS Skill Builder** → módulos de *Billing and Pricing* no Cloud Practitioner Essentials.
+- 🔗 Explore o **AWS Free Tier** no site oficial e veja os três tipos listados.
+- ✍️ **Desafio:** liste 4 formas de reduzir a fatura de uma arquitetura (uma para cada: computação, armazenamento, transferência, escalonamento). Se listar, você conectou custo com o resto do curso.
 
 <br>
 
@@ -184,19 +221,20 @@ Suas escolhas técnicas mexem diretamente no valor da fatura:
 | **Pilares de preço** | Computação, armazenamento e transferência de dados. |
 | **Pay-as-you-go** | Pagar conforme o uso. |
 | **Transferência de saída (outbound)** | Dados que saem para a internet (cobrados). |
-| **Free Tier** | Camada gratuita da AWS (12 meses, sempre grátis, testes). |
+| **Transferência de entrada (inbound)** | Dados que entram na AWS (geralmente gratuitos). |
+| **Free Tier** | Camada gratuita: 12 meses, sempre grátis e testes. |
 | **Otimização de custos** | Pilar do Well-Architected focado em não desperdiçar. |
 
 <br>
 
 ## ✅ Checklist de conclusão
 
-- [ ] Li todo o conteúdo do módulo
-- [ ] Sei os três pilares de preço
-- [ ] Entendo que saída é cobrada e entrada costuma ser grátis
-- [ ] Conheço os três tipos de Free Tier
-- [ ] Sei como decisões de arquitetura afetam o custo
-- [ ] Fiz o quiz
+- [ ] Entendi os três pilares de preço
+- [ ] Sei que entrada é grátis e saída é cobrada
+- [ ] Entendi o pay-as-you-go e os princípios de preço
+- [ ] Conheço os três tipos do Free Tier
+- [ ] Sei conectar custo com decisões de arquitetura
+- [ ] Fiz o quiz e entendi por que cada alternativa errada está errada
 - [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)
 
 <br>

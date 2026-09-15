@@ -1,14 +1,16 @@
-# Módulo 13 · Escalabilidade e alta disponibilidade (ELB e Auto Scaling)
+# Módulo 13 · Escalabilidade e alta disponibilidade
 
-> **Domínio:** 3 · Tecnologia e Serviços · **Tempo estimado:** 2h30 · **Pré-requisitos:** Módulo 12
+> **Domínio:** 3 · Tecnologia e Serviços · **Tempo estimado:** 4h · **Pré-requisitos:** Módulos 09 a 12
+> **Peso na prova:** fecha o Domínio 3 (**34%**). Escalonamento vertical × horizontal e a dupla **ELB + Auto Scaling** são presença certa.
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Onde você quer chegar
 
-Ao final deste módulo, você será capaz de:
+Ao final deste módulo, você vai:
 
-- Diferenciar **escalar verticalmente** e **horizontalmente**.
-- Entender o **Elastic Load Balancing (ELB)**.
-- Entender o **EC2 Auto Scaling** e como eles garantem **alta disponibilidade**.
+- Diferenciar escalonamento **vertical** (máquina maior) de **horizontal** (mais máquinas).
+- Entender o **Elastic Load Balancing (ELB)** — o distribuidor de tráfego.
+- Entender o **EC2 Auto Scaling** — o ajuste automático de quantidade.
+- Ver como **ELB + Auto Scaling** juntos produzem **elasticidade** e **alta disponibilidade**.
 
 <br>
 
@@ -16,73 +18,76 @@ Ao final deste módulo, você será capaz de:
 
 <br>
 
-## 🧠 Conteúdo
+## 🎬 O restaurante na noite de sexta
+
+Um restaurante começa a noite tranquilo, com 2 garçons. Às 21h, lota. O dono tem duas escolhas: pedir que os **2 garçons corram mais** (cada um vira "super-garçom") — ou **chamar mais 6 garçons**. A primeira tem um limite (uma pessoa só corre até certo ponto, e se ela passar mal, o salão inteiro para). A segunda escala melhor e é mais segura: se um garçom sai, os outros seguem.
+
+Essas duas escolhas são o coração deste módulo: crescer tornando **maior** vs. crescer adicionando **mais**. E a nuvem faz isso **sozinha**, em tempo real — é onde tudo o que você viu no curso se junta.
 
 <br>
 
-### 1. Duas formas de crescer
+---
 
-Quando a demanda aumenta, você pode escalar de dois jeitos:
+<br>
 
-| Tipo | O que é | Analogia 🍕 |
-|:--|:--|:--|
-| ⬆️ **Vertical (scale up)** | Tornar o servidor **maior** (mais CPU/RAM). | Trocar sua pizza média por uma família. |
-| ➡️ **Horizontal (scale out)** | Adicionar **mais servidores**. | Pedir várias pizzas em vez de uma gigante. |
+## 🧠 Parte 1 — Duas formas de crescer
+
+| Tipo | O que é | Analogia 🍕 | Limite |
+|:--|:--|:--|:--|
+| ⬆️ **Vertical (scale up)** | Tornar o servidor **maior** (mais CPU/RAM). | Trocar a pizza média por uma família | Tem teto (a máquina só cresce até certo ponto) e vira ponto único de falha |
+| ➡️ **Horizontal (scale out)** | Adicionar **mais servidores**. | Pedir várias pizzas em vez de uma gigante | Praticamente sem teto e mais resiliente |
 
 > [!IMPORTANT]
-> A nuvem adora o **escalonamento horizontal**: adicionar mais máquinas iguais é mais resiliente (se uma cai, as outras seguem) e mais elástico. A prova valoriza o "scale out".
+> A nuvem prefere **escalonamento horizontal** (scale out) — adicionar mais máquinas iguais. Por dois motivos: não tem "teto" como a vertical, e é mais **resiliente** (se uma máquina cai, as outras seguem). O vertical tem uso, mas concentra risco. Se a prova pergunta "a forma mais resiliente e escalável de crescer", a resposta tende a ser **horizontal**.
 
 <br>
 
-### 2. Elastic Load Balancing (ELB) — o distribuidor de tráfego
+## ⚖️ Parte 2 — Elastic Load Balancing (ELB): o distribuidor de tráfego
 
-Se você tem vários servidores, alguém precisa **distribuir os pedidos** entre eles de forma justa. Esse é o **Elastic Load Balancing (ELB)**: ele recebe o tráfego e reparte entre as instâncias saudáveis, em várias AZs.
+Se você tem várias máquinas (scale out), precisa de alguém para **distribuir os acessos** entre elas de forma justa — senão uma fica sobrecarregada e outra ociosa. Esse é o **Elastic Load Balancing (ELB)**: ele fica "na frente" das instâncias e reparte o tráfego.
+
+Além de distribuir, o ELB faz **health checks**: verifica a saúde de cada instância e **para de enviar tráfego para as que falharam**, mandando só para as saudáveis.
+
+> [!TIP]
+> Tipos que podem aparecer: **ALB (Application Load Balancer)** trabalha no nível de aplicação (HTTP/HTTPS, roteamento inteligente por conteúdo); **NLB (Network Load Balancer)** trabalha no nível de rede (altíssima performance, TCP). Para o Cloud Practitioner, o essencial é saber que o **ELB distribui tráfego e faz health check** entre instâncias.
+
+<br>
+
+## 📈 Parte 3 — EC2 Auto Scaling: o ajuste automático
+
+O **EC2 Auto Scaling** ajusta **automaticamente o número de instâncias** conforme a demanda. Você define regras baseadas em métricas (ex.: "se a CPU passar de 70%, adicione instâncias") e três limites:
+
+- **Mínimo** — nunca menos que isso (garante disponibilidade).
+- **Desejado** — o alvo no momento.
+- **Máximo** — nunca mais que isso (protege o orçamento).
+
+Quando a demanda sobe, ele **cria** instâncias; quando cai, ele **remove** — e ainda **substitui** instâncias que falham no health check.
+
+> [!CAUTION]
+> **Pegadinha de custo:** sem um **máximo** bem definido, um pico de tráfego (ou um ataque) pode fazer o Auto Scaling criar instâncias sem parar e estourar a fatura. Definir o máximo é também uma decisão de **custo**, não só de capacidade.
+
+<br>
+
+## 🔗 Parte 4 — A dupla dinâmica: ELB + Auto Scaling = elasticidade
+
+Aqui tudo se junta. Sozinhos, cada um resolve metade do problema. **Juntos**, eles entregam a **elasticidade** que você viu lá no Domínio 1 (a "Netflix que respira"):
+
+- O **Auto Scaling** cria e remove instâncias conforme a demanda.
+- O **ELB** distribui o tráfego entre as instâncias que existem naquele momento.
 
 ```mermaid
 flowchart TD
-    U["👥 Usuários"] --> ELB["⚖️ Elastic Load Balancer"]
-    ELB --> I1["🖥️ EC2 (AZ-a)"]
-    ELB --> I2["🖥️ EC2 (AZ-b)"]
-    ELB --> I3["🖥️ EC2 (AZ-c)"]
+    U["👥 Usuários"] --> LB["⚖️ Elastic Load Balancer<br/>(distribui + health check)"]
+    LB --> I1["🖥️ Instância (AZ-a)"]
+    LB --> I2["🖥️ Instância (AZ-b)"]
+    LB --> I3["🖥️ Instância (AZ-c)"]
+    AS["📈 Auto Scaling<br/>cria/remove conforme a demanda"] -.gerencia.-> I1
+    AS -.gerencia.-> I2
+    AS -.gerencia.-> I3
 ```
-
-> [!TIP]
-> O ELB faz **verificações de saúde** (health checks): se uma instância falha, ele **para de mandar tráfego** para ela e usa apenas as saudáveis. Isso é alta disponibilidade na prática.
-
-Tipos principais de balanceador: **Application Load Balancer (ALB)** para tráfego web (HTTP/HTTPS) e **Network Load Balancer (NLB)** para altíssimo desempenho na camada de rede.
-
-<br>
-
-### 3. EC2 Auto Scaling — o ajuste automático
-
-O **Amazon EC2 Auto Scaling** adiciona ou remove instâncias **automaticamente**, conforme a demanda:
-
-- Muitos acessos? Ele **cria** mais instâncias (scale out).
-- Demanda caiu? Ele **remove** instâncias (scale in), economizando dinheiro.
-
-```mermaid
-flowchart LR
-    M["📈 Demanda sobe"] --> AS["🔄 Auto Scaling"]
-    AS --> ADD["➕ Adiciona instâncias"]
-    M2["📉 Demanda cai"] --> AS
-    AS --> REM["➖ Remove instâncias"]
-```
-
-> [!NOTE]
-> Você define um **mínimo**, um **desejado** e um **máximo** de instâncias. O Auto Scaling mantém tudo dentro desses limites — nem falta capacidade, nem sobra custo.
-
-<br>
-
-### 4. A dupla dinâmica: ELB + Auto Scaling = elasticidade
-
-Juntos, ELB e Auto Scaling entregam o sonho da nuvem:
-
-1. O **Auto Scaling** cria/remove instâncias conforme a demanda.
-2. O **ELB** distribui o tráfego entre as instâncias que existem no momento.
-3. Resultado: a aplicação **aguenta picos**, **se recupera de falhas** e **não desperdiça dinheiro** em horas de baixa.
 
 > [!IMPORTANT]
-> Essa combinação é o coração da **elasticidade** e da **alta disponibilidade**. Se a prova perguntar como manter um app disponível e econômico sob demanda variável, a resposta quase sempre envolve **ELB + Auto Scaling em múltiplas AZs**.
+> E quando você distribui essas instâncias por **múltiplas AZs** (Domínio 1!), ganha **alta disponibilidade** de brinde: se uma AZ cai, o ELB manda o tráfego para as instâncias saudáveis nas outras AZs, e o Auto Scaling repõe o que faltou. **Elasticidade + múltiplas AZs = a arquitetura resiliente clássica** que a prova espera que você reconheça.
 
 <br>
 
@@ -90,85 +95,143 @@ Juntos, ELB e Auto Scaling entregam o sonho da nuvem:
 
 <br>
 
-## ❓ Quiz — teste seus conhecimentos
+## 🎯 Dicas de prova (pegadinhas clássicas)
+
+> [!CAUTION]
+> - **Vertical = máquina maior (tem teto). Horizontal = mais máquinas (resiliente, sem teto).** A nuvem prefere horizontal.
+> - **ELB distribui tráfego + faz health check.** Sozinho, não cria instâncias.
+> - **Auto Scaling cria/remove instâncias** conforme a demanda. Sozinho, não distribui tráfego.
+> - **ELB + Auto Scaling = elasticidade.** Em múltiplas AZs = alta disponibilidade.
+> - Definir o **máximo** do Auto Scaling protege o **custo**.
+> - Health check tira instância doente da rotação — resiliência automática.
 
 <br>
 
-**1. Adicionar mais servidores (em vez de aumentar um só) é escalar de que forma?**
+## 🗺️ Mapa rápido pra revisão
 
-- **A)** Verticalmente (scale up).
-- **B)** Horizontalmente (scale out).
-- **C)** Diagonalmente.
-- **D)** Não é escalonamento.
+| Conceito | Em uma frase |
+|:--|:--|
+| Vertical (scale up) | máquina maior — a pizza família |
+| Horizontal (scale out) | mais máquinas — várias pizzas (preferido) |
+| ELB | distribui tráfego + health check |
+| Auto Scaling | ajusta a quantidade de instâncias (mín./desejado/máx.) |
+| ELB + Auto Scaling | elasticidade (a nuvem "respira") |
+| + múltiplas AZs | alta disponibilidade |
+
+<br>
+
+---
+
+<br>
+
+## ❓ Quiz nível prova
+
+<br>
+
+**1. Qual é a diferença entre escalonamento vertical e horizontal?**
+
+- **A)** Vertical adiciona mais servidores; horizontal aumenta o tamanho de um servidor.
+- **B)** Vertical aumenta o tamanho de um servidor; horizontal adiciona mais servidores.
+- **C)** Os dois significam a mesma coisa.
+- **D)** Horizontal só funciona on-premises.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Adicionar **mais máquinas** é escalonamento **horizontal** (scale out), o preferido da nuvem.
+> ✅ **Resposta: B)**
+>
+> **Vertical (scale up)** = servidor **maior**. **Horizontal (scale out)** = **mais** servidores. A nuvem prefere o horizontal por ser resiliente e sem teto.
+>
+> - **A)** ❌ — está invertido.
+> - **C)** ❌ — são conceitos distintos.
+> - **D)** ❌ — o horizontal é justamente uma força da nuvem.
 
 </details>
 
 <br>
 
-**2. Qual serviço distribui o tráfego entre várias instâncias saudáveis?**
+**2. Uma aplicação recebe tráfego que varia muito ao longo do dia. A empresa quer que o número de instâncias aumente e diminua automaticamente conforme a demanda. Qual serviço faz isso?**
 
-- **A)** EC2 Auto Scaling.
-- **B)** Elastic Load Balancing (ELB).
-- **C)** Amazon S3.
-- **D)** AWS CloudTrail.
+- **A)** Elastic Load Balancing
+- **B)** EC2 Auto Scaling
+- **C)** Amazon CloudFront
+- **D)** Amazon S3
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — O **ELB** reparte o tráfego entre as instâncias saudáveis, em várias AZs.
+> ✅ **Resposta: B) EC2 Auto Scaling**
+>
+> Ajustar automaticamente a **quantidade** de instâncias conforme a demanda é o papel do Auto Scaling.
+>
+> - **A)** ❌ — o ELB distribui tráfego, mas não cria/remove instâncias.
+> - **C)** ❌ — CloudFront é CDN.
+> - **D)** ❌ — S3 é armazenamento.
 
 </details>
 
 <br>
 
-**3. O que o EC2 Auto Scaling faz quando a demanda cai?**
+**3. Qual é a função principal de um Elastic Load Balancer?**
 
-- **A)** Cria mais instâncias.
-- **B)** Remove instâncias para economizar (scale in).
-- **C)** Desliga a conta.
-- **D)** Aumenta o tamanho de cada instância.
+- **A)** Criar e remover instâncias automaticamente.
+- **B)** Distribuir o tráfego entre várias instâncias e enviar apenas às saudáveis (health check).
+- **C)** Armazenar backups de longo prazo.
+- **D)** Traduzir nomes de domínio em IPs.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Com a demanda baixa, o Auto Scaling **remove** instâncias (scale in), reduzindo custos.
+> ✅ **Resposta: B)**
+>
+> O ELB **distribui o tráfego** entre instâncias e usa **health checks** para rotear só para as saudáveis.
+>
+> - **A)** ❌ — isso é o Auto Scaling.
+> - **C)** ❌ — isso é o S3/Glacier.
+> - **D)** ❌ — isso é o Route 53 (DNS).
 
 </details>
 
 <br>
 
-**4. Como o ELB contribui para a alta disponibilidade?**
+**4. Como ELB e Auto Scaling trabalham juntos para entregar elasticidade e alta disponibilidade?**
 
-- **A)** Ignorando instâncias que falham, via health checks, e usando só as saudáveis.
-- **B)** Desligando todas as instâncias à noite.
-- **C)** Criptografando os dados em repouso.
-- **D)** Armazenando backups no Glacier.
+- **A)** O ELB cria instâncias e o Auto Scaling distribui o tráfego.
+- **B)** O Auto Scaling ajusta a quantidade de instâncias e o ELB distribui o tráfego entre elas; em múltiplas AZs, o sistema sobrevive à queda de uma zona.
+- **C)** Os dois fazem exatamente a mesma coisa, de forma redundante.
+- **D)** Eles só funcionam em uma única AZ.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: A)** — O ELB faz **health checks** e para de enviar tráfego para instâncias com falha, mantendo o serviço no ar.
+> ✅ **Resposta: B)**
+>
+> Auto Scaling cuida da **quantidade**; ELB cuida da **distribuição**. Espalhados por várias AZs, entregam **alta disponibilidade**.
+>
+> - **A)** ❌ — está com os papéis invertidos.
+> - **C)** ❌ — têm funções complementares, não idênticas.
+> - **D)** ❌ — justamente o uso em múltiplas AZs é o que traz resiliência.
 
 </details>
 
 <br>
 
-**5. Qual combinação entrega elasticidade e alta disponibilidade para uma aplicação web?**
+**5. Selecione as DUAS afirmações corretas.** *(múltipla resposta — escolha 2)*
 
-- **A)** S3 + Glacier.
-- **B)** ELB + Auto Scaling em múltiplas AZs.
-- **C)** IAM + KMS.
-- **D)** CloudTrail + CloudWatch.
+- **A)** O escalonamento horizontal é geralmente mais resiliente que o vertical.
+- **B)** O ELB, sozinho, cria e remove instâncias conforme a demanda.
+- **C)** Definir um número máximo no Auto Scaling ajuda a controlar custos.
+- **D)** O escalonamento vertical não tem limite algum.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — **ELB + Auto Scaling** em várias AZs é a combinação clássica para elasticidade e disponibilidade.
+> ✅ **Respostas: A) e C)**
+>
+> **A** (horizontal é mais resiliente) e **C** (o máximo controla custo) estão corretas.
+>
+> - **B)** ❌ — quem cria/remove instâncias é o **Auto Scaling**, não o ELB.
+> - **D)** ❌ — o vertical **tem** teto (a máquina só cresce até um limite).
 
 </details>
 
@@ -180,8 +243,8 @@ Juntos, ELB e Auto Scaling entregam o sonho da nuvem:
 
 ## 🧪 Mão na massa (sem console!)
 
-- 🔗 **AWS Skill Builder** → procure por *"Elastic Load Balancing"* e *"EC2 Auto Scaling"*.
-- 🔗 **AWS SimuLearn** → jornada de **escalabilidade**: pratique configurar balanceamento e auto scaling em ambiente simulado.
+- 🔗 **AWS Skill Builder** → módulos de *Elastic Load Balancing* e *EC2 Auto Scaling*.
+- ✍️ **Desafio do restaurante:** desenhe um ELB na frente de 3 instâncias em 3 AZs, com o Auto Scaling gerenciando a quantidade. Explique o que acontece quando (a) o tráfego dobra e (b) uma AZ cai. Se souber, você fechou o Domínio 3.
 
 <br>
 
@@ -193,24 +256,24 @@ Juntos, ELB e Auto Scaling entregam o sonho da nuvem:
 
 | Termo | Significado |
 |:--|:--|
-| **Escalonamento vertical** | Aumentar o tamanho de um servidor. |
+| **Escalonamento vertical** | Aumentar o tamanho (CPU/RAM) de um servidor. |
 | **Escalonamento horizontal** | Adicionar mais servidores. |
 | **Elastic Load Balancing (ELB)** | Distribui tráfego entre instâncias saudáveis. |
-| **Health check** | Verificação de saúde das instâncias. |
-| **ALB / NLB** | Balanceadores de aplicação / de rede. |
-| **EC2 Auto Scaling** | Ajusta o número de instâncias automaticamente. |
+| **Health check** | Verificação de saúde das instâncias pelo ELB. |
+| **ALB / NLB** | Balanceador de aplicação (HTTP) / de rede (TCP). |
+| **EC2 Auto Scaling** | Ajusta automaticamente o número de instâncias (mín./desejado/máx.). |
 | **Elasticidade** | Ajuste automático de recursos conforme a demanda. |
 
 <br>
 
 ## ✅ Checklist de conclusão
 
-- [ ] Li todo o conteúdo do módulo
-- [ ] Diferencio escalonamento vertical e horizontal
-- [ ] Entendo o papel do ELB e dos health checks
-- [ ] Entendo o EC2 Auto Scaling (mín/desejado/máx)
-- [ ] Sei por que ELB + Auto Scaling garantem elasticidade e HA
-- [ ] Fiz o quiz
+- [ ] Diferencio escalonamento vertical e horizontal (e sei por que a nuvem prefere o horizontal)
+- [ ] Entendi o papel do ELB (distribuir + health check)
+- [ ] Entendi o EC2 Auto Scaling (mín./desejado/máx.)
+- [ ] Sei como ELB + Auto Scaling geram elasticidade e, com múltiplas AZs, alta disponibilidade
+- [ ] Lembro que o máximo do Auto Scaling controla custo
+- [ ] Fiz o quiz e entendi por que cada alternativa errada está errada
 - [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)
 
 <br>

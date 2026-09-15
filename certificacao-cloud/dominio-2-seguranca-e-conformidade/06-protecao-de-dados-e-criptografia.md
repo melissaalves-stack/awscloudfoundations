@@ -1,14 +1,16 @@
 # Módulo 06 · Proteção de dados e criptografia
 
 > **Domínio:** 2 · Segurança e Conformidade · **Tempo estimado:** 3h · **Pré-requisitos:** Módulos 04 e 05
+> **Peso na prova:** parte do Domínio 2 (**30%**). Criptografia em repouso vs. em trânsito e o papel do KMS caem com frequência.
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Onde você quer chegar
 
-Ao final deste módulo, você será capaz de:
+Ao final deste módulo, você vai:
 
-- Entender criptografia **em repouso** e **em trânsito**.
-- Explicar o papel do **AWS KMS** e do **CloudHSM**.
-- Reconhecer serviços de proteção de dados como **Secrets Manager** e **Macie**.
+- Entender **criptografia** sem susto — o que é e por que protege seus dados.
+- Diferenciar criptografia **em repouso** (at rest) de **em trânsito** (in transit).
+- Saber o papel do **AWS KMS** (o gerente de chaves) e quando usar o **CloudHSM**.
+- Reconhecer os serviços que guardam segredos e descobrem dados sensíveis: **Secrets Manager, Parameter Store, Macie, ACM**.
 
 <br>
 
@@ -16,68 +18,83 @@ Ao final deste módulo, você será capaz de:
 
 <br>
 
-## 🧠 Conteúdo
+## 🎬 O bilhete que ninguém consegue ler
+
+Imagine que você escreve um bilhete secreto e o embaralha com uma regra que só você e o destinatário conhecem (trocar cada letra pela seguinte, por exemplo). Se alguém interceptar o bilhete no caminho, vê só um monte de letras sem sentido. Sem a **chave** (a regra), o conteúdo é inútil.
+
+Isso é **criptografia** — e é a última linha de defesa dos seus dados. Mesmo que um invasor consiga o arquivo, se ele estiver criptografado, é lixo ilegível sem a chave. Neste módulo você vai ver **onde** a AWS aplica criptografia e **quem** cuida das chaves.
 
 <br>
 
-### 1. O que é criptografia (sem susto)
-
-Criptografar é **embaralhar** um dado com uma "chave", de modo que só quem tem a chave certa consiga lê-lo de volta. Sem a chave, o dado vira texto sem sentido.
-
-> [!TIP]
-> **Analogia do cofre** 🔐
-> Criptografar é trancar seu documento num cofre. Mesmo que alguém roube o cofre, sem a **chave** não abre. A "chave" aqui é uma sequência secreta que o computador usa para embaralhar e desembaralhar.
+---
 
 <br>
 
-### 2. Dois momentos: em repouso e em trânsito
+## 🧠 Parte 1 — O que é criptografia (sem susto)
 
-| Tipo | Quando acontece | Exemplo |
-|:--|:--|:--|
-| 🛑 **Em repouso (at rest)** | Quando o dado está **guardado** (parado no disco). | Um arquivo salvo num bucket S3 criptografado. |
-| 🚚 **Em trânsito (in transit)** | Quando o dado está **viajando** pela rede. | Uma página carregando por HTTPS (o cadeado do navegador). |
-
-> [!IMPORTANT]
-> A prova gosta dessa dupla. **Em repouso** = dado parado/armazenado. **Em trânsito** = dado em movimento pela rede. O ideal é proteger **os dois**.
-
-<br>
-
-### 3. AWS KMS — o gerente de chaves
-
-Gerenciar chaves de criptografia à mão é complicado e arriscado. O **AWS KMS (Key Management Service)** faz isso por você: cria, guarda, gira e controla o acesso às chaves — e se integra com quase todos os serviços (S3, EBS, RDS...).
-
-```mermaid
-flowchart LR
-    D["📄 Dado"] --> K["🔑 AWS KMS<br/>gerencia a chave"]
-    K --> E["🔐 Dado criptografado"]
-    E --> S["💾 Armazenado com segurança"]
-```
+**Criptografia é embaralhar dados usando uma chave, de forma que só quem tem a chave consiga desembaralhar e ler.** Sem a chave, o dado é um amontoado ininteligível.
 
 > [!NOTE]
-> Com o KMS, você ativa criptografia em muitos serviços praticamente com **um clique** — o KMS cuida das chaves nos bastidores.
+> A ideia é simples: **dado + chave → dado embaralhado** (cifrado). E o contrário: **dado embaralhado + chave → dado legível** (decifrado). Toda a segurança depende de **proteger a chave** — por isso a AWS tem serviços dedicados só para gerenciar chaves, que você verá já já.
 
 <br>
 
-### 4. Quando você precisa de controle total: CloudHSM
+## 🔄 Parte 2 — Os dois momentos: em repouso e em trânsito
 
-Alguns setores (bancos, governo) exigem controle **físico e exclusivo** das chaves, por lei. Para esses casos existe o **AWS CloudHSM** — um módulo de hardware dedicado **só para você**, onde as chaves nunca saem do seu controle.
+Seus dados precisam de proteção em **dois momentos** distintos da vida deles. A prova adora essa distinção.
+
+| Tipo | Quando acontece | Exemplo do dia a dia |
+|:--|:--|:--|
+| 🛑 **Em repouso (at rest)** | Quando o dado está **guardado, parado** num disco. | Um arquivo salvo num bucket S3 criptografado |
+| 🚚 **Em trânsito (in transit)** | Quando o dado está **viajando** pela rede. | Uma página carregando por **HTTPS** (o cadeado do navegador) |
 
 > [!TIP]
-> Regra prática: **KMS** para a maioria dos casos (gerenciado e fácil). **CloudHSM** quando há exigência regulatória de hardware dedicado.
+> **Âncora de memória:** dado **parado no armário** = em repouso. Dado **dentro do caminhão de entrega** = em trânsito. Uma arquitetura segura protege os **dois** momentos — não adianta trancar o armário e mandar o caminhão aberto.
+
+> [!IMPORTANT]
+> Ligue os pontos com o que você já sabe: a criptografia **em trânsito** é o que o **HTTPS/TLS** faz (aquele cadeado). Quem gerencia os certificados que habilitam o HTTPS na AWS é o **ACM** (veremos na Parte 5). A criptografia **em repouso** é uma opção que você liga em serviços como o S3 e o EBS, usando chaves gerenciadas pelo **KMS** (próxima parte).
 
 <br>
 
-### 5. Outros guardiões de dados
+## 🔑 Parte 3 — AWS KMS: o gerente de chaves
 
-| Serviço | Para que serve |
-|:--|:--|
-| 🗝️ **AWS Secrets Manager** | Guardar e girar **segredos** (senhas de banco, chaves de API) com segurança, sem deixá-los no código. |
-| 📇 **AWS Systems Manager Parameter Store** | Guardar configurações e segredos simples (versão mais econômica para casos básicos). |
-| 🕵️ **Amazon Macie** | Usa ML para **descobrir dados sensíveis** (como CPFs e cartões) guardados no S3. |
-| 📜 **AWS Certificate Manager (ACM)** | Gerencia certificados SSL/TLS para habilitar HTTPS (criptografia em trânsito). |
+Se a segurança toda depende de proteger a chave, quem cuida das chaves? O **AWS KMS (Key Management Service)** — um serviço gerenciado que **cria, guarda e controla o uso** das chaves de criptografia.
+
+Com o KMS você:
+- Cria chaves de criptografia sem precisar ser especialista.
+- Controla **quem** pode usar cada chave (integrado ao IAM).
+- Ativa criptografia em repouso em serviços como S3, EBS, RDS com poucos cliques.
+
+> [!TIP]
+> **Analogia do cofre do banco:** você não guarda suas joias mais preciosas em casa; guarda no cofre do banco, que controla o acesso e registra quem abriu. O KMS é esse cofre para as suas chaves de criptografia. Se a prova fala em "criar e gerenciar chaves de criptografia de forma gerenciada", a resposta é **KMS**.
+
+<br>
+
+## 🏦 Parte 4 — Quando você precisa de controle total: CloudHSM
+
+Às vezes uma exigência regulatória diz: *"as chaves precisam estar num hardware dedicado, só seu, que nem a AWS pode acessar"*. Para esse caso existe o **AWS CloudHSM** — um módulo de hardware (HSM) dedicado e exclusivo, onde **só você** tem controle das chaves.
+
+> [!NOTE]
+> A diferença em uma frase: o **KMS** é o cofre **compartilhado e gerenciado** do banco (ótimo para 99% dos casos). O **CloudHSM** é um **cofre exclusivo, só seu**, para exigências rígidas de conformidade que pedem hardware dedicado e controle único. Se a questão enfatiza "hardware dedicado" ou "controle exclusivo do cliente sobre as chaves", pense em **CloudHSM**.
+
+<br>
+
+## 🛡️ Parte 5 — Outros guardiões de dados
+
+Além das chaves, a AWS tem serviços especializados para proteger **segredos** e **descobrir** dados sensíveis. A prova gosta de dar a descrição e pedir o nome.
+
+| Serviço | Para que serve | Frase-gatilho |
+|:--|:--|:--|
+| 🗝️ **AWS Secrets Manager** | Guardar e **girar automaticamente** segredos (senhas de banco, chaves de API), sem deixá-los no código. | "rotacionar senhas de banco automaticamente" |
+| 📇 **Systems Manager Parameter Store** | Guardar configurações e segredos simples — opção mais econômica para casos básicos. | "armazenar parâmetros de configuração" |
+| 🕵️ **Amazon Macie** | Usa **machine learning** para **descobrir dados sensíveis** (CPFs, cartões) guardados no **S3**. | "identificar dados sensíveis/PII no S3" |
+| 📜 **AWS Certificate Manager (ACM)** | Provisiona e gerencia **certificados SSL/TLS** para habilitar **HTTPS** (criptografia em trânsito). | "gerenciar certificados / habilitar HTTPS" |
 
 > [!CAUTION]
-> **Nunca** escreva senhas ou chaves de acesso direto no seu código ou em repositórios públicos. Use o **Secrets Manager** ou **roles** do IAM. Chaves vazadas em repositórios são uma das principais causas de incidentes.
+> **Pegadinha frequente — Secrets Manager vs. Parameter Store:** os dois guardam segredos. O diferencial do **Secrets Manager** é a **rotação automática** de segredos (ele troca a senha sozinho de tempos em tempos). Se a questão enfatiza "rotacionar automaticamente", é **Secrets Manager**. Se é só "guardar um parâmetro simples e barato", pode ser o **Parameter Store**.
+
+> [!CAUTION]
+> **Não confunda Macie com GuardDuty** (que você verá no próximo módulo): **Macie descobre dados sensíveis no S3**; **GuardDuty detecta ameaças/atividades suspeitas**. Um olha *os dados*, o outro olha *o comportamento*.
 
 <br>
 
@@ -85,85 +102,144 @@ Alguns setores (bancos, governo) exigem controle **físico e exclusivo** das cha
 
 <br>
 
-## ❓ Quiz — teste seus conhecimentos
+## 🎯 Dicas de prova (pegadinhas clássicas)
+
+> [!CAUTION]
+> - **Em repouso = parado no disco; em trânsito = viajando na rede (HTTPS/TLS).** Proteja os dois.
+> - **KMS** = criar e gerenciar chaves (o padrão). **CloudHSM** = hardware dedicado e exclusivo (exigência rígida).
+> - **Secrets Manager** = guardar segredos **com rotação automática**. Parameter Store = guardar parâmetros simples/baratos.
+> - **Macie** = descobrir dados sensíveis (PII) no **S3**. Não confunda com GuardDuty (ameaças).
+> - **ACM** = certificados SSL/TLS para HTTPS (criptografia em trânsito).
+> - Criptografia é a "última linha": mesmo vazando, o dado cifrado é inútil sem a chave.
 
 <br>
 
-**1. Um arquivo salvo e parado em um bucket S3 criptografado está protegido de que forma?**
+## 🗺️ Mapa rápido pra revisão
 
-- **A)** Em trânsito.
-- **B)** Em repouso.
-- **C)** Não está protegido.
-- **D)** Apenas por senha.
+| Serviço/conceito | Em uma frase |
+|:--|:--|
+| Em repouso × em trânsito | armário trancado × caminhão blindado |
+| KMS | cofre gerenciado das chaves (padrão) |
+| CloudHSM | cofre exclusivo em hardware dedicado |
+| Secrets Manager | guarda e **gira** segredos |
+| Parameter Store | guarda parâmetros simples (barato) |
+| Macie | acha dados sensíveis no S3 (ML) |
+| ACM | certificados HTTPS (TLS) |
+
+<br>
+
+---
+
+<br>
+
+## ❓ Quiz nível prova
+
+<br>
+
+**1. Uma empresa quer garantir que os arquivos guardados em um bucket S3 fiquem ilegíveis caso alguém obtenha acesso indevido ao armazenamento. Que tipo de proteção ela deve aplicar?**
+
+- **A)** Criptografia em trânsito
+- **B)** Criptografia em repouso
+- **C)** Um Security Group mais restritivo
+- **D)** Uma Edge Location
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Dado **guardado/parado** = criptografia **em repouso** (at rest).
+> ✅ **Resposta: B) Criptografia em repouso**
+>
+> Os dados estão **parados** no S3 (armazenados). Criptografá-los em repouso garante que fiquem ilegíveis sem a chave, mesmo se acessados indevidamente.
+>
+> - **A)** ❌ — em trânsito protege o dado *viajando* na rede, não parado no disco.
+> - **C)** ❌ — ajuda no controle de acesso, mas não torna o dado ilegível.
+> - **D)** ❌ — Edge Location é entrega de conteúdo, nada a ver.
 
 </details>
 
 <br>
 
-**2. O cadeado HTTPS de um site protege os dados de que forma?**
+**2. Qual serviço da AWS é o indicado para criar e gerenciar chaves de criptografia de forma gerenciada, integrando com o controle de acesso do IAM?**
 
-- **A)** Em repouso.
-- **B)** Em trânsito.
-- **C)** Nenhuma.
-- **D)** Apenas contra vírus.
+- **A)** Amazon Macie
+- **B)** AWS KMS
+- **C)** AWS WAF
+- **D)** Amazon Cognito
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — HTTPS protege o dado **em movimento pela rede** = criptografia **em trânsito** (in transit).
+> ✅ **Resposta: B) AWS KMS**
+>
+> O **Key Management Service** cria, guarda e controla o uso das chaves de criptografia, integrado ao IAM.
+>
+> - **A)** ❌ — Macie descobre dados sensíveis, não gerencia chaves.
+> - **C)** ❌ — WAF é firewall de aplicações web.
+> - **D)** ❌ — Cognito gerencia identidades de usuários finais.
 
 </details>
 
 <br>
 
-**3. Qual serviço a AWS oferece para criar e gerenciar chaves de criptografia de forma integrada?**
+**3. Uma exigência regulatória determina que as chaves de criptografia fiquem em um módulo de hardware dedicado e sob controle exclusivo do cliente. Qual serviço atende a isso?**
 
-- **A)** Amazon Macie.
-- **B)** AWS KMS (Key Management Service).
-- **C)** Amazon Cognito.
-- **D)** AWS Shield.
+- **A)** AWS KMS (chave gerenciada padrão)
+- **B)** AWS CloudHSM
+- **C)** AWS Secrets Manager
+- **D)** AWS Certificate Manager
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — O **KMS** gerencia chaves e se integra com S3, EBS, RDS e muitos outros serviços.
+> ✅ **Resposta: B) AWS CloudHSM**
+>
+> Quando a exigência é **hardware dedicado** e **controle exclusivo**, o CloudHSM é a resposta.
+>
+> - **A)** ❌ — o KMS é gerenciado e compartilhado; atende a maioria dos casos, mas não a exigência de hardware exclusivo.
+> - **C)** ❌ — guarda segredos, não é HSM.
+> - **D)** ❌ — gerencia certificados TLS.
 
 </details>
 
 <br>
 
-**4. Um banco precisa, por lei, de um módulo de hardware dedicado só para suas chaves. Qual serviço atende?**
+**4. Uma equipe quer armazenar a senha de um banco de dados de forma segura e fazer com que ela seja trocada (rotacionada) automaticamente em intervalos regulares. Qual serviço usar?**
 
-- **A)** AWS KMS.
-- **B)** AWS CloudHSM.
-- **C)** AWS Secrets Manager.
-- **D)** Amazon Macie.
+- **A)** AWS Secrets Manager
+- **B)** Amazon S3
+- **C)** AWS Artifact
+- **D)** Amazon Macie
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — O **CloudHSM** oferece hardware dedicado e exclusivo, ideal para exigências regulatórias.
+> ✅ **Resposta: A) AWS Secrets Manager**
+>
+> O diferencial do Secrets Manager é justamente a **rotação automática** de segredos como senhas de banco.
+>
+> - **B)** ❌ — o S3 armazena objetos, não é feito para gerenciar/rotacionar segredos.
+> - **C)** ❌ — Artifact é portal de documentos de conformidade.
+> - **D)** ❌ — Macie descobre dados sensíveis, não gerencia senhas.
 
 </details>
 
 <br>
 
-**5. Qual serviço usa machine learning para descobrir dados sensíveis (como CPFs) guardados no S3?**
+**5. Selecione as DUAS afirmações corretas sobre criptografia na AWS.** *(múltipla resposta — escolha 2)*
 
-- **A)** Amazon Macie.
-- **B)** AWS KMS.
-- **C)** AWS Certificate Manager.
-- **D)** Amazon Cognito.
+- **A)** Criptografia em trânsito protege os dados enquanto eles viajam pela rede (ex.: via HTTPS/TLS).
+- **B)** Uma vez criptografado em repouso, o dado nunca precisa de proteção em trânsito.
+- **C)** O AWS KMS é usado para criar e gerenciar chaves de criptografia.
+- **D)** Criptografia elimina a necessidade de controle de acesso (IAM).
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: A)** — O **Amazon Macie** identifica e classifica dados sensíveis no S3 usando ML.
+> ✅ **Respostas: A) e C)**
+>
+> **A** define corretamente a criptografia em trânsito; **C** descreve o papel do KMS.
+>
+> - **B)** ❌ — os dois momentos são independentes: você protege em repouso E em trânsito.
+> - **D)** ❌ — criptografia e IAM são camadas complementares; uma não substitui a outra (defesa em profundidade).
 
 </details>
 
@@ -175,8 +251,9 @@ Alguns setores (bancos, governo) exigem controle **físico e exclusivo** das cha
 
 ## 🧪 Mão na massa (sem console!)
 
-- 🔗 **AWS Skill Builder** → procure por *"AWS KMS"* e *"Data Protection"* para exemplos guiados.
-- 🔗 Reflita: para um app que guarda dados de clientes, liste onde você aplicaria criptografia **em repouso** e onde aplicaria **em trânsito**.
+- 🔗 **AWS Skill Builder** → módulos sobre *criptografia* e *proteção de dados* no Cloud Practitioner Essentials.
+- 🔗 Repare no **cadeado do navegador** ao abrir qualquer site seguro: aquilo é criptografia em trânsito (TLS) acontecendo agora.
+- ✍️ **Desafio:** para cada serviço (KMS, CloudHSM, Secrets Manager, Macie, ACM), escreva a situação em uma frase que faria você escolhê-lo. Se souber as 5, dominou o módulo.
 
 <br>
 
@@ -188,24 +265,26 @@ Alguns setores (bancos, governo) exigem controle **físico e exclusivo** das cha
 
 | Termo | Significado |
 |:--|:--|
-| **Criptografia** | Embaralhar dados com uma chave para que só quem a possui consiga lê-los. |
+| **Criptografia** | Embaralhar dados com uma chave; só quem tem a chave consegue ler. |
 | **Em repouso (at rest)** | Proteção de dados armazenados/parados. |
-| **Em trânsito (in transit)** | Proteção de dados em movimento pela rede. |
-| **AWS KMS** | Serviço gerenciado de criação e gestão de chaves. |
-| **AWS CloudHSM** | Módulo de hardware dedicado para controle exclusivo de chaves. |
-| **Secrets Manager** | Serviço para guardar e girar segredos com segurança. |
-| **Amazon Macie** | Descobre dados sensíveis no S3 com ML. |
-| **ACM** | Gerencia certificados SSL/TLS (HTTPS). |
+| **Em trânsito (in transit)** | Proteção de dados em movimento pela rede (HTTPS/TLS). |
+| **AWS KMS** | Serviço gerenciado de criação e gestão de chaves de criptografia. |
+| **AWS CloudHSM** | Módulo de hardware dedicado, com controle exclusivo do cliente sobre as chaves. |
+| **Secrets Manager** | Guarda e rotaciona segredos (senhas, chaves de API) automaticamente. |
+| **Parameter Store** | Guarda parâmetros/segredos simples, opção econômica. |
+| **Amazon Macie** | Descobre dados sensíveis (PII) no S3 usando machine learning. |
+| **ACM** | Gerencia certificados SSL/TLS para habilitar HTTPS. |
 
 <br>
 
 ## ✅ Checklist de conclusão
 
-- [ ] Li todo o conteúdo do módulo
-- [ ] Entendo criptografia em repouso e em trânsito
-- [ ] Sei o papel do KMS e do CloudHSM
-- [ ] Reconheço Secrets Manager, Macie e ACM
-- [ ] Fiz o quiz
+- [ ] Entendi o que é criptografia e por que ela é a "última linha"
+- [ ] Diferencio criptografia em repouso e em trânsito
+- [ ] Sei o papel do KMS e quando usar o CloudHSM
+- [ ] Distingo Secrets Manager, Parameter Store, Macie e ACM
+- [ ] Não confundo Macie (dados) com GuardDuty (ameaças)
+- [ ] Fiz o quiz e entendi por que cada alternativa errada está errada
 - [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)
 
 <br>

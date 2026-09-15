@@ -65,6 +65,20 @@ flowchart LR
 
 ---
 
+## 🎯 Simulados (teste seus conhecimentos)
+
+Terminou os módulos? Hora de treinar para a prova com questões no estilo do exame:
+
+- 🟢 [Simulado do Domínio 1](./simulados/simulado-dominio-1.md) — Conceitos de Nuvem (10 questões)
+- 🔵 [Simulado do Domínio 2](./simulados/simulado-dominio-2.md) — Segurança e Conformidade (10 questões)
+- 🟣 [Simulado do Domínio 3](./simulados/simulado-dominio-3.md) — Tecnologia e Serviços (12 questões)
+- 🟠 [Simulado do Domínio 4](./simulados/simulado-dominio-4.md) — Cobrança, Preços e Suporte (8 questões)
+- 🏆 **[Simulado Geral](./simulados/simulado-geral.md) — 65 questões, o ensaio da prova real**
+
+> Veja o [índice completo dos simulados](./simulados/README.md) para dicas de como estudar.
+
+---
+
 ## 🔗 Acesso rápido
 
 - 📊 **[Registrar Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)**

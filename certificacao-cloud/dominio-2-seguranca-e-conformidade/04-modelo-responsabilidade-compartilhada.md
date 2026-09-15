@@ -1,14 +1,16 @@
 # Módulo 04 · O Modelo de Responsabilidade Compartilhada
 
-> **Domínio:** 2 · Segurança e Conformidade · **Tempo estimado:** 2h30 · **Pré-requisitos:** Domínio 1
+> **Domínio:** 2 · Segurança e Conformidade · **Tempo estimado:** 3h · **Pré-requisitos:** Domínio 1 completo
+> **Peso na prova:** o Domínio 2 vale **30%** do CLF-C02 — o segundo maior. E este módulo é a espinha dorsal dele: entender quem é responsável por quê é o que destrava metade das questões de segurança.
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Onde você quer chegar
 
-Ao final deste módulo, você será capaz de:
+Ao final deste módulo, você vai:
 
-- Explicar o que é o **Modelo de Responsabilidade Compartilhada**.
-- Diferenciar segurança **"da" nuvem** (AWS) e segurança **"na" nuvem** (você).
-- Classificar exemplos reais de responsabilidade entre AWS e cliente.
+- Explicar o **Modelo de Responsabilidade Compartilhada** com suas próprias palavras.
+- Saber, para qualquer tarefa, dizer se ela é da **AWS** ou do **cliente**.
+- Entender a diferença entre segurança **"da" nuvem** e segurança **"na" nuvem**.
+- Não cair na pegadinha dos **serviços gerenciados**, onde a linha de responsabilidade se move.
 
 <br>
 
@@ -16,76 +18,87 @@ Ao final deste módulo, você será capaz de:
 
 <br>
 
-## 🧠 Conteúdo
+## 🎬 De quem é a culpa quando vaza?
+
+Toda semana sai uma notícia: "empresa vazou dados de milhões de clientes que estavam na AWS". A pergunta que todo mundo faz é: *a AWS falhou?*
+
+Quase sempre, **não**. Na esmagadora maioria dos vazamentos, a infraestrutura da AWS estava perfeita — o que falhou foi a **configuração feita pelo cliente**: um bucket S3 deixado público sem querer, uma senha fraca, uma permissão larga demais.
+
+Como isso é possível? Porque na nuvem a segurança é **dividida**. A AWS cuida de uma parte, e **você** cuida da outra. Saber exatamente onde uma responsabilidade termina e a outra começa é o coração do Domínio 2 — e é o que este módulo te dá.
 
 <br>
 
-### 1. A ideia central
-
-Na nuvem, a segurança é **dividida** entre a AWS e você. Nenhum dos dois é responsável por tudo. Entender essa divisão é uma das perguntas mais comuns da prova.
-
-> [!IMPORTANT]
-> A regra de ouro:
-> - 🏢 A **AWS** cuida da segurança **"DA" nuvem** (a infraestrutura).
-> - 👤 **Você** cuida da segurança **"NA" nuvem** (o que você coloca lá dentro).
+---
 
 <br>
 
-### 2. A analogia do apartamento alugado 🏠
+## 🧠 Parte 1 — A ideia central: segurança "da" nuvem vs. "na" nuvem
 
-Pense em alugar um apartamento em um prédio:
+O modelo se resume a uma frase que vale ouro na prova:
+
+> - A **AWS** é responsável pela segurança **DA** nuvem (a infraestrutura: os prédios, o hardware, a rede, a virtualização).
+> - **Você** é responsável pela segurança **NA** nuvem (o que você coloca lá dentro: seus dados, seus acessos, suas configurações).
+
+Uma preposição muda tudo: **"da"** (AWS) vs. **"na"** (você). A AWS protege a fundação; você protege o que constrói em cima dela.
+
+<br>
+
+## 🏠 Parte 2 — A analogia do apartamento alugado
+
+A melhor forma de sentir isso é pensar num prédio de apartamentos. A administradora do prédio (a AWS) e você (o inquilino) têm deveres diferentes — e claros:
 
 | O prédio (AWS) cuida de... | Você (inquilino) cuida de... |
 |:--|:--|
 | Estrutura, fundação, paredes | Trancar a **sua** porta |
-| Segurança da portaria | Não deixar a chave com estranhos |
+| Segurança da portaria e do perímetro | Não deixar a chave com estranhos |
 | Encanamento e elétrica do prédio | Guardar bem seus objetos de valor |
 | Câmeras nas áreas comuns | Decidir quem entra no seu apê |
 
-A AWS garante que o "prédio" é seguro. Mas se você deixa a sua porta destrancada (ex.: um bucket S3 público sem querer), o problema é seu.
+> [!TIP]
+> Repare: se você deixar sua porta destrancada e for roubado, **a culpa não é do prédio** — a portaria estava lá, as câmeras funcionando, a estrutura de pé. Você não trancou o que era seu. Na nuvem é idêntico: se você deixa um bucket público, a AWS não falhou. Você não trancou o que era seu.
 
 <br>
 
-### 3. Quem cuida de quê, na prática
+## 🔍 Parte 3 — Quem cuida de quê, na prática
+
+A prova adora te dar uma tarefa e perguntar "de quem é a responsabilidade?". Aqui está o mapa essencial:
+
+| Responsabilidade | De quem é? | Por quê |
+|:--|:--:|:--|
+| Segurança física dos data centers | 🏢 **AWS** | É a infraestrutura ("da" nuvem) |
+| Descarte seguro de discos antigos | 🏢 **AWS** | Hardware é da AWS |
+| Manter o **hypervisor** atualizado | 🏢 **AWS** | A camada de virtualização é dela |
+| Configurar **quem acessa** seus recursos (IAM) | 👤 **Você** | Controle de acesso é seu |
+| **Criptografar** seus dados sensíveis | 👤 **Você** | Seus dados, sua proteção |
+| Aplicar **patches no SO** de uma instância EC2 | 👤 **Você** | Você escolheu e opera aquele SO |
+| Configurar corretamente um **Security Group** | 👤 **Você** | Configuração é sua |
+| Classificar e gerenciar seus dados | 👤 **Você** | Só você sabe o que é sensível |
+
+> [!IMPORTANT]
+> Um jeito infalível de decidir na prova: pergunte **"isso é físico/infraestrutura, ou é configuração/dado?"** Físico e infraestrutura (prédio, hardware, hypervisor, rede física) → **AWS**. Configuração, dados, acesso e sistema operacional que você gerencia → **você**.
+
+<br>
+
+## ⚙️ Parte 4 — A pegadinha: a linha se move com serviços gerenciados
+
+Aqui está o detalhe que derruba gente que decorou só "AWS = física, cliente = resto". A linha de responsabilidade **não é fixa** — ela desliza dependendo de quão **gerenciado** é o serviço.
+
+Pense num espectro:
+
+- Numa instância **EC2** (IaaS, pouco gerenciada), **você** cuida do sistema operacional, dos patches, do firewall. Muita responsabilidade sua.
+- Já num serviço **totalmente gerenciado** como o **S3, DynamoDB ou Lambda**, a AWS assume o sistema operacional, os patches e a infraestrutura por baixo. **Sobra menos** para você — mas nunca sobra **nada**: seus **dados** e o **controle de acesso** continuam sendo sempre seus.
 
 ```mermaid
-flowchart TD
-    subgraph AWS["🏢 AWS — Segurança DA nuvem"]
-        A1["Hardware e data centers"]
-        A2["Rede global e AZs"]
-        A3["Virtualização / hypervisor"]
-        A4["Infraestrutura dos serviços gerenciados"]
-    end
-    subgraph VOCE["👤 Você — Segurança NA nuvem"]
-        V1["Seus dados"]
-        V2["Gerenciamento de identidade (IAM)"]
-        V3["Configuração de firewall / rede"]
-        V4["Criptografia e permissões"]
-        V5["Sistema operacional e patches (no EC2)"]
-    end
+flowchart LR
+    A["🖥️ EC2<br/>(IaaS)<br/>você cuida de mais"] --> B["📦 RDS / serviços<br/>gerenciados"]
+    B --> C["⚡ S3 / Lambda / DynamoDB<br/>(gerenciado)<br/>AWS cuida de mais"]
 ```
 
-| Responsabilidade | De quem é? |
-|:--|:--:|
-| Segurança física dos data centers | 🏢 AWS |
-| Descarte seguro de discos antigos | 🏢 AWS |
-| Configurar quem pode acessar seus recursos (IAM) | 👤 Você |
-| Criptografar seus dados sensíveis | 👤 Você |
-| Aplicar patches no SO de uma instância EC2 | 👤 Você |
-| Manter o hypervisor atualizado | 🏢 AWS |
+> [!NOTE]
+> **Regra de ouro que nunca falha:** não importa quão gerenciado seja o serviço, **você é SEMPRE responsável por: (1) seus dados, (2) o controle de acesso a eles (IAM) e (3) a classificação desses dados.** Isso nunca passa para a AWS. Se a questão perguntar "o que é sempre responsabilidade do cliente?", a resposta orbita esses três.
 
-<br>
-
-### 4. O detalhe que confunde: serviços gerenciados
-
-A linha de divisão **muda** conforme o tipo de serviço:
-
-- **EC2** (IaaS): você gerencia mais coisas — inclusive o **sistema operacional e os patches**.
-- **RDS** (banco gerenciado): a AWS cuida do SO e dos patches do banco; você cuida dos dados e do acesso.
-- **Lambda / S3** (serverless / gerenciado): a AWS cuida de quase tudo da infraestrutura; você cuida dos **dados e das permissões**.
-
-> [!TIP]
-> Quanto **mais gerenciado** o serviço, **menos** responsabilidade sobra para você. Mas os **seus dados e o controle de acesso (IAM)** são **sempre** sua responsabilidade — em todos os serviços.
+> [!CAUTION]
+> **Pegadinha clássica:** "quem aplica patch de segurança no banco de dados?" A resposta **depende**: se for um banco que você instalou numa instância **EC2**, o patch é **seu**; se for um banco **gerenciado** (RDS), o patch do sistema/engine é da **AWS**. Leia se o serviço é gerenciado ou não.
 
 <br>
 
@@ -93,85 +106,137 @@ A linha de divisão **muda** conforme o tipo de serviço:
 
 <br>
 
-## ❓ Quiz — teste seus conhecimentos
+## 🎯 Dicas de prova (pegadinhas clássicas)
+
+> [!CAUTION]
+> - **"Da" nuvem = AWS; "na" nuvem = você.** Uma preposição decide a resposta.
+> - **Físico/infra → AWS. Configuração/dados/acesso → você.** É o teste rápido.
+> - **Você é SEMPRE dono dos seus dados, do acesso (IAM) e da classificação.** Nunca passa pra AWS.
+> - **A linha se move com serviços gerenciados.** Patch de SO no EC2 = você; patch no RDS = AWS.
+> - **Segurança física dos data centers = sempre AWS.** Vazamento por bucket público = sempre culpa de configuração do cliente.
+> - Descarte de hardware, hypervisor, rede física, energia → **AWS**.
 
 <br>
 
-**1. No modelo de responsabilidade compartilhada, a AWS é responsável por...**
+## 🗺️ Mapa rápido pra revisão
 
-- **A)** Configurar suas permissões de IAM.
-- **B)** A segurança "DA" nuvem — a infraestrutura física, rede e virtualização.
-- **C)** Criptografar seus dados por você.
-- **D)** Aplicar patches no SO das suas instâncias EC2.
+| Pergunta | Resposta |
+|:--|:--|
+| Prédio, hardware, hypervisor, rede física | 🏢 AWS ("da" nuvem) |
+| Meus dados, meu IAM, minha config, meu SO no EC2 | 👤 Você ("na" nuvem) |
+| Patch de SO no EC2 | 👤 Você |
+| Patch do engine no RDS (gerenciado) | 🏢 AWS |
+| Sempre do cliente, em qualquer serviço | Dados + acesso + classificação |
+
+<br>
+
+---
+
+<br>
+
+## ❓ Quiz nível prova
+
+<br>
+
+**1. Uma empresa descobre que um bucket S3 com dados de clientes estava acessível publicamente por engano. De quem é a responsabilidade por essa exposição?**
+
+- **A)** Da AWS, por não impedir a configuração.
+- **B)** Do cliente, pois configurar o acesso aos próprios dados é responsabilidade dele.
+- **C)** Compartilhada igualmente entre os dois.
+- **D)** De ninguém — é um risco inevitável.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — A AWS cuida da segurança **"DA" nuvem**: data centers, hardware, rede e hypervisor.
+> ✅ **Resposta: B)**
+>
+> Controle de acesso e configuração dos próprios dados é **sempre** responsabilidade do cliente (segurança "na" nuvem). A infraestrutura da AWS funcionou; a configuração é que falhou.
+>
+> - **A)** ❌ — a AWS oferece as ferramentas (Block Public Access); usá-las é com o cliente.
+> - **C)** ❌ — nesse caso específico (configuração), a responsabilidade é do cliente.
+> - **D)** ❌ — é um risco totalmente evitável com configuração correta.
 
 </details>
 
 <br>
 
-**2. Quem é responsável por aplicar patches no sistema operacional de uma instância EC2?**
+**2. Qual das tarefas a seguir é responsabilidade da AWS no Modelo de Responsabilidade Compartilhada?**
 
-- **A)** A AWS.
-- **B)** Ninguém.
-- **C)** Você (o cliente).
-- **D)** O provedor de internet.
+- **A)** Configurar políticas de IAM.
+- **B)** Criptografar os dados do cliente.
+- **C)** Garantir a segurança física dos data centers.
+- **D)** Aplicar patches no sistema operacional de uma instância EC2.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: C)** — No **EC2** (IaaS), o **cliente** cuida do SO e dos patches. Em serviços gerenciados como o RDS, isso muda.
+> ✅ **Resposta: C)**
+>
+> Segurança física dos data centers é infraestrutura — segurança "da" nuvem, sempre da **AWS**.
+>
+> - **A), B), D)** ❌ — todas são segurança "na" nuvem: configuração de acesso, proteção de dados e patch do SO que o cliente gerencia.
 
 </details>
 
 <br>
 
-**3. Um bucket S3 ficou público por engano e vazou dados. De quem é a responsabilidade?**
+**3. Uma empresa usa o Amazon RDS (banco de dados gerenciado). Quem é responsável por aplicar patches no motor do banco e no sistema operacional subjacente?**
 
-- **A)** Da AWS, sempre.
-- **B)** Do cliente — configurar permissões e proteger dados é responsabilidade dele.
-- **C)** De ninguém.
-- **D)** Do fabricante do disco.
+- **A)** O cliente, como em qualquer banco.
+- **B)** A AWS, porque o RDS é um serviço gerenciado.
+- **C)** Ninguém — bancos gerenciados não recebem patches.
+- **D)** Uma empresa terceirizada contratada pelo cliente.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Proteger dados e configurar acesso é **sempre** do cliente. A AWS garante a infraestrutura, não as suas configurações.
+> ✅ **Resposta: B)**
+>
+> No RDS (gerenciado), a AWS assume o patch do SO e do engine. A linha de responsabilidade **se moveu** para a AWS por ser um serviço gerenciado.
+>
+> - **A)** ❌ — seria verdade se o banco estivesse instalado numa EC2 (não gerenciado), mas aqui é RDS.
+> - **C)** ❌ — recebem patches, sim; a AWS os aplica.
+> - **D)** ❌ — não é o modelo.
 
 </details>
 
 <br>
 
-**4. Descartar com segurança discos antigos dos data centers é responsabilidade de quem?**
+**4. Independentemente do serviço usado (EC2, S3, Lambda...), o que é SEMPRE responsabilidade do cliente?**
 
-- **A)** Do cliente.
-- **B)** Da AWS.
-- **C)** Compartilhada igualmente.
-- **D)** Do usuário final.
+- **A)** A manutenção do hypervisor.
+- **B)** Os dados, o controle de acesso a eles e sua classificação.
+- **C)** A refrigeração dos data centers.
+- **D)** O descarte físico dos discos.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — Tudo que é **físico** (incluindo descarte de hardware) é da **AWS**.
+> ✅ **Resposta: B)**
+>
+> Dados, acesso (IAM) e classificação **nunca** passam para a AWS, não importa o serviço. É a regra de ouro do modelo.
+>
+> - **A), C), D)** ❌ — todas são infraestrutura ("da" nuvem), sempre da AWS.
 
 </details>
 
 <br>
 
-**5. Independentemente do serviço usado, o que é SEMPRE responsabilidade do cliente?**
+**5. Selecione as DUAS responsabilidades que pertencem ao CLIENTE.** *(múltipla resposta — escolha 2)*
 
-- **A)** A refrigeração do data center.
-- **B)** Os próprios dados e o controle de acesso (IAM).
-- **C)** A manutenção do hypervisor.
-- **D)** A rede global da AWS.
+- **A)** Configurar corretamente um Security Group.
+- **B)** Manter a energia e a refrigeração do data center.
+- **C)** Gerenciar as permissões de IAM dos usuários.
+- **D)** Proteger fisicamente os servidores contra roubo.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — **Seus dados** e o **gerenciamento de identidade/acesso** são responsabilidade do cliente em **todos** os serviços.
+> ✅ **Respostas: A) e C)**
+>
+> Configuração de Security Group e gestão de IAM são segurança "na" nuvem — do cliente.
+>
+> - **B) e D)** ❌ — energia, refrigeração e proteção física são infraestrutura, sempre da AWS.
 
 </details>
 
@@ -183,8 +248,9 @@ A linha de divisão **muda** conforme o tipo de serviço:
 
 ## 🧪 Mão na massa (sem console!)
 
-- 🔗 **AWS Skill Builder** → procure por *"Shared Responsibility Model"* para a visão oficial ilustrada.
-- 🔗 Faça o exercício mental: pegue 5 serviços (EC2, S3, RDS, Lambda, DynamoDB) e liste, para cada um, o que é da AWS e o que é seu.
+- 🔗 **AWS Skill Builder** → módulo sobre o *Shared Responsibility Model* no Cloud Practitioner Essentials.
+- 🔗 Leia o diagrama oficial do **Modelo de Responsabilidade Compartilhada** no site da AWS (sem login).
+- ✍️ **Desafio:** pegue 10 tarefas de segurança quaisquer e classifique cada uma em "AWS" ou "cliente". Se acertar as 10, você domina o módulo mais importante do Domínio 2.
 
 <br>
 
@@ -196,21 +262,21 @@ A linha de divisão **muda** conforme o tipo de serviço:
 
 | Termo | Significado |
 |:--|:--|
-| **Responsabilidade Compartilhada** | Divisão de deveres de segurança entre AWS e cliente. |
-| **Segurança "da" nuvem** | Responsabilidade da AWS (infraestrutura). |
-| **Segurança "na" nuvem** | Responsabilidade do cliente (dados, acesso, configuração). |
-| **Serviço gerenciado** | Serviço em que a AWS assume mais responsabilidades operacionais. |
+| **Responsabilidade Compartilhada** | Divisão dos deveres de segurança entre AWS e cliente. |
+| **Segurança "da" nuvem** | Responsabilidade da AWS: infraestrutura física, hardware, rede, virtualização. |
+| **Segurança "na" nuvem** | Responsabilidade do cliente: dados, acesso, configuração, SO gerenciado. |
+| **Serviço gerenciado** | Serviço em que a AWS assume mais responsabilidades operacionais (ex.: S3, RDS, Lambda). |
 | **Hypervisor** | Software que gerencia a virtualização; responsabilidade da AWS. |
 
 <br>
 
 ## ✅ Checklist de conclusão
 
-- [ ] Li todo o conteúdo do módulo
-- [ ] Entendo a diferença entre segurança "da" e "na" nuvem
-- [ ] Consigo classificar exemplos reais de responsabilidade
-- [ ] Sei que dados e IAM são sempre do cliente
-- [ ] Fiz o quiz
+- [ ] Sei explicar segurança "da" nuvem vs. "na" nuvem
+- [ ] Uso o teste "físico/infra → AWS; config/dados → cliente"
+- [ ] Sei que dados, acesso e classificação são sempre do cliente
+- [ ] Entendi que a linha se move com serviços gerenciados (EC2 vs. RDS)
+- [ ] Fiz o quiz e entendi por que cada alternativa errada está errada
 - [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)
 
 <br>

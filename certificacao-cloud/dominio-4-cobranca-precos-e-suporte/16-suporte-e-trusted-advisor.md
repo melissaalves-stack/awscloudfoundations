@@ -1,14 +1,16 @@
-# Módulo 16 · Planos de suporte e Trusted Advisor
+# Módulo 16 · Suporte e Trusted Advisor
 
-> **Domínio:** 4 · Cobrança, Preços e Suporte · **Tempo estimado:** 2h · **Pré-requisitos:** Módulos 14 e 15
+> **Domínio:** 4 · Cobrança, Preços e Suporte · **Tempo estimado:** 3h · **Pré-requisitos:** Módulos 14 e 15
+> **Peso na prova:** fecha o Domínio 4 (**12%**) e a trilha. Planos de suporte e Trusted Advisor são pontos fáceis — garanta-os.
 
-## 🎯 Objetivos de aprendizagem
+## 🎯 Onde você quer chegar
 
-Ao final deste módulo, você será capaz de:
+Ao final deste módulo, você vai:
 
-- Diferenciar os **planos de suporte** da AWS.
-- Entender o **AWS Trusted Advisor** e suas 5 categorias.
-- Conhecer o **AWS Health Dashboard** e outros recursos de ajuda.
+- Conhecer os **4 planos de suporte** da AWS e para quem cada um serve.
+- Saber o que é o **TAM** e em qual plano ele aparece.
+- Entender o **Trusted Advisor** e suas 5 categorias de recomendação.
+- Reconhecer o **AWS Health Dashboard** e onde mais buscar ajuda.
 
 <br>
 
@@ -16,62 +18,86 @@ Ao final deste módulo, você será capaz de:
 
 <br>
 
-## 🧠 Conteúdo
+## 🎬 Quando algo dá errado às 3 da manhã
+
+Seu sistema de produção cai numa madrugada de domingo. O que acontece agora depende de **uma decisão que você tomou meses atrás**: qual plano de suporte contratou. Se for o gratuito, você tem fóruns e documentação. Se for o Enterprise, você tem um telefone que atende em minutos e um gerente técnico que já conhece a sua conta. Este módulo é sobre essas escolhas — e sobre as ferramentas que evitam o problema antes dele acontecer.
 
 <br>
 
-### 1. Os planos de suporte da AWS
+---
 
-A AWS oferece **quatro** níveis de suporte, do gratuito ao premium:
+<br>
+
+## 🧠 Parte 1 — Os 4 planos de suporte da AWS
+
+A AWS tem quatro níveis de suporte, do gratuito ao premium. A prova adora dar uma necessidade e perguntar o plano adequado.
 
 | Plano | Para quem | Destaque |
 |:--|:--|:--|
-| 🆓 **Basic** | Todas as contas (grátis). | Documentação, fóruns e Trusted Advisor (checagens básicas). |
-| 💬 **Developer** | Quem está experimentando/desenvolvendo. | Suporte técnico por e-mail em horário comercial. |
-| 🏢 **Business** | Cargas de produção. | Suporte 24/7 por telefone/chat, Trusted Advisor **completo**. |
-| 🏆 **Enterprise** | Grandes cargas críticas. | Um **TAM** (Technical Account Manager) dedicado e resposta mais rápida. |
+| 🆓 **Basic** | Todas as contas (grátis). | Documentação, fóruns e Trusted Advisor (checagens **básicas**). |
+| 💬 **Developer** | Quem está experimentando/desenvolvendo. | Suporte técnico por **e-mail**, horário comercial. |
+| 🏢 **Business** | Cargas de **produção**. | Suporte **24/7** por telefone/chat e Trusted Advisor **completo**. |
+| 🏆 **Enterprise** | Grandes cargas **críticas**. | Um **TAM** (Technical Account Manager) **dedicado** e a resposta mais rápida. |
 
 > [!IMPORTANT]
-> Dois pontos que caem na prova:
-> - O **TAM (Technical Account Manager)** — um contato dedicado — vem no plano **Enterprise** (e no Enterprise On-Ramp).
-> - O **Trusted Advisor completo** (todas as checagens) exige plano **Business** ou superior.
+> Os dois gatilhos que mais caem:
+> - **"Suporte 24/7 para cargas de produção"** → **Business** (é onde o 24/7 começa).
+> - **"Gerente técnico dedicado (TAM) / carga crítica de missão"** → **Enterprise** (o TAM é exclusivo dele).
+> - Todo mundo tem o **Basic** de graça; o **Developer** é o degrau de quem está só testando.
 
 <br>
 
-### 2. AWS Trusted Advisor — o consultor automático
+## 👤 Parte 2 — O TAM (Technical Account Manager)
 
-O **AWS Trusted Advisor** examina sua conta e dá **recomendações** em cinco categorias:
+O **TAM** é um contato técnico **dedicado** da AWS, que conhece a sua conta, ajuda no planejamento e é seu ponto focal. Ele existe **somente no plano Enterprise**.
+
+> [!TIP]
+> Se a questão menciona **"gerente/contato técnico dedicado"**, a resposta é **Enterprise** (por causa do TAM). É uma das associações mais diretas do Domínio 4.
+
+<br>
+
+## 💡 Parte 3 — AWS Trusted Advisor: o consultor automático
+
+O **Trusted Advisor** (que você já encontrou no Domínio 2) analisa sua conta automaticamente e dá **recomendações** em **5 categorias**:
 
 | Categoria | Exemplo de recomendação |
 |:--|:--|
 | 💰 **Otimização de custos** | "Você tem instâncias ociosas — considere desligá-las." |
-| ⚡ **Desempenho** | "Este recurso está subdimensionado." |
+| ⚡ **Desempenho** | "Este recurso pode ser ajustado para melhorar a performance." |
 | 🔒 **Segurança** | "Este bucket S3 está público!" |
 | 🛟 **Tolerância a falhas** | "Você não tem backups configurados aqui." |
 | 📊 **Limites de serviço** | "Você está perto do limite de instâncias da Região." |
 
+> [!NOTE]
+> **Ligação com o suporte:** no plano **Basic**, o Trusted Advisor faz só um conjunto **básico** de verificações. O conjunto **completo** (as 5 categorias inteiras) vem nos planos **Business** e **Enterprise**. Se a questão fala em "acesso completo ao Trusted Advisor", pense em Business/Enterprise.
+
 > [!TIP]
-> Pense no Trusted Advisor como um "checkup automático" que aponta o que melhorar. Na conta **Basic**, ele faz apenas checagens básicas (algumas de segurança e limites). No **Business+**, libera **todas** as cinco categorias.
+> Decore as **5 categorias** — a prova pode listar 4 verdadeiras e uma falsa e pedir qual **não** é do Trusted Advisor: custos, desempenho, segurança, tolerância a falhas e limites de serviço.
 
 <br>
 
-### 3. AWS Health Dashboard — status dos serviços
+## 📡 Parte 4 — AWS Health Dashboard: status dos serviços
 
-O **AWS Health Dashboard** mostra a saúde dos serviços da AWS e eventos que podem afetar seus recursos. Serve para você saber se um problema é seu... ou da própria AWS.
+O **AWS Health Dashboard** mostra o **estado de saúde dos serviços da AWS** e eventos que podem afetar a sua conta especificamente (uma manutenção programada, um incidente em uma Região). É onde você olha para saber se "o problema é meu ou é da AWS".
+
+> [!TIP]
+> Gatilho: "verificar se há um incidente/interrupção nos serviços da AWS que afeta minha conta" → **AWS Health Dashboard**.
 
 <br>
 
-### 4. Onde mais buscar ajuda
+## 📚 Parte 5 — Onde mais buscar ajuda
+
+Fechando a trilha, vale reconhecer os recursos de aprendizado e suporte que você já vem usando:
 
 | Recurso | Para quê |
 |:--|:--|
-| 📚 **Documentação AWS** | A referência oficial de tudo. |
-| 🧠 **AWS Skill Builder** | Cursos e treinamentos (o que usamos na Liga!). |
-| 🤝 **AWS Support / re:Post** | Fórum de perguntas e respostas da comunidade. |
+| 📚 **Documentação AWS** | A referência oficial de todos os serviços. |
+| 🧠 **AWS Skill Builder** | Cursos e treinamentos (o que a Liga usa!). |
+| 🤝 **AWS re:Post** | Fórum de perguntas e respostas da comunidade. |
 | 🏗️ **AWS Well-Architected Tool** | Avalia sua arquitetura contra os pilares ([Módulo 02](../dominio-1-conceitos-de-nuvem/02-well-architected-e-caf.md)). |
 
 > [!NOTE]
-> 🎉 **Você chegou ao fim da trilha Cloud Practitioner!** Agora é revisar, praticar simulados e agendar sua prova. E não esqueça: a trilha de **[AI Practitioner](../../certificacao-ia/README.md)** te espera para a próxima certificação!
+> 🎉 **Este é o último módulo da trilha Cloud Practitioner!** Você percorreu os 4 domínios: conceitos de nuvem, segurança, tecnologia/serviços e cobrança/suporte. O próximo passo é fixar tudo com os **simulados** — um por domínio e um geral. Bora fechar com chave de ouro!
 
 <br>
 
@@ -79,85 +105,139 @@ O **AWS Health Dashboard** mostra a saúde dos serviços da AWS e eventos que po
 
 <br>
 
-## ❓ Quiz — teste seus conhecimentos
+## 🎯 Dicas de prova (pegadinhas clássicas)
+
+> [!CAUTION]
+> - **Suporte 24/7 começa no Business.** Developer é só e-mail em horário comercial.
+> - **TAM = só Enterprise.** "Gerente técnico dedicado" → Enterprise.
+> - **Trusted Advisor completo = Business/Enterprise;** no Basic, só checagens básicas.
+> - **5 categorias do Trusted Advisor:** custos, desempenho, segurança, tolerância a falhas, limites de serviço.
+> - **AWS Health Dashboard** = saber se há incidente da AWS afetando sua conta.
+> - Todos têm o **Basic** grátis.
 
 <br>
 
-**1. Qual plano de suporte inclui um Technical Account Manager (TAM) dedicado?**
+## 🗺️ Mapa rápido pra revisão
 
-- **A)** Basic.
-- **B)** Developer.
-- **C)** Business.
-- **D)** Enterprise.
+| Item | Em uma frase |
+|:--|:--|
+| Basic | grátis: docs, fóruns, Trusted Advisor básico |
+| Developer | testes: e-mail em horário comercial |
+| Business | produção: 24/7 + Trusted Advisor completo |
+| Enterprise | crítico: TAM dedicado + resposta mais rápida |
+| Trusted Advisor | 5 categorias de recomendação automática |
+| Health Dashboard | saúde dos serviços da AWS |
+
+<br>
+
+---
+
+<br>
+
+## ❓ Quiz nível prova
+
+<br>
+
+**1. Uma empresa com carga de produção precisa de suporte técnico 24/7 por telefone e do Trusted Advisor completo, mas não precisa de um gerente dedicado. Qual plano é o mais adequado (e econômico)?**
+
+- **A)** Basic
+- **B)** Developer
+- **C)** Business
+- **D)** Enterprise
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: D)** — O **TAM** dedicado vem no plano **Enterprise** (e Enterprise On-Ramp).
+> ✅ **Resposta: C) Business**
+>
+> O **Business** oferece 24/7 e o Trusted Advisor completo — sem o custo extra do TAM, que ela não precisa.
+>
+> - **A)** ❌ — Basic não tem 24/7 nem Trusted Advisor completo.
+> - **B)** ❌ — Developer é só e-mail em horário comercial.
+> - **D)** ❌ — Enterprise atende, mas é mais caro por incluir o TAM, que não é necessário aqui.
 
 </details>
 
 <br>
 
-**2. Qual plano de suporte é gratuito e disponível para todas as contas?**
+**2. Qual recurso é exclusivo do plano de suporte Enterprise?**
 
-- **A)** Basic.
-- **B)** Developer.
-- **C)** Business.
-- **D)** Enterprise.
+- **A)** Acesso à documentação.
+- **B)** Um Technical Account Manager (TAM) dedicado.
+- **C)** Fóruns da comunidade.
+- **D)** O Trusted Advisor básico.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: A)** — O plano **Basic** é gratuito e já vem com toda conta.
+> ✅ **Resposta: B) TAM dedicado**
+>
+> O **TAM** é exclusivo do plano **Enterprise**.
+>
+> - **A), C), D)** ❌ — documentação, fóruns e Trusted Advisor básico estão disponíveis já no Basic (gratuito).
 
 </details>
 
 <br>
 
-**3. O AWS Trusted Advisor faz recomendações em quantas categorias?**
+**3. Qual serviço analisa automaticamente sua conta e recomenda melhorias em custos, desempenho, segurança, tolerância a falhas e limites de serviço?**
 
-- **A)** 3.
-- **B)** 5.
-- **C)** 6.
-- **D)** 10.
+- **A)** AWS CloudTrail
+- **B)** AWS Trusted Advisor
+- **C)** AWS Budgets
+- **D)** AWS Health Dashboard
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: B)** — São **5 categorias**: custos, desempenho, segurança, tolerância a falhas e limites de serviço.
+> ✅ **Resposta: B) AWS Trusted Advisor**
+>
+> As 5 categorias de recomendação automática são a marca do Trusted Advisor.
+>
+> - **A)** ❌ — CloudTrail é auditoria de ações.
+> - **C)** ❌ — Budgets alerta sobre orçamento.
+> - **D)** ❌ — Health Dashboard mostra a saúde dos serviços da AWS, não recomendações da sua conta.
 
 </details>
 
 <br>
 
-**4. Você quer o Trusted Advisor COMPLETO, com todas as checagens. Qual plano mínimo?**
+**4. Um administrador quer verificar se uma lentidão é causada por um incidente nos próprios serviços da AWS que afeta sua conta. Onde ele olha?**
 
-- **A)** Basic.
-- **B)** Developer.
-- **C)** Business.
-- **D)** Nenhum, ele é sempre completo.
+- **A)** AWS Cost Explorer
+- **B)** AWS Health Dashboard
+- **C)** AWS Artifact
+- **D)** AWS Pricing Calculator
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: C)** — O Trusted Advisor completo exige plano **Business** ou superior. O Basic tem só checagens básicas.
+> ✅ **Resposta: B) AWS Health Dashboard**
+>
+> O Health Dashboard mostra o estado dos serviços da AWS e eventos que afetam a sua conta.
+>
+> - **A), C), D)** ❌ — custo, conformidade e estimativa de preços, respectivamente; nenhum mostra incidentes de serviço.
 
 </details>
 
 <br>
 
-**5. Onde você verifica se um problema é da própria AWS (e não seu)?**
+**5. Selecione as DUAS afirmações corretas.** *(múltipla resposta — escolha 2)*
 
-- **A)** AWS Health Dashboard.
-- **B)** AWS Pricing Calculator.
-- **C)** Amazon Macie.
-- **D)** AWS Budgets.
+- **A)** O suporte 24/7 por telefone está disponível a partir do plano Business.
+- **B)** O plano Basic inclui um TAM dedicado.
+- **C)** O Trusted Advisor completo (todas as 5 categorias) está disponível nos planos Business e Enterprise.
+- **D)** O Developer oferece um gerente técnico dedicado.
 
 <details>
-<summary>💡 Ver resposta</summary>
+<summary>💡 Ver resposta e explicação</summary>
 
-> ✅ **Resposta: A)** — O **AWS Health Dashboard** mostra a saúde dos serviços e eventos que afetam seus recursos.
+> ✅ **Respostas: A) e C)**
+>
+> **A** (24/7 começa no Business) e **C** (Trusted Advisor completo no Business/Enterprise) estão corretas.
+>
+> - **B)** ❌ — o TAM é exclusivo do Enterprise, não do Basic.
+> - **D)** ❌ — o Developer não tem TAM; ele é só e-mail em horário comercial.
 
 </details>
 
@@ -169,8 +249,8 @@ O **AWS Health Dashboard** mostra a saúde dos serviços da AWS e eventos que po
 
 ## 🧪 Mão na massa (sem console!)
 
-- 🔗 **AWS Skill Builder** → procure por *"AWS Support Plans"* e *"Trusted Advisor"*.
-- 🔗 Faça um **simulado completo da CLF-C02** no Skill Builder e veja se está pronto(a) para a prova! 🏆
+- 🔗 **AWS Skill Builder** → módulos sobre *planos de suporte* e *Trusted Advisor*.
+- ✍️ **Desafio final da trilha:** para 3 empresas (uma testando ideias, uma com produção que precisa de 24/7, uma crítica que quer um gerente dedicado), diga o plano de suporte. Acertou as três? Você fechou o Domínio 4.
 
 <br>
 
@@ -183,23 +263,25 @@ O **AWS Health Dashboard** mostra a saúde dos serviços da AWS e eventos que po
 | Termo | Significado |
 |:--|:--|
 | **Planos de suporte** | Basic, Developer, Business, Enterprise. |
-| **TAM** | Technical Account Manager (contato dedicado, plano Enterprise). |
+| **Basic** | Gratuito: documentação, fóruns, Trusted Advisor básico. |
+| **Developer** | Suporte por e-mail em horário comercial (testes/dev). |
+| **Business** | Suporte 24/7 e Trusted Advisor completo (produção). |
+| **Enterprise** | TAM dedicado e resposta mais rápida (missão crítica). |
+| **TAM** | Technical Account Manager: contato dedicado (só Enterprise). |
 | **Trusted Advisor** | Consultor automático com 5 categorias de recomendação. |
-| **AWS Health Dashboard** | Mostra a saúde e os eventos dos serviços AWS. |
-| **re:Post** | Fórum de perguntas e respostas da comunidade AWS. |
-| **Well-Architected Tool** | Avalia arquiteturas contra os 6 pilares. |
+| **AWS Health Dashboard** | Estado de saúde dos serviços da AWS e eventos que afetam a conta. |
 
 <br>
 
 ## ✅ Checklist de conclusão
 
-- [ ] Li todo o conteúdo do módulo
-- [ ] Diferencio os 4 planos de suporte
-- [ ] Sei que o TAM é do Enterprise e o Trusted Advisor completo é do Business+
-- [ ] Conheço as 5 categorias do Trusted Advisor
-- [ ] Sei para que serve o Health Dashboard
-- [ ] Fiz o quiz
-- [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) — **fim da trilha!** 🎉
+- [ ] Conheço os 4 planos de suporte e para quem servem
+- [ ] Sei que o 24/7 começa no Business e o TAM é só do Enterprise
+- [ ] Sei as 5 categorias do Trusted Advisor
+- [ ] Reconheço o AWS Health Dashboard
+- [ ] Fiz o quiz e entendi por que cada alternativa errada está errada
+- [ ] Registrei meu [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)
+- [ ] 🎉 Concluí a trilha — hora dos simulados!
 
 <br>
 
@@ -209,6 +291,6 @@ O **AWS Health Dashboard** mostra a saúde dos serviços da AWS e eventos que po
 
 **Precisa de ajuda?** 📊 [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) · ❓ [Dúvida](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=duvida.yml) · 📖 [Guia](../../GUIA-DO-ALUNO.md) · 🚀 [Builder Center](https://bit.ly/4w720IR)
 
-⬅️ [Módulo 15](./15-ferramentas-de-custo.md) &nbsp;·&nbsp; 🏠 [Índice do Domínio 4](./README.md) &nbsp;·&nbsp; 🤖 [Ir para a trilha AI Practitioner](../../certificacao-ia/README.md)
+⬅️ [Módulo 15](./15-ferramentas-de-custo.md) &nbsp;·&nbsp; 🏠 [Índice do Domínio 4](./README.md) &nbsp;·&nbsp; 🎯 [Ir para os Simulados](../simulados/README.md)
 
 </div>

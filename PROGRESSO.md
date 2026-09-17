@@ -26,8 +26,9 @@
 | 10 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 11 | [@Thyago-bat](https://github.com/Thyago-bat) | 3 |
 | 12 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
-| 13 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 1 |
-| 14 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
+| 13 | [@JA-Lassister](https://github.com/JA-Lassister) | 1 |
+| 14 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 1 |
+| 15 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
 ---
 
@@ -126,6 +127,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@JA-Lassister](https://github.com/JA-Lassister)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

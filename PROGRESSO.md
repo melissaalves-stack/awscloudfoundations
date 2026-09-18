@@ -18,13 +18,13 @@
 | 2 | [@frantonissi](https://github.com/frantonissi) | 17 |
 | 3 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 4 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 13 |
-| 5 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
-| 6 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
-| 7 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 8 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
-| 9 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 10 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 11 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 3 |
+| 5 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
+| 6 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
+| 7 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
+| 8 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 9 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 10 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 11 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 12 | [@Thyago-bat](https://github.com/Thyago-bat) | 3 |
 | 13 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 14 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 2 |
@@ -66,6 +66,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████████████████░░░░░░` | 13/17 | 76% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@hugosoaresdev](https://github.com/hugosoaresdev)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
@@ -114,14 +122,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@hugosoaresdev](https://github.com/hugosoaresdev)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

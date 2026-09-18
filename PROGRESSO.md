@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-17</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-18</sub>
 
 </div>
 
@@ -28,9 +28,10 @@
 | 12 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 13 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 2 |
 | 14 | [@JA-Lassister](https://github.com/JA-Lassister) | 2 |
-| 15 | [@daviazarias](https://github.com/daviazarias) | 1 |
-| 16 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 1 |
-| 17 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
+| 15 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 1 |
+| 16 | [@daviazarias](https://github.com/daviazarias) | 1 |
+| 17 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 1 |
+| 18 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
 ---
 
@@ -145,6 +146,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@hugosoaresdev](https://github.com/hugosoaresdev)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

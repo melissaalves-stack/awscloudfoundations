@@ -27,9 +27,9 @@
 | 11 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
 | 12 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
 | 13 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 14 | [@Thyago-bat](https://github.com/Thyago-bat) | 3 |
-| 15 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
-| 16 | [@douglasgiraldello](https://github.com/douglasgiraldello) | 2 |
+| 14 | [@douglasgiraldello](https://github.com/douglasgiraldello) | 3 |
+| 15 | [@Thyago-bat](https://github.com/Thyago-bat) | 3 |
+| 16 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 17 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 2 |
 | 18 | [@JA-Lassister](https://github.com/JA-Lassister) | 2 |
 | 19 | [@daviazarias](https://github.com/daviazarias) | 1 |
@@ -143,6 +143,14 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
+### [@douglasgiraldello](https://github.com/douglasgiraldello)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
 ### [@Thyago-bat](https://github.com/Thyago-bat)
 
 | Trilha | Progresso | Módulos | % |
@@ -156,14 +164,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@douglasgiraldello](https://github.com/douglasgiraldello)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

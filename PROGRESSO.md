@@ -19,7 +19,7 @@
 | 3 | [@frantonissi](https://github.com/frantonissi) | 17 |
 | 4 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 5 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 |
-| 6 | [@Thyago-bat](https://github.com/Thyago-bat) | 6 |
+| 6 | [@Thyago-bat](https://github.com/Thyago-bat) | 7 |
 | 7 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
 | 8 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
 | 9 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
@@ -83,7 +83,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████████░░░░░░░░░░░░░░░░` | 6/17 | 35% |
+| Certificação Cloud Practitioner | `██████████░░░░░░░░░░░░░░` | 7/17 | 41% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

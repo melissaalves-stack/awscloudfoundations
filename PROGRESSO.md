@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-22</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-23</sub>
 
 </div>
 
@@ -20,16 +20,16 @@
 | 4 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 5 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 |
 | 6 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
-| 7 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
-| 8 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
-| 9 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
-| 10 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
-| 11 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
-| 12 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 13 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
-| 14 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 15 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 16 | [@Thyago-bat](https://github.com/Thyago-bat) | 3 |
+| 7 | [@Thyago-bat](https://github.com/Thyago-bat) | 4 |
+| 8 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
+| 9 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
+| 10 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
+| 11 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
+| 12 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
+| 13 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 14 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 15 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 16 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 17 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 18 | [@daviazarias](https://github.com/daviazarias) | 2 |
 | 19 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 2 |
@@ -84,6 +84,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@Thyago-bat](https://github.com/Thyago-bat)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
@@ -156,14 +164,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@Thyago-bat](https://github.com/Thyago-bat)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

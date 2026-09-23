@@ -19,8 +19,8 @@
 | 3 | [@frantonissi](https://github.com/frantonissi) | 17 |
 | 4 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 5 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 |
-| 6 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
-| 7 | [@Thyago-bat](https://github.com/Thyago-bat) | 4 |
+| 6 | [@Thyago-bat](https://github.com/Thyago-bat) | 5 |
+| 7 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
 | 8 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
 | 9 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
 | 10 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
@@ -79,7 +79,7 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel)
+### [@Thyago-bat](https://github.com/Thyago-bat)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
@@ -87,11 +87,11 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@Thyago-bat](https://github.com/Thyago-bat)
+### [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

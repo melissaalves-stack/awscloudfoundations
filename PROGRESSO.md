@@ -32,8 +32,8 @@
 | 16 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 17 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 |
 | 18 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
-| 19 | [@daviazarias](https://github.com/daviazarias) | 2 |
-| 20 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 1 |
+| 19 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 2 |
+| 20 | [@daviazarias](https://github.com/daviazarias) | 2 |
 | 21 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 |
 
 ---
@@ -184,7 +184,7 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@daviazarias](https://github.com/daviazarias)
+### [@guilhermereisdev](https://github.com/guilhermereisdev)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
@@ -192,11 +192,11 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
-### [@guilhermereisdev](https://github.com/guilhermereisdev)
+### [@daviazarias](https://github.com/daviazarias)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `█░░░░░░░░░░░░░░░░░░░░░░░` | 1/17 | 6% |
+| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

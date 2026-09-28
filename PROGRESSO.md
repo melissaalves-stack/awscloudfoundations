@@ -21,16 +21,16 @@
 | 5 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 |
 | 6 | [@Thyago-bat](https://github.com/Thyago-bat) | 8 |
 | 7 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
-| 8 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
-| 9 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
-| 10 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
-| 11 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
-| 12 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
-| 13 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 14 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
-| 15 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 16 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
-| 17 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 3 |
+| 8 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 |
+| 9 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
+| 10 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
+| 11 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
+| 12 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
+| 13 | [@MarcosBento06](https://github.com/MarcosBento06) | 4 |
+| 14 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 15 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 4 |
+| 16 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
+| 17 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
 | 18 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 |
 | 19 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 20 | [@daviazarias](https://github.com/daviazarias) | 2 |
@@ -93,6 +93,14 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+### [@guilhermereisdev](https://github.com/guilhermereisdev)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
@@ -165,14 +173,6 @@
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@guilhermereisdev](https://github.com/guilhermereisdev)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

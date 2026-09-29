@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-28</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-29</sub>
 
 </div>
 
@@ -22,15 +22,15 @@
 | 6 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 |
 | 7 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 8 |
 | 8 | [@Thyago-bat](https://github.com/Thyago-bat) | 8 |
-| 9 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
-| 10 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 |
-| 11 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
-| 12 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
-| 13 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
-| 14 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
-| 15 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
-| 16 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
-| 17 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 4 |
+| 9 | [@PedroFerreira5](https://github.com/PedroFerreira5) | 5 |
+| 10 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
+| 11 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 |
+| 12 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
+| 13 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 |
+| 14 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 |
+| 15 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 |
+| 16 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 |
+| 17 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 |
 | 18 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 |
 | 19 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 3 |
 | 20 | [@daviazarias](https://github.com/daviazarias) | 2 |
@@ -104,6 +104,14 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
+### [@PedroFerreira5](https://github.com/PedroFerreira5)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
 ### [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel)
 
 | Trilha | Progresso | Módulos | % |
@@ -161,14 +169,6 @@
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
 ### [@Amoreirinha](https://github.com/Amoreirinha)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@PedroFerreira5](https://github.com/PedroFerreira5)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|

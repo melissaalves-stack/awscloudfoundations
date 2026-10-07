@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-09-30</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-10-07</sub>
 
 </div>
 
@@ -20,9 +20,9 @@
 | 4 | [@frantonissi](https://github.com/frantonissi) | 17 |
 | 5 | [@J3ff23](https://github.com/J3ff23) | 17 |
 | 6 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 |
-| 7 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 |
-| 8 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 8 |
-| 9 | [@Thyago-bat](https://github.com/Thyago-bat) | 8 |
+| 7 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 |
+| 8 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 |
+| 9 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 8 |
 | 10 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 5 |
 | 11 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 |
 | 12 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 |
@@ -88,6 +88,14 @@
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
+### [@Thyago-bat](https://github.com/Thyago-bat)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█████████████░░░░░░░░░░░` | 9/17 | 53% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
 ### [@MarcosBento06](https://github.com/MarcosBento06)
 
 | Trilha | Progresso | Módulos | % |
@@ -97,14 +105,6 @@
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 
 ### [@pereira-devcarlos](https://github.com/pereira-devcarlos)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `███████████░░░░░░░░░░░░░` | 8/17 | 47% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-### [@Thyago-bat](https://github.com/Thyago-bat)
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|

@@ -35,5 +35,8 @@ Ao concluir, você ganha um **certificado oficial da AWS Training & Certificatio
 
 📊 [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) · ❓ [Dúvida](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=duvida.yml) · 📖 [Guia](../../GUIA-DO-ALUNO.md) · 🚀 [Builder Center](https://bit.ly/4w720IR)
 
+> [!TIP]
+> 📄 **Prova chegando?** Releia a [revisão de véspera deste domínio](./REVISAO.md) — tudo em uma página.
+
 ---
 ⬅️ [Domínio 3](../dominio-3-aplicacoes-de-modelos/README.md) · 🏠 [Trilha IA](../README.md) · ➡️ [Domínio 5](../dominio-5-seguranca-e-governanca/README.md)

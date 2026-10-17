@@ -41,5 +41,8 @@ Assim que finalizar o desafio, você recebe um **certificado oficial da AWS Trai
 
 📊 [Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) · ❓ [Dúvida](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=duvida.yml) · 📖 [Guia](../../GUIA-DO-ALUNO.md) · 🚀 [Builder Center](https://bit.ly/4w720IR)
 
+> [!TIP]
+> 📄 **Prova chegando?** Releia a [revisão de véspera deste domínio](./REVISAO.md) — tudo em uma página.
+
 ---
 🏠 [Voltar à trilha Cloud](../README.md) · ➡️ [Ir para o Domínio 2](../dominio-2-seguranca-e-conformidade/README.md)

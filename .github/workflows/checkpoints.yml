@@ -21,6 +21,31 @@ jobs:
           script: |
             const fs = require('fs');
 
+            // Medalhas: cada grupo de módulos concluído vira uma medalha
+            const MEDALHAS = {
+              'Cloud': [
+                { nome: 'Conceitos de Nuvem',      emoji: '☁️', mods: [0,1,2,3] },
+                { nome: 'Segurança',               emoji: '🔐', mods: [4,5,6,7] },
+                { nome: 'Tecnologia e Serviços',   emoji: '🧰', mods: [8,9,10,11,12,13] },
+                { nome: 'Cobrança e Suporte',      emoji: '💰', mods: [14,15,16] },
+              ],
+              'AI Practitioner': [
+                { nome: 'Fundamentos de IA e ML',  emoji: '🧠', mods: [0,1,2] },
+                { nome: 'IA Generativa',           emoji: '✨', mods: [3,4,5] },
+                { nome: 'Aplicações de Modelos',   emoji: '🤖', mods: [6,7,8,9] },
+                { nome: 'IA Responsável',          emoji: '⚖️', mods: [10,11] },
+                { nome: 'Segurança e Governança',  emoji: '🛡️', mods: [12,13] },
+              ],
+              'Aprofundado': [
+                { nome: 'Computação',              emoji: '🖥️', mods: [1,2] },
+                { nome: 'Infra Global e Storage',  emoji: '🌎', mods: [3,4] },
+                { nome: 'Redes e VPC',             emoji: '🕸️', mods: [5] },
+                { nome: 'Bancos de Dados',         emoji: '🗄️', mods: [6,7] },
+                { nome: 'Responsabilidade',        emoji: '🤝', mods: [8] },
+                { nome: 'IAM Completo',            emoji: '🔑', mods: [9,10,11,12] },
+              ],
+            };
+
             const TRILHAS = [
               { chave: 'Cloud',          rotulo: 'Certificação Cloud Practitioner', total: 17, cor: '00E582' },
               { chave: 'AI Practitioner',rotulo: 'Certificação AI Practitioner',    total: 14, cor: '41B3FF' },
@@ -114,7 +139,9 @@ jobs:
               if (!alunos.has(autor)) alunos.set(autor, new Map());
               const porTrilha = alunos.get(autor);
               if (!porTrilha.has(trilha.chave)) porTrilha.set(trilha.chave, new Set());
-              porTrilha.get(trilha.chave).add(moduloLimpo.toLowerCase());
+              // Usa o número do módulo quando existir (evita duplicar por grafia diferente)
+              const num = moduloLimpo.match(/m[oó]dulo\s*(\d{1,2})/i);
+              porTrilha.get(trilha.chave).add(num ? 'm' + parseInt(num[1], 10) : moduloLimpo.toLowerCase());
               core.info(`  ✅ Registrado: ${trilha.rotulo} · ${moduloLimpo}`);
             }
 
@@ -132,6 +159,23 @@ jobs:
 
             const cabecalho = '| Trilha | Progresso | Módulos | % |\n|:--|:--|:--:|:--:|';
 
+            // Medalhas conquistadas por um aluno
+            const medalhasDe = (porTrilha) => {
+              const ganhas = [];
+              for (const t of TRILHAS) {
+                const feitos = porTrilha.get(t.chave) || new Set();
+                for (const m of MEDALHAS[t.chave]) {
+                  if (m.mods.every(n => feitos.has('m' + n))) ganhas.push({ ...m, trilha: t.rotulo });
+                }
+                if (feitos.size >= t.total) ganhas.push({ nome: 'Trilha completa', emoji: '🏆', trilha: t.rotulo });
+              }
+              return ganhas;
+            };
+            const vitrine = (ganhas) => ganhas.length ? ganhas.map(m => m.emoji).join(' ') : '—';
+            const listaMedalhas = (ganhas) => ganhas.length
+              ? ganhas.map(m => `- ${m.emoji} **${m.nome}** · ${m.trilha}`).join('\n')
+              : '_Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_';
+
             // ---------- PROGRESSO.md ----------
             const ordenados = [...alunos.entries()].sort((a, b) => {
               const soma = m => [...m.values()].reduce((s, set) => s + set.size, 0);
@@ -143,14 +187,15 @@ jobs:
             if (!ordenados.length) {
               md += 'Ninguém registrou checkpoint ainda. Seja a primeira pessoa: [abrir checkpoint](../../issues/new?template=checkpoint-de-modulo.yml) 🚀\n';
             } else {
-              md += '## 🏆 Ranking\n\n| # | Aluno(a) | Módulos concluídos |\n|:--:|:--|:--:|\n';
+              md += '## 🏆 Ranking\n\n| # | Aluno(a) | Módulos concluídos | Medalhas |\n|:--:|:--|:--:|:--|\n';
               ordenados.forEach(([login, porTrilha], i) => {
                 const soma = [...porTrilha.values()].reduce((s, set) => s + set.size, 0);
-                md += `| ${i + 1} | [@${login}](https://github.com/${login}) | ${soma} |\n`;
+                md += `| ${i + 1} | [@${login}](https://github.com/${login}) | ${soma} | ${vitrine(medalhasDe(porTrilha))} |\n`;
               });
+              md += '\n> [!TIP]\n> **Como ganhar medalhas:** conclua todos os módulos de um domínio. Use o número no checkpoint (ex.: `Domínio 1 · Módulo 03`) para o robô reconhecer.\n';
               md += '\n---\n\n## 📈 Detalhe por pessoa\n\n';
               for (const [login, porTrilha] of ordenados) {
-                md += `### [@${login}](https://github.com/${login})\n\n${cabecalho}\n${linhasAluno(porTrilha)}\n\n`;
+                md += `### [@${login}](https://github.com/${login})\n\n${cabecalho}\n${linhasAluno(porTrilha)}\n\n**Medalhas:**\n\n${listaMedalhas(medalhasDe(porTrilha))}\n\n`;
               }
             }
             md += '\n---\n\n<div align="center">\n\n🏠 [Voltar ao início](./README.md)\n\n</div>\n';
@@ -167,6 +212,10 @@ jobs:
                   '',
                   cabecalho,
                   linhasAluno(porTrilha),
+                  '',
+                  '#### 🏅 Medalhas',
+                  '',
+                  listaMedalhas(medalhasDe(porTrilha)),
                   '',
                   `**${soma} módulos concluídos.** Veja a turma inteira em [PROGRESSO.md](../blob/main/PROGRESSO.md). Bora construir! 🚀`,
                 ].join('\n');

@@ -38,5 +38,7 @@ Aqui a gente compartilha o que há de novo no ecossistema AWS e na comunidade: n
 ---
 
 <div align="center">
-🏠 [Voltar ao início](../README.md) · 📖 [Guia do Aluno](../GUIA-DO-ALUNO.md) · 💜 [Sobre a Liga](../sobre/)
+
+🏠 [Voltar ao início](../) &nbsp;·&nbsp; 📖 [Guia do Aluno](../GUIA-DO-ALUNO.md) &nbsp;·&nbsp; 💜 [Sobre a Liga](../sobre/)
+
 </div>

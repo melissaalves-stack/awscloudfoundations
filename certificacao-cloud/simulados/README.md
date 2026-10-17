@@ -16,6 +16,7 @@ O CLF-C02 tem **65 questões** e **90 minutos**. Os domínios têm pesos diferen
 | 3 · Tecnologia e Serviços | 34% | [Simulado do Domínio 3](./simulado-dominio-3.md) |
 | 4 · Cobrança, Preços e Suporte | 12% | [Simulado do Domínio 4](./simulado-dominio-4.md) |
 | **Todos** | **100%** | 🏆 [**Simulado Geral (65 questões)**](./simulado-geral.md) |
+| **Mensal** | — | ⏱️ [**Simulado do Mês**](./simulado-do-mes/) — cronometrado, com ranking |
 
 ## 🎓 Como estudar com os simulados
 

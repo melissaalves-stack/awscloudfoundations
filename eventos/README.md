@@ -24,30 +24,24 @@
 
 Ao longo do ciclo, a Liga promove uma série de **eventos presenciais e online** para a comunidade — palestras, workshops práticos, encontros de estudo e muito mais. Além disso, celebramos dois marcos especiais: um **AWS Community Day** e um **Hackathon**. 🚀
 
-Esta pasta guarda os **registros e memórias** de cada evento: o que rolou, quem participou e as fotos. Cada evento tem seu próprio espaço, preenchido conforme ele acontece.
-
-> [!NOTE]
-> Os detalhes de cada evento (tema, data e conteúdo) são publicados **após a sua realização**. Fique de olho nos canais oficiais da Liga para saber das novidades!
+Esta pasta é organizada **por mês** — cada mês reúne todos os encontros que aconteceram nele: o que rolou, materiais, gravações e o link das fotos.
 
 ---
 
-## 📁 Espaços de evento
+## 📅 Ciclo 2026–2027
 
-| Espaço | Conteúdo |
-|:--|:--|
-| 🎬 [Evento 01](./evento-01/) | Registro do evento |
-| 🎬 [Evento 02](./evento-02/) | Registro do evento |
-| 🎬 [Evento 03](./evento-03/) | Registro do evento |
-| 🎬 [Evento 04](./evento-04/) | Registro do evento |
-| 🎬 [Evento 05](./evento-05/) | Registro do evento |
-| 🎬 [Evento 06](./evento-06/) | Registro do evento |
-| 🎬 [Evento 07](./evento-07/) | Registro do evento |
-| 🎬 [Evento 08](./evento-08/) | Registro do evento |
-| 🌎 [AWS Community Day](./community-day-aws/) | Nosso Community Day |
-| 💻 [Hackathon](./hackathon/) | Nosso Hackathon |
+| Mês | Encontros | Destaques |
+|:--|:--:|:--|
+| 📅 [Agosto 2026](./2026-08-agosto/) | 1 | Fundamentos de Computação em Nuvem |
+| 📅 [Setembro 2026](./2026-09-setembro/) | 4 | Durable Functions · DemoDay · Palestra com Caio Valcazara · O Arsenal AWS |
+| 📅 [Outubro 2026](./2026-10-outubro/) | 2 | AWS Kiro (20–22) · Segurança na Nuvem AWS (28) |
+| 📅 [Novembro 2026](./2026-11-novembro/) | — | Encerramento da trilha de certificação |
+| 🌟 [Maio 2027](./2027-05-maio/) | 2 | AWS Community Day · Hackathon |
 
 ---
 
 <div align="center">
-🏠 [Voltar ao início](../README.md) · 💜 [Sobre a Liga](../sobre/) · 📸 [Instagram](https://www.instagram.com/awsbuilders.unifal)
+
+🏠 [Voltar ao início](../) &nbsp;·&nbsp; 💜 [Sobre a Liga](../sobre/) &nbsp;·&nbsp; 📸 [Instagram](https://www.instagram.com/awsbuilders.unifal)
+
 </div>

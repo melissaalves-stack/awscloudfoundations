@@ -35,6 +35,19 @@ Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Compu
 
 ---
 
+## 📅 Próximos encontros
+
+| Quando | Encontro | Tipo |
+|:--|:--|:--|
+| **20 a 22 out 2026** | 👻 [AWS Kiro](./eventos/2026-10-outubro/#-aws-kiro) | Evento |
+| **28 out 2026** | 🔐 [Segurança na Nuvem AWS](./eventos/2026-10-outubro/#-segurança-na-nuvem-aws) | Certificação · Domínio 2 |
+| **Nov 2026** | 🏁 [Encerramento da trilha de certificação](./eventos/2026-11-novembro/) | Certificação |
+| **Mai 2027** | 🌎 [AWS Community Day](./eventos/2027-05-maio/#-aws-community-day) · 💻 [Hackathon](./eventos/2027-05-maio/#-hackathon) | Marcos do ciclo |
+
+👉 **[Ver todos os eventos por mês](./eventos/)**
+
+---
+
 ## 🗺️ Como o repositório é organizado
 
 Pensamos tudo para ser **intuitivo**. São três trilhas de estudo e alguns espaços de apoio:
@@ -58,7 +71,9 @@ Pensamos tudo para ser **intuitivo**. São três trilhas de estudo e alguns espa
 | 🤖 **[Certificação AI Practitioner](./certificacao-ia/)** | Trilha completa rumo à prova oficial **AWS Certified AI Practitioner (AIF-C01)**. |
 | 🔬 **[Aprendizado Aprofundado](./aprofundamento/)** | Conteúdo técnico avançado da **capacitação oficial de líderes** da AWS. |
 | 📰 **[Novidades Tech](./blog/)** | Nosso "blog": novidades, programas e oportunidades do mundo Cloud. |
-| 🎉 **[Eventos](./eventos/)** | Registros e memórias dos nossos encontros, Community Day e Hackathon. |
+| 🎉 **[Eventos](./eventos/)** | Encontros organizados por mês, com materiais, gravações e o mural do Community Day e do Hackathon. |
+| 📖 **[Glossário](./GLOSSARIO.md)** | Todos os termos da prova em ordem alfabética, com link para o módulo que explica. |
+| ⏱️ **[Simulado do Mês](./certificacao-cloud/simulados/simulado-do-mes/)** | Um simulado cronometrado por mês, com correção automática e ranking. |
 | 💜 **[Sobre a Liga](./sobre/)** | Quem somos, nossa missão e quem lidera esta comunidade. |
 
 ---
@@ -78,7 +93,7 @@ Organizada nos **4 domínios oficiais da prova**, exatamente como a AWS estrutur
 | 3️⃣ | [Tecnologia e Serviços](./certificacao-cloud/dominio-3-tecnologia-e-servicos/) | 34% |
 | 4️⃣ | [Cobrança, Preços e Suporte](./certificacao-cloud/dominio-4-cobranca-precos-e-suporte/) | 12% |
 
-👉 **[Entrar na trilha Cloud Practitioner](./certificacao-cloud/)**
+👉 **[Entrar na trilha Cloud Practitioner](./certificacao-cloud/)** &nbsp;·&nbsp; 📄 Revisões de véspera: [D1](./certificacao-cloud/dominio-1-conceitos-de-nuvem/REVISAO.md) · [D2](./certificacao-cloud/dominio-2-seguranca-e-conformidade/REVISAO.md) · [D3](./certificacao-cloud/dominio-3-tecnologia-e-servicos/REVISAO.md) · [D4](./certificacao-cloud/dominio-4-cobranca-precos-e-suporte/REVISAO.md)
 
 ---
 
@@ -98,7 +113,7 @@ A certificação de **Inteligência Artificial** da AWS, também organizada nos 
 | 4️⃣ | [IA Responsável](./certificacao-ia/dominio-4-ia-responsavel/) | 14% |
 | 5️⃣ | [Segurança, Conformidade e Governança](./certificacao-ia/dominio-5-seguranca-e-governanca/) | 14% |
 
-👉 **[Entrar na trilha AI Practitioner](./certificacao-ia/)**
+👉 **[Entrar na trilha AI Practitioner](./certificacao-ia/)** &nbsp;·&nbsp; 📄 Revisões de véspera: [D1](./certificacao-ia/dominio-1-fundamentos-de-ia-e-ml/REVISAO.md) · [D2](./certificacao-ia/dominio-2-fundamentos-de-ia-generativa/REVISAO.md) · [D3](./certificacao-ia/dominio-3-aplicacoes-de-modelos/REVISAO.md) · [D4](./certificacao-ia/dominio-4-ia-responsavel/REVISAO.md) · [D5](./certificacao-ia/dominio-5-seguranca-e-governanca/REVISAO.md)
 
 ---
 

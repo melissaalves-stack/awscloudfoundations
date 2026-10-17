@@ -2,7 +2,7 @@ name: Corrigir Simulado do Mês
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
   workflow_dispatch:
 
 permissions:
@@ -25,6 +25,9 @@ jobs:
             const cfg = JSON.parse(fs.readFileSync('.github/simulado-do-mes.json', 'utf8'));
             const gabarito = (process.env.GABARITO || '').toUpperCase().replace(/[^A-D]/g, '');
             if (gabarito.length !== cfg.questoes) {
+              const iss = context.payload.issue;
+              if (iss) await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: iss.number,
+                body: '⚠️ A correção ainda não está configurada (falta o gabarito no repositório). A organização já foi avisada — seu envio vale e será corrigido.' });
               core.setFailed('Secret GABARITO_SIMULADO ausente ou com tamanho errado.');
               return;
             }
@@ -35,10 +38,22 @@ jobs:
               return m ? m[1].trim() : '';
             };
 
-            const issues = await github.paginate(github.rest.issues.listForRepo, {
-              owner: context.repo.owner, repo: context.repo.repo,
-              labels: 'simulado-do-mes', state: 'all', per_page: 100,
+            const { owner, repo } = context.repo;
+            const ehSimulado = (i) => (i.title || '').startsWith('[Simulado do Mês]') ||
+              (i.labels || []).some(l => (l.name || l) === 'simulado-do-mes');
+
+            // cria a label se ainda não existir e aplica na issue atual
+            try { await github.rest.issues.getLabel({ owner, repo, name: 'simulado-do-mes' }); }
+            catch { await github.rest.issues.createLabel({ owner, repo, name: 'simulado-do-mes', color: 'FF9900', description: 'Envio do Simulado do Mês' }); }
+            const atualPayload = context.payload.issue;
+            if (atualPayload && ehSimulado(atualPayload)) {
+              await github.rest.issues.addLabels({ owner, repo, issue_number: atualPayload.number, labels: ['simulado-do-mes'] });
+            }
+
+            const todas = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'all', per_page: 100,
             });
+            const issues = todas.filter(ehSimulado);
 
             // primeiro envio válido de cada pessoa dentro do prazo da edição
             const envios = new Map();
@@ -71,7 +86,7 @@ jobs:
 
             // resposta na issue que disparou
             const atual = context.payload.issue;
-            if (atual && (atual.labels || []).some(l => l.name === 'simulado-do-mes')) {
+            if (atual && ehSimulado(atual)) {
               const meu = envios.get(atual.user.login);
               let texto;
               if (new Date(atual.created_at) > prazo) texto = '⏰ Este envio chegou depois do prazo da edição e não entra no ranking.';

@@ -26,6 +26,7 @@
 | Campo | Detalhe |
 |:--|:--|
 | 🏷️ **Tipo** | Palestra |
+| 🎤 **Palestrante** | Eric Johnson |
 | 🎥 **Gravação** | [Assistir no YouTube](https://www.youtube.com/live/TB-jf7acFy0?si=y2A2tnHGF6BMedDZ) |
 
 ---
@@ -58,7 +59,6 @@
 | Campo | Detalhe |
 |:--|:--|
 | 📅 **Data** | 24 de setembro de 2026 |
-| 🎤 **Facilitadoras** | Melissa (Parte 1) · Julia (Parte 2) |
 | 🎯 **Domínio da prova** | Domínio 3 · Tecnologia e Serviços — 34% do CLF-C02, o maior peso |
 | 📂 **Materiais** | [Slides teóricos (PDF)](./slides/arsenal-aws-slides-teoricos.pdf) |
 
@@ -66,14 +66,9 @@ O domínio que mais pesa na prova pede que você reconheça **qual serviço reso
 
 ### 🎯 O que vimos
 
-**Parte 1 · Melissa**
-
 - **Computação** — EC2 e famílias de instância, Auto Scaling (mín./desejado/máx.), Lambda, ECS, Fargate, Elastic Beanstalk e Lightsail
 - **Armazenamento** — S3 e suas classes (Standard → Deep Archive), EBS (bloco), EFS (arquivo) e Storage Gateway (híbrido)
 - **Bancos de dados** — RDS e Aurora (relacional), DynamoDB (NoSQL), ElastiCache (cache) e Redshift (data warehouse)
-
-**Parte 2 · Julia**
-
 - **Rede e entrega** — VPC (sub-redes pública e privada, Internet e NAT Gateway), Security Groups vs. NACLs, Route 53, CloudFront, ELB, API Gateway e Direct Connect
 - **Monitoramento** — CloudWatch, CloudTrail e EventBridge
 - **Mensageria** — SNS (pub/sub), SQS (fila) e Step Functions

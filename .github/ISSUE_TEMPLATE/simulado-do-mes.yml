@@ -1,0 +1,27 @@
+name: "⏱️ Simulado do Mês"
+description: "Envie suas respostas do simulado cronometrado do mês."
+title: "[Simulado do Mês] "
+labels: ["simulado-do-mes"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⏱️ Simulado do Mês
+        Vale só o **primeiro envio**. O robô responde com a sua nota em segundos.
+
+  - type: input
+    id: respostas
+    attributes:
+      label: Respostas
+      description: "As 20 letras em sequência, sem espaços."
+      placeholder: "ABCDABCDABCDABCDABCD"
+    validations:
+      required: true
+
+  - type: input
+    id: tempo
+    attributes:
+      label: Tempo gasto (minutos)
+      placeholder: "Ex.: 27"
+    validations:
+      required: true

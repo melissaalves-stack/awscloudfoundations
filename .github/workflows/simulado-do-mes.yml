@@ -1,0 +1,120 @@
+name: Corrigir Simulado do Mês
+
+on:
+  issues:
+    types: [opened, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Corrigir envios e atualizar ranking
+        uses: actions/github-script@v7
+        env:
+          GABARITO: ${{ secrets.GABARITO_SIMULADO }}
+        with:
+          script: |
+            const fs = require('fs');
+            const cfg = JSON.parse(fs.readFileSync('.github/simulado-do-mes.json', 'utf8'));
+            const gabarito = (process.env.GABARITO || '').toUpperCase().replace(/[^A-D]/g, '');
+            if (gabarito.length !== cfg.questoes) {
+              const iss = context.payload.issue;
+              if (iss) await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: iss.number,
+                body: '⚠️ A correção ainda não está configurada (falta o gabarito no repositório). A organização já foi avisada — seu envio vale e será corrigido.' });
+              core.setFailed('Secret GABARITO_SIMULADO ausente ou com tamanho errado.');
+              return;
+            }
+            const prazo = new Date(cfg.prazo);
+
+            const secao = (body, titulo) => {
+              const m = body.match(new RegExp('###\\s*' + titulo + '[^\\n]*\\n+([^\\n]*)', 'i'));
+              return m ? m[1].trim() : '';
+            };
+
+            const { owner, repo } = context.repo;
+            const ehSimulado = (i) => (i.title || '').startsWith('[Simulado do Mês]') ||
+              (i.labels || []).some(l => (l.name || l) === 'simulado-do-mes');
+
+            // cria a label se ainda não existir e aplica na issue atual
+            try { await github.rest.issues.getLabel({ owner, repo, name: 'simulado-do-mes' }); }
+            catch { await github.rest.issues.createLabel({ owner, repo, name: 'simulado-do-mes', color: 'FF9900', description: 'Envio do Simulado do Mês' }); }
+            const atualPayload = context.payload.issue;
+            if (atualPayload && ehSimulado(atualPayload)) {
+              await github.rest.issues.addLabels({ owner, repo, issue_number: atualPayload.number, labels: ['simulado-do-mes'] });
+            }
+
+            const todas = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'all', per_page: 100,
+            });
+            const issues = todas.filter(ehSimulado);
+
+            // primeiro envio válido de cada pessoa dentro do prazo da edição
+            const envios = new Map();
+            for (const i of issues.sort((a, b) => new Date(a.created_at) - new Date(b.created_at))) {
+              if (i.pull_request || envios.has(i.user.login)) continue;
+              if (new Date(i.created_at) > prazo) continue;
+              const corpo = (i.body || '').replace(/\r\n/g, '\n');
+              const resp = secao(corpo, 'Respostas').toUpperCase().replace(/[^A-D]/g, '');
+              const tempo = parseInt(secao(corpo, 'Tempo'), 10) || 999;
+              if (resp.length !== cfg.questoes) continue;
+              let acertos = 0;
+              for (let k = 0; k < cfg.questoes; k++) if (resp[k] === gabarito[k]) acertos++;
+              envios.set(i.user.login, { login: i.user.login, acertos, tempo, issue: i.number });
+            }
+
+            const ranking = [...envios.values()].sort((a, b) => b.acertos - a.acertos || a.tempo - b.tempo);
+            const medalha = ['🥇', '🥈', '🥉'];
+            let tabela = ranking.length
+              ? '| # | Aluno(a) | Acertos | Tempo |\n|:--:|:--|:--:|:--:|\n' +
+                ranking.map((r, n) => `| ${medalha[n] || n + 1} | [@${r.login}](https://github.com/${r.login}) | ${r.acertos}/${cfg.questoes} | ${r.tempo} min |`).join('\n')
+              : '_Ninguém enviou ainda. Seja a primeira pessoa!_';
+            tabela += `\n\n<sub>Edição: ${cfg.titulo} · atualizado em ${new Date().toISOString().slice(0, 10)}</sub>`;
+
+            const arq = 'certificacao-cloud/simulados/simulado-do-mes/README.md';
+            const md = fs.readFileSync(arq, 'utf8').replace(
+              /<!-- RANKING:INICIO -->[\s\S]*<!-- RANKING:FIM -->/,
+              `<!-- RANKING:INICIO -->\n${tabela}\n<!-- RANKING:FIM -->`
+            );
+            fs.writeFileSync(arq, md);
+
+            // resposta na issue que disparou
+            const atual = context.payload.issue;
+            if (atual && ehSimulado(atual)) {
+              const meu = envios.get(atual.user.login);
+              let texto;
+              if (new Date(atual.created_at) > prazo) texto = '⏰ Este envio chegou depois do prazo da edição e não entra no ranking.';
+              else if (!meu) texto = '⚠️ Não consegui ler suas respostas. Confira se enviou exatamente ' + cfg.questoes + ' letras (A a D).';
+              else if (meu.issue !== atual.number) texto = 'ℹ️ Você já tinha enviado nesta edição (#' + meu.issue + '). Vale só o primeiro envio.';
+              else {
+                const pos = ranking.findIndex(r => r.login === meu.login) + 1;
+                const pct = Math.round(meu.acertos / cfg.questoes * 100);
+                texto = [
+                  `### ⏱️ Resultado de @${meu.login}`,
+                  '',
+                  `**${meu.acertos}/${cfg.questoes} acertos (${pct}%)** em ${meu.tempo} min · ${pos}º lugar por enquanto.`,
+                  '',
+                  pct >= 70 ? '✅ Acima dos ~70% da prova real. Bora!' : '📚 Abaixo dos ~70% da prova. Releia as revisões de véspera e tente de novo no próximo mês.',
+                  '',
+                  'O gabarito comentado sai depois do prazo. Ranking completo: [Simulado do Mês](../blob/main/' + arq + ').',
+                ].join('\n');
+              }
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: atual.number, body: texto });
+              // fecha a issue para que as respostas não fiquem visíveis no feed
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: atual.number, state: 'closed' });
+            }
+
+      - name: Commitar ranking
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add certificacao-cloud/simulados/simulado-do-mes/README.md
+          git diff --staged --quiet || git commit -m "chore: atualiza ranking do Simulado do Mês"
+          git pull --rebase
+          git push

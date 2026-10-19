@@ -1,0 +1,38 @@
+name: "❓ Dúvida"
+description: "Travou em algum conceito ou exercício? Peça ajuda à liderança e aos colegas."
+title: "[Dúvida] "
+labels: ["dúvida"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ Canal de Dúvidas
+        Descreva bem o que você está tentando fazer para que a liderança e os colegas consigam te ajudar rápido. 💬
+
+  - type: input
+    id: contexto
+    attributes:
+      label: Em qual módulo/conteúdo você está?
+      placeholder: "Ex.: Aprofundamento · Módulo 05 — Networking e VPC"
+    validations:
+      required: true
+
+  - type: textarea
+    id: duvida
+    attributes:
+      label: Qual é a sua dúvida?
+      placeholder: "Explique o conceito que não entendeu ou o erro que apareceu."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tentativas
+    attributes:
+      label: O que você já tentou?
+      placeholder: "Conte o que já testou — ajuda muito a resolver mais rápido."
+
+  - type: textarea
+    id: print
+    attributes:
+      label: Print ou código (opcional)
+      placeholder: "Cole aqui uma imagem ou trecho de código, se ajudar."

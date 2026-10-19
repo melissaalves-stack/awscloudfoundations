@@ -29,7 +29,7 @@
 <!-- RANKING:INICIO -->
 | # | Aluno(a) | Acertos | Tempo |
 |:--:|:--|:--:|:--:|
-| 🥇 | [@melissaalves-stack](https://github.com/melissaalves-stack) | 3/20 | 10 min |
+| 🥇 | [@melissaalves-stack](https://github.com/melissaalves-stack) | 20/20 | 10 min |
 
 <sub>Edição: Novembro de 2026 · atualizado em 2026-10-19</sub>
 <!-- RANKING:FIM -->

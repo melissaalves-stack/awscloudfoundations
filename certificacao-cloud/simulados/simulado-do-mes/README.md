@@ -27,11 +27,7 @@
 ## 🏆 Ranking da edição atual
 
 <!-- RANKING:INICIO -->
-| # | Aluno(a) | Acertos | Tempo |
-|:--:|:--|:--:|:--:|
-| 🥇 | [@melissaalves-stack](https://github.com/melissaalves-stack) | 18/20 | 10 min |
-
-<sub>Edição: Novembro de 2026 · atualizado em 2026-10-17</sub>
+_Ninguém enviou ainda. Seja a primeira pessoa!_
 <!-- RANKING:FIM -->
 
 ## 📚 Edições anteriores

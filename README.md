@@ -19,6 +19,24 @@
 
 ---
 
+## 🌐 Site da Liga
+
+<div align="center">
+
+<a href="https://awsbuildersunifal.vercel.app">
+  <img src="./assets/site-preview.png" alt="Site da LACEN — Aprenda nuvem construindo." width="100%" />
+</a>
+
+<br><br>
+
+<a href="https://awsbuildersunifal.vercel.app">
+  <img src="https://img.shields.io/badge/🌐%20Acesse%20o%20site%20oficial-FF9900?style=for-the-badge&labelColor=161D26" height="40" />
+</a>
+
+</div>
+
+---
+
 ## 👋 Bem-vindo(a) à Liga!
 
 Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Computação em Nuvem da UNIFAL-MG**. Aqui você aprende **computação em nuvem e inteligência artificial do zero**, no seu ritmo, com aulas didáticas, diagramas, quizzes interativos e prática guiada.

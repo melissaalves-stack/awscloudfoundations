@@ -19,7 +19,7 @@
 | 3 | [@gco-code](https://github.com/gco-code) | 17 | ☁️ 🔐 🧰 💰 🏆 |
 | 4 | [@frantonissi](https://github.com/frantonissi) | 17 | ☁️ 🔐 🧰 💰 🏆 |
 | 5 | [@J3ff23](https://github.com/J3ff23) | 17 | ☁️ 🔐 🧰 💰 🏆 |
-| 6 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 14 | ☁️ 🔐 🧰 |
+| 6 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 15 | ☁️ 🔐 🧰 |
 | 7 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 | ☁️ 🔐 🧰 |
 | 8 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
 | 9 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
@@ -127,7 +127,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████████████████████░░░░` | 14/17 | 82% |
+| Certificação Cloud Practitioner | `█████████████████████░░░` | 15/17 | 88% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

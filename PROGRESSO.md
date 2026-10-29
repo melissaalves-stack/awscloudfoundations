@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-10-28</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-10-29</sub>
 
 </div>
 
@@ -23,7 +23,7 @@
 | 7 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
 | 8 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
 | 9 | [@pereira-devcarlos](https://github.com/pereira-devcarlos) | 8 | ☁️ 🔐 |
-| 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 5 | — |
+| 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — |
 | 11 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ |
 | 12 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ |
 | 13 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 | ☁️ |
@@ -180,7 +180,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
+| Certificação Cloud Practitioner | `████████░░░░░░░░░░░░░░░░` | 6/17 | 35% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

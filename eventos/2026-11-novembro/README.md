@@ -15,7 +15,7 @@
 
 | Encontro | Tipo | Materiais |
 |:--|:--|:--|
-| 🏁 _a definir_ | Certificação | _a publicar_ |
+| Domínio 4: Cobrança, preços e suporte | Certificação | _a publicar_ |
 
 📸 **Fotos do mês:** _link do Drive em breve_
 

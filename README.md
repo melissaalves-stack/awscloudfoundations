@@ -57,9 +57,7 @@ Este repositório é o **ambiente de aprendizado** da **Liga Acadêmica de Compu
 
 | Quando | Encontro | Tipo |
 |:--|:--|:--|
-| **20 a 22 out 2026** | 👻 [AWS Kiro](./eventos/2026-10-outubro/#-aws-kiro) | Evento |
-| **28 out 2026** | 🔐 [Segurança na Nuvem AWS](./eventos/2026-10-outubro/#-segurança-na-nuvem-aws) | Certificação · Domínio 2 |
-| **Nov 2026** | 🏁 [Encerramento da trilha de certificação](./eventos/2026-11-novembro/) | Certificação |
+| **Nov 2026** | 🏁 [Domínio 4: Cobrança, preços e suporte (Encerramento da trilha de certificação)](./eventos/2026-11-novembro/) | Certificação |
 | **Mai 2027** | 🌎 [AWS Community Day](./eventos/2027-05-maio/#-aws-community-day) · 💻 [Hackathon](./eventos/2027-05-maio/#-hackathon) | Marcos do ciclo |
 
 👉 **[Ver todos os eventos por mês](./eventos/)**

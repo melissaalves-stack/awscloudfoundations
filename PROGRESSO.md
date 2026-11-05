@@ -24,16 +24,16 @@
 | 8 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
 | 9 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
 | 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — |
-| 11 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ |
-| 12 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ |
-| 13 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 | ☁️ |
-| 14 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 4 | ☁️ |
-| 15 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 | ☁️ |
-| 16 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 | — |
-| 17 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 | ☁️ |
-| 18 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 | — |
-| 19 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 | — |
-| 20 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 2 | — |
+| 11 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 4 | ☁️ |
+| 12 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ |
+| 13 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ |
+| 14 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 | ☁️ |
+| 15 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 4 | ☁️ |
+| 16 | [@hugosoaresdev](https://github.com/hugosoaresdev) | 4 | ☁️ |
+| 17 | [@Diego-Montemor](https://github.com/Diego-Montemor) | 4 | — |
+| 18 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 | ☁️ |
+| 19 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 | — |
+| 20 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 | — |
 | 21 | [@daviazarias](https://github.com/daviazarias) | 2 | — |
 | 22 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 | — |
 
@@ -192,6 +192,18 @@
 
 _Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_
 
+### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+**Medalhas:**
+
+- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
+
 ### [@guilhermereisdev](https://github.com/guilhermereisdev)
 
 | Trilha | Progresso | Módulos | % |
@@ -293,18 +305,6 @@ _Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-**Medalhas:**
-
-_Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_
-
-### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

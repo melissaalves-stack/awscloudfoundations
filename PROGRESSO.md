@@ -21,9 +21,9 @@
 | 5 | [@frantonissi](https://github.com/frantonissi) | 17 | ☁️ 🔐 🧰 💰 🏆 |
 | 6 | [@J3ff23](https://github.com/J3ff23) | 17 | ☁️ 🔐 🧰 💰 🏆 |
 | 7 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 | ☁️ 🔐 🧰 |
-| 8 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
-| 9 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
-| 10 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 7 | ☁️ |
+| 8 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 9 | ☁️ 🔐 |
+| 9 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
+| 10 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
 | 11 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — |
 | 12 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ |
 | 13 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ |
@@ -154,6 +154,19 @@
 - 🔐 **Segurança** · Certificação Cloud Practitioner
 - 🧰 **Tecnologia e Serviços** · Certificação Cloud Practitioner
 
+### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `█████████████░░░░░░░░░░░` | 9/17 | 53% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+**Medalhas:**
+
+- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
+- 🔐 **Segurança** · Certificação Cloud Practitioner
+
 ### [@Thyago-bat](https://github.com/Thyago-bat)
 
 | Trilha | Progresso | Módulos | % |
@@ -179,18 +192,6 @@
 
 - ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
 - 🔐 **Segurança** · Certificação Cloud Practitioner
-
-### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `██████████░░░░░░░░░░░░░░` | 7/17 | 41% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-**Medalhas:**
-
-- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
 
 ### [@Otavio-oliv](https://github.com/Otavio-oliv)
 

@@ -29,7 +29,7 @@
 <!-- RANKING:INICIO -->
 _Ninguém enviou ainda. Seja a primeira pessoa!_
 
-<sub>Edição: Novembro de 2026 · atualizado em 2026-10-29</sub>
+<sub>Edição: Novembro de 2026 · atualizado em 2026-11-05</sub>
 <!-- RANKING:FIM -->
 
 ## 📚 Edições anteriores

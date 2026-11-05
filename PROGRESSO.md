@@ -23,8 +23,8 @@
 | 7 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 | ☁️ 🔐 🧰 |
 | 8 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 |
 | 9 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 |
-| 10 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — |
-| 11 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 4 | ☁️ |
+| 10 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 6 | ☁️ |
+| 11 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — |
 | 12 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ |
 | 13 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ |
 | 14 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 4 | ☁️ |
@@ -180,6 +180,18 @@
 - ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
 - 🔐 **Segurança** · Certificação Cloud Practitioner
 
+### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `████████░░░░░░░░░░░░░░░░` | 6/17 | 35% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+**Medalhas:**
+
+- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
+
 ### [@Otavio-oliv](https://github.com/Otavio-oliv)
 
 | Trilha | Progresso | Módulos | % |
@@ -191,18 +203,6 @@
 **Medalhas:**
 
 _Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_
-
-### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `██████░░░░░░░░░░░░░░░░░░` | 4/17 | 24% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-**Medalhas:**
-
-- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
 
 ### [@guilhermereisdev](https://github.com/guilhermereisdev)
 

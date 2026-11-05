@@ -4,7 +4,7 @@
 
 # 📊 Progresso da turma
 
-<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-10-29</sub>
+<sub>Atualizado automaticamente a cada checkpoint registrado · 2026-11-05</sub>
 
 </div>
 
@@ -33,8 +33,9 @@
 | 17 | [@Vic-Tambasco](https://github.com/Vic-Tambasco) | 4 | ☁️ |
 | 18 | [@Amoreirinha](https://github.com/Amoreirinha) | 4 | — |
 | 19 | [@Luis-Unifal](https://github.com/Luis-Unifal) | 3 | — |
-| 20 | [@daviazarias](https://github.com/daviazarias) | 2 | — |
-| 21 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 | — |
+| 20 | [@Gabriela-Mazon](https://github.com/Gabriela-Mazon) | 2 | — |
+| 21 | [@daviazarias](https://github.com/daviazarias) | 2 | — |
+| 22 | [@darlansm47-stack](https://github.com/darlansm47-stack) | 1 | — |
 
 > [!TIP]
 > **Como ganhar medalhas:** conclua todos os módulos de um domínio. Use o número no checkpoint (ex.: `Domínio 1 · Módulo 03`) para o robô reconhecer.
@@ -292,6 +293,18 @@ _Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
 | Certificação Cloud Practitioner | `████░░░░░░░░░░░░░░░░░░░░` | 3/17 | 18% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+**Medalhas:**
+
+_Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_
+
+### [@Gabriela-Mazon](https://github.com/Gabriela-Mazon)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `███░░░░░░░░░░░░░░░░░░░░░` | 2/17 | 12% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

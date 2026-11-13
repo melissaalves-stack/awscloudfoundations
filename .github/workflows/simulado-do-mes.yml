@@ -84,6 +84,17 @@ jobs:
             );
             fs.writeFileSync(arq, md);
 
+            // resultados em JSON, para os perfis públicos do site (membros/simulados.json)
+            const arqDados = 'membros/simulados.json';
+            let dados = {};
+            try { dados = JSON.parse(fs.readFileSync(arqDados, 'utf8')); } catch {}
+            dados[cfg.edicao] = {
+              titulo: cfg.titulo, questoes: cfg.questoes, participantes: ranking.length,
+              ranking: ranking.map((r, n) => ({ login: r.login, acertos: r.acertos, tempo: r.tempo, posicao: n + 1 })),
+            };
+            fs.mkdirSync('membros', { recursive: true });
+            fs.writeFileSync(arqDados, JSON.stringify(dados, null, 2) + '\n');
+
             // resposta na issue que disparou
             const atual = context.payload.issue;
             if (atual && ehSimulado(atual)) {
@@ -114,7 +125,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add certificacao-cloud/simulados/simulado-do-mes/README.md
-          git diff --staged --quiet || git commit -m "chore: atualiza ranking do Simulado do Mês"
-          git pull --rebase
-          git push
+          git add certificacao-cloud/simulados/simulado-do-mes/README.md membros/simulados.json
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: atualiza ranking do Simulado do Mês"
+          # Outra automação pode ter commitado no meio do caminho: rebase e tenta de novo.
+          for tentativa in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1

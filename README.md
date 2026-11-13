@@ -90,6 +90,7 @@ Pensamos tudo para ser **intuitivo**. São três trilhas de estudo e alguns espa
 | 🎉 **[Eventos](./eventos/)** | Encontros organizados por mês, com materiais, gravações e o mural do Community Day e do Hackathon. |
 | 📖 **[Glossário](./GLOSSARIO.md)** | Todos os termos da prova em ordem alfabética, com link para o módulo que explica. |
 | ⏱️ **[Simulado do Mês](./certificacao-cloud/simulados/simulado-do-mes/)** | Um simulado cronometrado por mês, com correção automática e ranking. |
+| 🌐 **[Perfis públicos](./membros/)** | Sua página no site da Liga, com trilhas, medalhas, eventos e certificados — gerada pelos seus checkpoints. |
 | 💜 **[Sobre a Liga](./sobre/)** | Quem somos, nossa missão e quem lidera esta comunidade. |
 
 ---
@@ -186,6 +187,18 @@ Tire dúvidas na aba **[Issues](https://github.com/melissaalves-stack/awscloudfo
 </div>
 
 Cada módulo concluído vira um **checkpoint**. Abra uma Issue com o template [Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml) — em segundos um robô responde na própria Issue com a sua barra de progresso atualizada e soma você ao **[📊 Progresso da turma](./PROGRESSO.md)**.
+
+### 🌐 Seu perfil público e seus certificados
+
+Tudo o que você registra aqui vira uma página sua no site da Liga — **`awsbuildersunifal.vercel.app/u/seu-usuario`** — pronta para o LinkedIn e o currículo.
+
+| O que você faz | O que você ganha |
+|:--|:--|
+| 📊 Abre um **[Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)** | O módulo entra no seu perfil, com medalha ao fechar o domínio |
+| 🎟️ Registra **[Presença em Evento](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=presenca-em-evento.yml)** com o código do dia | O evento entra no perfil e libera o **certificado do AWS Student Builder Group** |
+| 🏆 Conclui **todos os módulos de uma trilha** | **Certificado de conclusão de trilha** da LACEN, com QR code de validação |
+
+👉 **[Ver os perfis da Liga](https://awsbuildersunifal.vercel.app/u)** &nbsp;·&nbsp; 🎓 **[Emitir certificado](https://awsbuildersunifal.vercel.app/certificado)**
 
 ---
 

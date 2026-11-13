@@ -79,6 +79,11 @@ Cada módulo tem uma **checklist de conclusão** no final. Para registrar oficia
 >
 > 👉 **[Abrir um Checkpoint de Módulo](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)**
 
+> [!TIP]
+> **Cada checkpoint alimenta o seu perfil público.** O robô responde na Issue com o link — algo como `awsbuildersunifal.vercel.app/u/seu-usuario` — com suas trilhas, medalhas, eventos e simulados. É um link pronto para o LinkedIn e o currículo. Ao fechar todos os módulos de uma trilha, o robô também envia o link do seu **certificado de conclusão**.
+>
+> 👉 **[Ver os perfis da Liga](https://awsbuildersunifal.vercel.app/u)**
+
 ### 6. Pratique (sem console!) 🧪
 
 Ao final de cada módulo há uma **sugestão de laboratório**. A parte prática usa ambientes **prontos e gratuitos** — você **não precisa** de conta pessoal da AWS nem de cartão de crédito:
@@ -103,6 +108,13 @@ Nossa comunidade usa a aba **Issues** para registrar estudos, tirar dúvidas e i
 - **Quando usar:** sempre que concluir os estudos ou exercícios de um módulo/nível.
 - **Como funciona:** escolha a trilha, informe o módulo e preencha a checklist com suas respostas/prints para validar seu progresso.
 - 👉 **[Abrir Checkpoint](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=checkpoint-de-modulo.yml)**
+
+### 🎟️ Presença em Evento
+
+- **O que é:** o registro de que você esteve em um encontro da Liga.
+- **Quando usar:** logo depois do encontro, com o **código anunciado no dia**.
+- **Como funciona:** digite o código; o robô confirma, soma o evento ao seu perfil público e libera o seu **certificado do AWS Student Builder Group**. O código é apagado da Issue assim que é validado.
+- 👉 **[Registrar presença](https://github.com/melissaalves-stack/awscloudfoundations/issues/new?template=presenca-em-evento.yml)**
 
 ### ❓ 2. Dúvida
 

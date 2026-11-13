@@ -1,0 +1,10 @@
+[
+  { "id": "2026-08-fundamentos", "titulo": "Fundamentos de Computação em Nuvem", "data": "2026-08-01", "dataTexto": "Agosto de 2026", "tipo": "Certificação · Domínio 1", "pasta": "eventos/2026-08-agosto", "codigoHash": null },
+  { "id": "2026-09-durable-functions", "titulo": "Durable Functions & Rescue Agents", "data": "2026-09-01", "dataTexto": "Setembro de 2026", "tipo": "Palestra", "pasta": "eventos/2026-09-setembro", "codigoHash": null },
+  { "id": "2026-09-demoday", "titulo": "DemoDay", "data": "2026-09-01", "dataTexto": "Setembro de 2026", "tipo": "DemoDay", "pasta": "eventos/2026-09-setembro", "codigoHash": null },
+  { "id": "2026-09-solucoes-com-ia", "titulo": "Construindo Soluções com IA", "data": "2026-09-01", "dataTexto": "Setembro de 2026", "tipo": "Palestra", "pasta": "eventos/2026-09-setembro", "codigoHash": null },
+  { "id": "2026-09-arsenal-aws", "titulo": "O Arsenal AWS", "data": "2026-09-24", "dataTexto": "24 de setembro de 2026", "tipo": "Certificação · Domínio 3", "pasta": "eventos/2026-09-setembro", "codigoHash": null },
+  { "id": "2026-10-kiro", "titulo": "AWS Kiro — II Workshop de CC UNIFAL-MG", "data": "2026-10-20", "dataTexto": "20 a 22 de outubro de 2026", "tipo": "Minicurso", "pasta": "eventos/2026-10-outubro", "codigoHash": null },
+  { "id": "2026-10-seguranca", "titulo": "Segurança na Nuvem AWS", "data": "2026-10-28", "dataTexto": "28 de outubro de 2026", "tipo": "Certificação · Domínio 2", "pasta": "eventos/2026-10-outubro", "codigoHash": null },
+  { "id": "2026-11-cobranca-e-suporte", "titulo": "Cobrança, Preços e Suporte", "data": "2026-11-01", "dataTexto": "Novembro de 2026", "tipo": "Certificação · Domínio 4", "pasta": "eventos/2026-11-novembro", "codigoHash": null, "prazoPresenca": null }
+]

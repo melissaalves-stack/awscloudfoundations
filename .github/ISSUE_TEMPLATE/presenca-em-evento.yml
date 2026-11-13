@@ -1,0 +1,19 @@
+name: "🎟️ Presença em Evento"
+description: "Registre sua presença em um encontro da Liga com o código anunciado no dia."
+title: "[Presença] "
+labels: ["presenca"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎟️ Presença em Evento
+        Digite o **código anunciado no encontro**. O robô confirma em segundos, soma o evento ao seu **perfil público** e libera o seu **certificado do AWS Student Builder Group**.
+
+  - type: input
+    id: codigo
+    attributes:
+      label: Código do evento
+      description: "Exatamente como foi anunciado no encontro. O robô apaga o código desta Issue depois de validar."
+      placeholder: "Ex.: NUVEM42"
+    validations:
+      required: true

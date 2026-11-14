@@ -24,7 +24,7 @@
 | 8 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 | ☁️ 🔐 🧰 | [🌐](https://awsbuildersunifal.vercel.app/u/CrispimCesarJulio) |
 | 9 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 | [🌐](https://awsbuildersunifal.vercel.app/u/Thyago-bat) |
 | 10 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 | [🌐](https://awsbuildersunifal.vercel.app/u/MarcosBento06) |
-| 11 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 6 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/Petronio-Jr) |
+| 11 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 7 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/Petronio-Jr) |
 | 12 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — | [🌐](https://awsbuildersunifal.vercel.app/u/Otavio-oliv) |
 | 13 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/guilhermereisdev) |
 | 14 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/JA-Lassister) |
@@ -220,7 +220,7 @@
 
 | Trilha | Progresso | Módulos | % |
 |:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `████████░░░░░░░░░░░░░░░░` | 6/17 | 35% |
+| Certificação Cloud Practitioner | `██████████░░░░░░░░░░░░░░` | 7/17 | 41% |
 | Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
 | Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
 

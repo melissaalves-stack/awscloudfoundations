@@ -3,7 +3,7 @@
   "nome": "Pet",
   "avatar": "https://avatars.githubusercontent.com/u/211521381?v=4",
   "desde": "2026-09-19",
-  "totalModulos": 4,
+  "totalModulos": 5,
   "trilhas": [
     {
       "slug": "cloud",
@@ -11,9 +11,9 @@
       "codigo": "CLF-C02",
       "cor": "00E582",
       "pasta": "certificacao-cloud",
-      "feitos": 4,
+      "feitos": 5,
       "total": 17,
-      "pct": 24,
+      "pct": 29,
       "concluida": false,
       "concluidaEm": null,
       "modulos": [
@@ -40,6 +40,12 @@
           "titulo": "Economia da nuvem e migração",
           "caminho": "certificacao-cloud/dominio-1-conceitos-de-nuvem/03-economia-da-nuvem-e-migracao.md",
           "em": "2026-09-19"
+        },
+        {
+          "n": 4,
+          "titulo": "O Modelo de Responsabilidade Compartilhada",
+          "caminho": "certificacao-cloud/dominio-2-seguranca-e-conformidade/04-modelo-responsabilidade-compartilhada.md",
+          "em": "2026-11-14"
         }
       ]
     },

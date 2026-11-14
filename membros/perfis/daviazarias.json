@@ -1,0 +1,64 @@
+{
+  "login": "daviazarias",
+  "nome": "Davi Azarias",
+  "avatar": "https://avatars.githubusercontent.com/u/169682659?v=4",
+  "desde": "2026-09-17",
+  "totalModulos": 2,
+  "trilhas": [
+    {
+      "slug": "cloud",
+      "rotulo": "Certificação Cloud Practitioner",
+      "codigo": "CLF-C02",
+      "cor": "00E582",
+      "pasta": "certificacao-cloud",
+      "feitos": 2,
+      "total": 17,
+      "pct": 12,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": [
+        {
+          "n": 0,
+          "titulo": "Por que a nuvem existe",
+          "caminho": "certificacao-cloud/dominio-1-conceitos-de-nuvem/00-por-que-a-nuvem-existe.md",
+          "em": "2026-09-17"
+        },
+        {
+          "n": 1,
+          "titulo": "A infraestrutura global da AWS",
+          "caminho": "certificacao-cloud/dominio-1-conceitos-de-nuvem/01-infraestrutura-global-da-aws.md",
+          "em": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "slug": "ia",
+      "rotulo": "Certificação AI Practitioner",
+      "codigo": "AIF-C01",
+      "cor": "41B3FF",
+      "pasta": "certificacao-ia",
+      "feitos": 0,
+      "total": 14,
+      "pct": 0,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": []
+    },
+    {
+      "slug": "aprofundamento",
+      "rotulo": "Aprendizado Aprofundado",
+      "codigo": "Capacitação de Líderes",
+      "cor": "FF9900",
+      "pasta": "aprofundamento",
+      "feitos": 0,
+      "total": 12,
+      "pct": 0,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": []
+    }
+  ],
+  "medalhas": [],
+  "eventos": [],
+  "atualizadoEm": "2026-11-14"
+}

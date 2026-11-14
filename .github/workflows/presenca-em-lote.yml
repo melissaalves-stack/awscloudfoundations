@@ -1,0 +1,206 @@
+name: Registrar presenças em lote
+
+# Uso exclusivo da organização — registra presença de vários membros em um
+# ou mais eventos de uma vez, sem depender de Issue por pessoa.
+#
+# Como usar:
+#   Actions → "Registrar presenças em lote" → Run workflow
+#   1. Digite os logins do GitHub separados por vírgula (ex.: alice,bob,carol)
+#   2. Marque os eventos em que eles estiveram presentes
+#   3. Run workflow — o robô atualiza os perfis e commita
+
+on:
+  workflow_dispatch:
+    inputs:
+      logins:
+        description: "Logins do GitHub (separados por vírgula)"
+        required: true
+        type: string
+      ev_fundamentos:
+        description: "✅ Fundamentos de Computação em Nuvem (Agosto 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_durable_functions:
+        description: "✅ Durable Functions & Rescue Agents (Setembro 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_demoday:
+        description: "✅ DemoDay (Setembro 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_solucoes_ia:
+        description: "✅ Construindo Soluções com IA (Setembro 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_arsenal_aws:
+        description: "✅ O Arsenal AWS (24 set 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_kiro:
+        description: "✅ AWS Kiro — II Workshop de CC UNIFAL-MG (20–22 out 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_seguranca:
+        description: "✅ Segurança na Nuvem AWS (28 out 2026)"
+        required: false
+        type: boolean
+        default: false
+      ev_cobranca:
+        description: "✅ Cobrança, Preços e Suporte (Novembro 2026)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  presenca-lote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Registrar presenças
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs   = require('fs');
+            const path = require('path');
+
+            // ---- catálogo de eventos (mesma ordem do eventos.json) ----
+            const TODOS = JSON.parse(fs.readFileSync('.github/eventos.json', 'utf8'));
+            const MAPA  = Object.fromEntries(TODOS.map(e => [e.id, e]));
+
+            // ---- quais eventos foram marcados ----
+            const INPUTS = {
+              'ev_fundamentos':      '2026-08-fundamentos',
+              'ev_durable_functions':'2026-09-durable-functions',
+              'ev_demoday':          '2026-09-demoday',
+              'ev_solucoes_ia':      '2026-09-solucoes-com-ia',
+              'ev_arsenal_aws':      '2026-09-arsenal-aws',
+              'ev_kiro':             '2026-10-kiro',
+              'ev_seguranca':        '2026-10-seguranca',
+              'ev_cobranca':         '2026-11-cobranca-e-suporte',
+            };
+
+            const eventosSelecionados = Object.entries(INPUTS)
+              .filter(([inp]) => context.payload.inputs[inp] === 'true')
+              .map(([, id]) => MAPA[id])
+              .filter(Boolean);
+
+            if (!eventosSelecionados.length) {
+              core.setFailed('Nenhum evento marcado. Marque pelo menos um e rode novamente.');
+              return;
+            }
+
+            // ---- logins ----
+            const logins = context.payload.inputs.logins
+              .split(',').map(s => s.trim().replace(/^@/, '')).filter(Boolean);
+
+            if (!logins.length) {
+              core.setFailed('Nenhum login informado.');
+              return;
+            }
+
+            core.info(`Logins: ${logins.join(', ')}`);
+            core.info(`Eventos: ${eventosSelecionados.map(e => e.titulo).join(', ')}`);
+
+            // ---- para cada login: lê (ou cria) o JSON do perfil e injeta presenças ----
+            const pastaPerfis = 'membros/perfis';
+            fs.mkdirSync(pastaPerfis, { recursive: true });
+
+            const dia = d => new Date(d).toISOString().slice(0, 10);
+            const hoje = dia(new Date());
+
+            for (const login of logins) {
+              const arquivo = path.join(pastaPerfis, login.toLowerCase() + '.json');
+              let perfil;
+
+              if (fs.existsSync(arquivo)) {
+                perfil = JSON.parse(fs.readFileSync(arquivo, 'utf8'));
+              } else {
+                // Perfil mínimo — o robô de checkpoints vai enriquecer depois
+                let nomeReal = null;
+                try {
+                  const u = await github.rest.users.getByUsername({ username: login });
+                  nomeReal = u.data.name || null;
+                } catch { /* login inexistente ou API fora — continua assim */ }
+
+                perfil = {
+                  login,
+                  nome: nomeReal,
+                  avatar: `https://github.com/${login}.png`,
+                  desde: hoje,
+                  totalModulos: 0,
+                  trilhas: [],
+                  medalhas: [],
+                  eventos: [],
+                  atualizadoEm: hoje,
+                };
+                core.info(`Perfil novo criado para @${login}`);
+              }
+
+              // Garante que o array existe
+              if (!Array.isArray(perfil.eventos)) perfil.eventos = [];
+
+              let alterou = false;
+              for (const ev of eventosSelecionados) {
+                if (!perfil.eventos.some(e => e.id === ev.id)) {
+                  perfil.eventos.push({
+                    id: ev.id,
+                    titulo: ev.titulo,
+                    data: ev.data,
+                    dataTexto: ev.dataTexto || ev.data,
+                    tipo: ev.tipo || 'Encontro',
+                  });
+                  alterou = true;
+                  core.info(`  @${login} → ${ev.titulo}`);
+                } else {
+                  core.info(`  @${login} → ${ev.titulo} (já tinha)`);
+                }
+              }
+
+              if (alterou) {
+                // Ordena cronologicamente
+                perfil.eventos.sort((a, b) => a.data.localeCompare(b.data));
+                perfil.atualizadoEm = hoje;
+                fs.writeFileSync(arquivo, JSON.stringify(perfil, null, 2) + '\n');
+              }
+            }
+
+            // ---- recalcula index.json ----
+            const arquivosPerfis = fs.readdirSync(pastaPerfis).filter(f => f.endsWith('.json'));
+            const indice = arquivosPerfis.map(f => {
+              const p = JSON.parse(fs.readFileSync(path.join(pastaPerfis, f), 'utf8'));
+              return {
+                login: p.login,
+                nome: p.nome,
+                avatar: p.avatar,
+                totalModulos: p.totalModulos || 0,
+                medalhas: (p.medalhas || []).map(m => m.emoji),
+                eventos: (p.eventos || []).length,
+                trilhasConcluidas: (p.trilhas || []).filter(t => t.concluida).map(t => t.slug),
+              };
+            }).sort((a, b) => b.totalModulos - a.totalModulos || b.eventos - a.eventos || a.login.localeCompare(b.login));
+
+            fs.writeFileSync('membros/index.json', JSON.stringify(indice, null, 2) + '\n');
+            core.info(`index.json atualizado com ${indice.length} perfis.`);
+
+      - name: Commitar perfis
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add membros
+          git diff --staged --quiet && echo "Nada para commitar." && exit 0
+          git commit -m "chore: registra presenças em lote [skip ci]"
+          for tentativa in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1

@@ -24,8 +24,8 @@
 | 8 | [@CrispimCesarJulio](https://github.com/CrispimCesarJulio) | 14 | ☁️ 🔐 🧰 | [🌐](https://awsbuildersunifal.vercel.app/u/CrispimCesarJulio) |
 | 9 | [@Thyago-bat](https://github.com/Thyago-bat) | 9 | ☁️ 🔐 | [🌐](https://awsbuildersunifal.vercel.app/u/Thyago-bat) |
 | 10 | [@MarcosBento06](https://github.com/MarcosBento06) | 8 | ☁️ 🔐 | [🌐](https://awsbuildersunifal.vercel.app/u/MarcosBento06) |
-| 11 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — | [🌐](https://awsbuildersunifal.vercel.app/u/Otavio-oliv) |
-| 12 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 5 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/Petronio-Jr) |
+| 11 | [@Petronio-Jr](https://github.com/Petronio-Jr) | 6 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/Petronio-Jr) |
+| 12 | [@Otavio-oliv](https://github.com/Otavio-oliv) | 6 | — | [🌐](https://awsbuildersunifal.vercel.app/u/Otavio-oliv) |
 | 13 | [@guilhermereisdev](https://github.com/guilhermereisdev) | 4 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/guilhermereisdev) |
 | 14 | [@JA-Lassister](https://github.com/JA-Lassister) | 4 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/JA-Lassister) |
 | 15 | [@Otavio-A-Miguel](https://github.com/Otavio-A-Miguel) | 4 | ☁️ | [🌐](https://awsbuildersunifal.vercel.app/u/Otavio-A-Miguel) |
@@ -216,6 +216,20 @@
 
 🌐 [Perfil público](https://awsbuildersunifal.vercel.app/u/MarcosBento06)
 
+### [@Petronio-Jr](https://github.com/Petronio-Jr)
+
+| Trilha | Progresso | Módulos | % |
+|:--|:--|:--:|:--:|
+| Certificação Cloud Practitioner | `████████░░░░░░░░░░░░░░░░` | 6/17 | 35% |
+| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
+| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
+
+**Medalhas:**
+
+- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
+
+🌐 [Perfil público](https://awsbuildersunifal.vercel.app/u/Petronio-Jr)
+
 ### [@Otavio-oliv](https://github.com/Otavio-oliv)
 
 | Trilha | Progresso | Módulos | % |
@@ -229,20 +243,6 @@
 _Nenhuma medalha ainda — conclua todos os módulos de um domínio para ganhar a primeira!_
 
 🌐 [Perfil público](https://awsbuildersunifal.vercel.app/u/Otavio-oliv)
-
-### [@Petronio-Jr](https://github.com/Petronio-Jr)
-
-| Trilha | Progresso | Módulos | % |
-|:--|:--|:--:|:--:|
-| Certificação Cloud Practitioner | `███████░░░░░░░░░░░░░░░░░` | 5/17 | 29% |
-| Certificação AI Practitioner | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/14 | 0% |
-| Aprendizado Aprofundado | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0/12 | 0% |
-
-**Medalhas:**
-
-- ☁️ **Conceitos de Nuvem** · Certificação Cloud Practitioner
-
-🌐 [Perfil público](https://awsbuildersunifal.vercel.app/u/Petronio-Jr)
 
 ### [@guilhermereisdev](https://github.com/guilhermereisdev)
 

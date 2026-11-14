@@ -3,7 +3,7 @@
   "nome": "Pet",
   "avatar": "https://avatars.githubusercontent.com/u/211521381?v=4",
   "desde": "2026-09-19",
-  "totalModulos": 5,
+  "totalModulos": 6,
   "trilhas": [
     {
       "slug": "cloud",
@@ -11,9 +11,9 @@
       "codigo": "CLF-C02",
       "cor": "00E582",
       "pasta": "certificacao-cloud",
-      "feitos": 5,
+      "feitos": 6,
       "total": 17,
-      "pct": 29,
+      "pct": 35,
       "concluida": false,
       "concluidaEm": null,
       "modulos": [
@@ -45,6 +45,12 @@
           "n": 4,
           "titulo": "O Modelo de Responsabilidade Compartilhada",
           "caminho": "certificacao-cloud/dominio-2-seguranca-e-conformidade/04-modelo-responsabilidade-compartilhada.md",
+          "em": "2026-11-14"
+        },
+        {
+          "n": 5,
+          "titulo": "Identidade e acesso (IAM)",
+          "caminho": "certificacao-cloud/dominio-2-seguranca-e-conformidade/05-identidade-e-acesso-iam.md",
           "em": "2026-11-14"
         }
       ]

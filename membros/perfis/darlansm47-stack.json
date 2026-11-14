@@ -1,0 +1,58 @@
+{
+  "login": "darlansm47-stack",
+  "nome": null,
+  "avatar": "https://avatars.githubusercontent.com/u/290548636?v=4",
+  "desde": "2026-08-28",
+  "totalModulos": 1,
+  "trilhas": [
+    {
+      "slug": "cloud",
+      "rotulo": "Certificação Cloud Practitioner",
+      "codigo": "CLF-C02",
+      "cor": "00E582",
+      "pasta": "certificacao-cloud",
+      "feitos": 0,
+      "total": 17,
+      "pct": 0,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": []
+    },
+    {
+      "slug": "ia",
+      "rotulo": "Certificação AI Practitioner",
+      "codigo": "AIF-C01",
+      "cor": "41B3FF",
+      "pasta": "certificacao-ia",
+      "feitos": 1,
+      "total": 14,
+      "pct": 7,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": [
+        {
+          "n": 6,
+          "titulo": "Amazon Bedrock",
+          "caminho": "certificacao-ia/dominio-3-aplicacoes-de-modelos/06-amazon-bedrock.md",
+          "em": "2026-08-28"
+        }
+      ]
+    },
+    {
+      "slug": "aprofundamento",
+      "rotulo": "Aprendizado Aprofundado",
+      "codigo": "Capacitação de Líderes",
+      "cor": "FF9900",
+      "pasta": "aprofundamento",
+      "feitos": 0,
+      "total": 12,
+      "pct": 0,
+      "concluida": false,
+      "concluidaEm": null,
+      "modulos": []
+    }
+  ],
+  "medalhas": [],
+  "eventos": [],
+  "atualizadoEm": "2026-11-14"
+}
